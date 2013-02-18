@@ -1,7 +1,6 @@
 LATEX = latex
 MAIN  = main
 
-
 main: 	$(MAIN).tex  
 	$(LATEX) $(MAIN).tex 
 	bibtex $(MAIN)
@@ -12,16 +11,7 @@ main: 	$(MAIN).tex
 
 
 clean:
-	rm -f $(MAIN)~
-	rm -f $(MAIN).aux
-	rm -f $(MAIN).bbl
-	rm -f $(MAIN).ps
-	rm -f $(MAIN).pdf
-	rm -f $(MAIN).dvi
-	rm -f $(MAIN).blg
-	rm -f $(MAIN).log
-	rm -f *~
-	rm -f $(MAIN).tex.flc
+	rm -f $(MAIN).{aux,bbl,ps,pdf,div,blg,log}
 
 view: 
 	open $(MAIN).pdf &
