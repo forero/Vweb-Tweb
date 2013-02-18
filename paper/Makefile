@@ -1,5 +1,5 @@
 LATEX = latex
-MAIN  = stochastic
+MAIN  = main
 
 
 main: 	$(MAIN).tex  
