@@ -105,13 +105,88 @@ shape and angular momentum alignment.
 \citep{Faltenbacher2009} %galaxy alignments with mocks
 \citep{Paz2008} %angular momentum alignments
 \citep{Platen2008} %alignment in voids
-\citep{AragonCalvo2007} %Spin alignment
 \citep{Lee2007}%Obs. spin alignment
-\citep{Hahn2007}% various alignments with the Tweb
+
 
 
 \begin{itemize}
+\item
+\citep{AragonCalvo2007} %Spin alignment
+The method is the Multi-scale Morphology Filter which is based on the
+Hessian matrix of the density field, where the density field is
+computed from the particle distribution using a Delaunay tesselation
+field estimatior (DTFE), which is self-adaptive. This allows them to
+identify clusters, filaments and walls.
+
+
+The simulation has $512^3$ particles in a cubic box of $150$\hMpc. The
+mass per particle is $2\times 10^{9}$\hMsun. 
+Halo identitification is done with the HOP algorithm. They keep halos with more
+than $50$ partices and less than $5000$, defining a mass range of
+$1-100\times 10^{11}$\hMsun.
+
+The principal
+axes of each halo are computed from the non-normalized inertia
+tensor. The inertian tensor and the angular momentum are computed with
+respect to the center of mass of the halo.
+
+
+They compute two angles, one with respect to the direction
+defining the filaments and the other the walls. Their results make a
+distinction between halos of more massive and less massive than
+$10^{12}$\hMsun.
+
+The halo spins tend to lie on the plane of the wall. This is stronger
+for massive halos.The effect for filaments is weaker: low mass halos
+tend to lieparallel to their host filament, while high mass halos tend
+to be perpendicular.  
+
+Theres is a very strong effect for the principal axes of halos in
+filaments to be strongly correlated with the direction of the
+filaments. The minor axis tend to be perpendicular to the
+filament. This effect is stronger for larger halos.
+
+The effect in walls is less strong ,but still the minor axis tend to
+lie perpendicular to the wall, while the other axis then to lie over
+the wall. The effect is stronger for massive halos.
+
+They find that spins and shapes of dark matter halos are significantly
+correlated with each other and with the orientation of their host
+structures. 
+
+
+
 \item 
+\citep{Hahn2007}% various alignments with the Tweb
+The method is the Tweb. They use three simulations each of $512^3$
+particles, with sizes $L_1=45$\hMpc, $L_2=90$\hMpc and
+$L_3=180$\hMpc, this corresponds to particle masses of $4.7, 38.0,
+300\times 10^7$\hMsun. The normalization is $\sigma_8=0.9$. Halo
+identification was done with a FOF algorithm with 0.2 times the
+interparticle distance. They consider halos of at least 300
+particles. 
+
+The web is obtained for a grid of $1024^3$ cells, the density field is
+obtained with a CIC interpolation and smoothed using a Gaussian
+Kernel. In the rest of the paper all the results correspond to a
+smoothing scale of $R_{s}=2.1$\hMpc.
+
+
+They Report on the angle between the halo
+angular momentum vector and the eigenvector corresponding to
+perpendicular directions to the sheets and the direction of the
+filaments. This is divided in two halo populations: $5\times 10^{10} -
+1.0\times 10^{12}$ and $>10^{12}$. There is a weak antialignment in
+the case of the filaments and a stronger anti-alignment in the case of
+the sheets. For the sheets the effect is stronger for the massive
+bin. In the filaments the alignment is weak regardless of the
+mass. They do not report any other significan statistic, but recognize
+that they suffer from small-number statistics in voids).
+
+
+They do not see any strong dependance of the environment in the
+shape. They do not measure the shape alinment.
+
 \citep{Lee2002}%Obs. spin alignment
 Observational measurement for the alignment of galaxy spin axes with
 the local tidal shear field. For the measurement of shear, we have used
