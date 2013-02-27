@@ -101,7 +101,7 @@ shape and angular momentum alignment.
 
 
 \citep{Libeskind2013} %various alignments
-\citep{Codis2012}
+
 \citep{Faltenbacher2009} %galaxy alignments with mocks
 \citep{Paz2008} %angular momentum alignments
 \citep{Platen2008} %alignment in voids
@@ -110,7 +110,43 @@ shape and angular momentum alignment.
 
 
 \begin{itemize}
-\item
+\item 
+\citep{Codis2012}
+Studies the alignment of the sping of dark matter halos realtive to
+the surrounding large scale structure and to the tidal tensor
+eigenvalues.
+
+They use a dark matter simulation with $4096^3$ DM particles in a
+cubic periodic box of $2000$\hMpc on a side, which corresponds to a
+particle mass of $7.7\times 10^9$\Msun. Halos are identified
+using a FoF algorithm with a linking legth of 0.2 keeping all halos
+with more than 40 particles, which sets the minimum halo mass to be
+$3\times 10^{11}$\Msun. In their work the particles were sampled on a
+$2048^3$ grid and the density field was smoothed with a gaussian
+fileter over a scale of $5$\hMpc corresponding to a mass of $1.9\times
+10^{14}$. The skeleton was computed over $6^{3}$ overlapping subcubes
+and then reconnected.
+
+
+
+The filament finder algorithm is based on Morse theory and defines a
+Skeleton to be the set of critical lines joining the maxima of the
+densit field through saddle points following the gradient. They also
+compute the hessinan of the potential over the smoothed density field
+to get their eigenvectors.
+
+
+The spin of the halo is defined as $m_{p}\sum_{i}(r_i-\bar{r})\times
+(v_i-\bar{v})$ where $\bar{r}$ is the center of mass of the halo and
+$\bar{v}$ is the average velocity.
+
+They measure the sping alignment with each one of the
+eigenvectors. With repecto to the first eigenvector $e_{1}$ there is
+antialignement for masses $M>10^{12}$\Msun and alignment for masses
+$<10^{12}$\Msun 
+
+
+\item 
 \citep{AragonCalvo2007} %Spin alignment
 The method is the Multi-scale Morphology Filter which is based on the
 Hessian matrix of the density field, where the density field is
@@ -188,7 +224,19 @@ They do not see any strong dependance of the environment in the
 shape. They do not measure the shape alinment.
 \item
 \citep{Basilakos2006}
-Use a cosmologycal SPH+N-body simulation to measure the alignment of cluster halos with their parent supercluster. For both the cluster halos and parent super-cluster they define the shape via the non-normalized inertia tensor.
+Use a cosmological SPH+N-body simulation to measure the alignment of
+cluster halos with their parent supercluster. For both the cluster
+halos and parent super-cluster they define the shape via the
+non-normalized inertia tensor.  The find that strenght of the
+alignments increases with the degree of filamentarity of the
+supercluster.
+
+The simulation has $2\times 512^3$ particles in a box of side
+$500$\hMpc. The dark matter particle mass is $6.6\times
+10^{10}$\hMsun while for SPH particles is $1.2\times
+10^{10}$\hMsun. The halo finding is done with a FOF algorithm with a
+linking length of 0.17 and keep objects with more than 100 partcles. 
+
 
 \item
 \citep{Lee2002}%Obs. spin alignment
