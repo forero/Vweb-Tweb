@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: mn2e.bst
+Database file #1: references.bib
+Warning--I didn't find a database entry for "Libeskind2012"
+You've used 11 entries,
+            2601 wiz_defined-function locations,
+            619 strings with 5602 characters,
+and the built_in function-call counts, 5062 in all, are:
+= -- 494
+> -- 393
+< -- 3
++ -- 135
+- -- 135
+* -- 503
+:= -- 942
+add.period$ -- 0
+call.type$ -- 11
+change.case$ -- 89
+chr.to.int$ -- 11
+cite$ -- 11
+duplicate$ -- 121
+empty$ -- 177
+format.name$ -- 152
+if$ -- 910
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 36
+num.names$ -- 44
+pop$ -- 64
+preamble$ -- 1
+purify$ -- 100
+quote$ -- 0
+skip$ -- 159
+stack$ -- 0
+substring$ -- 248
+swap$ -- 11
+text.length$ -- 0
+text.prefix$ -- 45
+top$ -- 0
+type$ -- 99
+warning$ -- 0
+while$ -- 44
+width$ -- 0
+write$ -- 112
+(There was 1 warning)
