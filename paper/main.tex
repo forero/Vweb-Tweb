@@ -101,8 +101,8 @@ interest.
 shape and angular momentum alignment.
 
 
-\citep{Libeskind2013} %various alignments
-\citep{Libeskind2012} %varios alignments
+
+
 
 
 \citep{Faltenbacher2009} %galaxy alignments with mocks
@@ -113,45 +113,51 @@ shape and angular momentum alignment.
 
 
 \begin{itemize}
+
+
 \item
-\citep{Zhang2009}
-Study the spin and shape alignment against filaments. 
+\citep{Libeskind2013} %various alignments
+Studies shape and spin alignment with the cosmic web defined by the
+velocity shear tensor method described in this paper.
 
-They use a dark matter simulation with $1024^3$ DM particles in a
-periodic box of $100$ \hMpc on a side. The particle mass is
-$6.92\times10^{7}$\hMsun. Dark matter haloes are found using a FOF
-algorithm with a linking length of 0.2 times the interparticle
-distance. Only halos with more than 500 particles are retained for
-further analysis. 
+The simulation has $2048^3$ particles in a bos of $250$\hMpc,
+corresponding to a particles mass of $1.3\times 10^{8}$\hMsun.  Halos
+are found using a FOF halo finder with $b=0.17$. The catalog only
+include halos more massiven than $3\times 10^{9}$\hMsun.
 
-The angular momentum is measured with positions repect to the center
-of mass and the shape is determined using the non-normalized moment of
-inertia tensor.
+The shape is defined from the reduced inertia tensor. Results are
+reported for three mass bins $M_{\rm vir}<10^{11.5}$\hMsun,
+$11^{11.5}<M_{\rm vir}<12^{12.5}\hMsun$ and $M_{\rm vir}>12^{12.5}\hMsun$.
 
-The environment is found using the hessian of the density. The density
-field was interpolated over a $1024^3$ grid and then smoothed with a
-Gaussian filter of scale $R_{s}2.1$\hMpc. There are two methods to
-define the direction of a filament. The first method uses the
-eigenvalues of the hessian density, howevere they define the filament
-direction with the eigenvector corresponding the single positive
-eigenvalue of the hessian. The second method used a line that
-connects the two terminal halos in a filament segment.
+THe identification of the cosmic web is done on a grid of $256^3$ with
+a gaussian smoothing of $\sim 1$\hMpc over the velocity field. The
+details of this smoothing are different from ours. This is decribed in
+detail in the Appendix.
+
+The aligmnet signal of the spin is very weak while the shape alignment
+signal is very strong. The alignment is such that the eigenvector
+corresponding to the smalles eigenvalue is aligned with the major
+axis. This effect is stronger for more massive halos. 
+In other words the major axis of a halo is aligned with a filament,
+and lies on the plane that define a sheet.
+
+\item
+\citep{Trowland2013}
 
 
-The characterization of the alingment with the $\cos(\theta)$
-statistic. For the method that uses the eigenvectors, they find that
-the strenght of the spin alignment decreases with halo mass. For the
-shape they study the alingment of the major axis with the
-filament. The find an alignment signal in all mass bins, with an stronger
-effect for more massive halos. 
 
-In a final experiment they measure the spin alignment in four
-different samples that separated by the strength of the shape
-alignment. They find that halos anticorrelated in shape, show a strong
-sping correlation going to the extreme where there is a strong spin
-anticorrelation for halos with a strong shape correlation. This means
-that the halos with strong spin alignment are not the same halos
-showing strong shape alignment. 
+
+The simulation is the millennium simulation, which has $2160^3$
+particles in a volume of $500$\hMpc on a side. This corresponds to a
+particle mass of $8.6\times 10^{8}$\hMsun. The catalog uses both halos
+and subhalos which were identified with SUBFIND. Only halos with more
+than 500 particles were kept to get a robust computation for the spin.
+
+However the analysis are reported ona box of $300$\hMpc on a
+side. Four different gaussian smoothing scales are used: 
+
+The method to define the filamentary structure is based on the
+eigenvalues of the hessian of the density.
 
 
 \item 
@@ -195,6 +201,47 @@ algorithm are in perfect agreement with the results from the Tidal
 web.  The transitional mass is weakly dependent on the smoothing scale,
 varing between $1-5\times 10^{12}$\hMsun for smoothing scales between
   $1.0-5.0$\hMpc. 
+
+
+\item
+\citep{Zhang2009}
+Study the spin and shape alignment against filaments. 
+
+They use a dark matter simulation with $1024^3$ DM particles in a
+periodic box of $100$ \hMpc on a side. The particle mass is
+$6.92\times10^{7}$\hMsun. Dark matter haloes are found using a FOF
+algorithm with a linking length of 0.2 times the interparticle
+distance. Only halos with more than 500 particles are retained for
+further analysis. 
+
+The angular momentum is measured with positions repect to the center
+of mass and the shape is determined using the non-normalized moment of
+inertia tensor.
+
+The environment is found using the hessian of the density. The density
+field was interpolated over a $1024^3$ grid and then smoothed with a
+Gaussian filter of scale $R_{s}2.1$\hMpc. There are two methods to
+define the direction of a filament. The first method uses the
+eigenvalues of the hessian density, howevere they define the filament
+direction with the eigenvector corresponding the single positive
+eigenvalue of the hessian. The second method used a line that
+connects the two terminal halos in a filament segment.
+
+
+The characterization of the alingment with the $\cos(\theta)$
+statistic. For the method that uses the eigenvectors, they find that
+the strenght of the spin alignment decreases with halo mass. For the
+shape they study the alingment of the major axis with the
+filament. The find an alignment signal in all mass bins, with an stronger
+effect for more massive halos. 
+
+In a final experiment they measure the spin alignment in four
+different samples that separated by the strength of the shape
+alignment. They find that halos anticorrelated in shape, show a strong
+sping correlation going to the extreme where there is a strong spin
+anticorrelation for halos with a strong shape correlation. This means
+that the halos with strong spin alignment are not the same halos
+showing strong shape alignment. 
 
 
 \item 
@@ -273,6 +320,10 @@ that they suffer from small-number statistics in voids).
 
 They do not see any strong dependance of the environment in the
 shape. They do not measure the shape alinment.
+
+\item
+\citep{Brunino2007}
+
 \item
 \citep{Basilakos2006}
 Use a cosmological SPH+N-body simulation to measure the alignment of
