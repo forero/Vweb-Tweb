@@ -61,7 +61,8 @@
 
 \begin{document}
 
-\title[Vweb \& Tweb]{Halo alignments with large scale tidal and velocity fields}
+\title[Vweb \& Tweb]{Halo alignments with large scale tidal and
+  velocity fields} 
 \author[S. Contreras et al.]{
 \parbox[t]{\textwidth}{\raggedright 
   Sergio Contreras$^{1}$ 
@@ -78,7 +79,8 @@ $^{2}$Uni B
 
 \end{abstract}
 \begin{keywords}
-methods: N-body simulations, galaxies: haloes, cosmology: theory, dark matter, large-scale structure of Universe
+methods: N-body simulations, galaxies: haloes, cosmology: theory, dark
+matter, large-scale structure of Universe 
 \end{keywords}
 
 
@@ -110,6 +112,13 @@ shape and angular momentum alignment.
 \citep{Platen2008} %alignment in voids
 \citep{Lee2007}%Obs. spin alignment
 
+
+\begin{table}
+\begin{tabular}{llll}
+Author & Web Method & Halo Finder & SPIN \\
+\end{tabular}
+SPIN
+\end{table}
 
 
 \begin{itemize}
@@ -145,19 +154,39 @@ and lies on the plane that define a sheet.
 \citep{Trowland2013}
 
 
-
-
 The simulation is the millennium simulation, which has $2160^3$
 particles in a volume of $500$\hMpc on a side. This corresponds to a
 particle mass of $8.6\times 10^{8}$\hMsun. The catalog uses both halos
 and subhalos which were identified with SUBFIND. Only halos with more
-than 500 particles were kept to get a robust computation for the spin.
+than 500 particles were kept to get a robust computation for the
+spin. For each halo the spin is defined as the sum of the angular momentum
+of each particle with respect to the center of mass. 
 
-However the analysis are reported ona box of $300$\hMpc on a
-side. Four different gaussian smoothing scales are used: 
+
 
 The method to define the filamentary structure is based on the
-eigenvalues of the hessian of the density.
+eigenvalues of the hessian of the density.However the analysis are
+reported ona box of $300$\hMpc on a side. Four different gaussian
+smoothing scales are used: $2.0$, $3.0$ and $5.0$\hMpc.
+
+The authors report a slight alignment signal of spin against the
+principal filament axis. By fitting the following functional form to
+the $\cos(\theta)$ distribution
+
+\begin{equation}
+P(\cos\theta) =
+(1-c)\sqrt{1+\frac{c}{2}}\left[1-c\left(1-\frac{3}{2}\cos^{2}\theta \right)\right]^{-3/2},
+\end{equation}
+
+they are able to quantify the degree of alignment ($c<0$) or
+antialignment ($c>0$).  This parameterization is based on theoretical
+expectactions of Tidal Torque Theory (TTT) \citep{Lee2005}. At $z=0$, the reported
+value is $c = −0.035 \pm 0.004$, where the uncertainty was calculated
+using bootstraping and resampling. 
+
+When the halo sample is divided between low mass and high mass halos
+with a transition scale $M_{\star}=5.9\times 10^{12}$\Msun, there is
+an anti-alignment above this mass and an alignment below it. 
 
 
 \item 
