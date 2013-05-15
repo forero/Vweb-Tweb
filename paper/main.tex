@@ -122,14 +122,35 @@ SHAPE
 
 TABLA
 \begin{table*}
-\begin{tabular}{ccccccc}\hline\hline
-Author & Web Method & Halo Finder & Spatial Scale & Test Direction &
+\begin{tabular}{cccccc}\hline\hline
+Author & Web Method & Spatial Scale & Test Direction &
 Alignment & Mass dependence\\\hline
-\cite{Hahn2007} & Tidal Web & FOF & $2.1$\hMpc & along
+
+\cite{AragonCalvo2007} & Hessian density field & - &
+perpendicular to sheet & $-$$-$ & $>10^{12}$\hMsun\\
+
+
+& & - &
+perpendicular to sheet & $-$ & $<10^{12}$\hMsun\\
+
+& & - &
+along the filament& $-$ & $>10^{12}$\hMsun\\
+
+
+& & - &
+along the filament& $+$ & $<10^{12}$\hMsun\\
+
+
+
+\cite{Hahn2007} & Tidal Web & $2.1$\hMpc & along
 the filament & $-$& none\\
-\cite{Hahn2007} & Tidal Web & FOF & $2.1$\hMpc &
+
+
+& &  $2.1$\hMpc &
 perpendicular to sheet & $-$$-$ & stronger $>10^{12}$\hMsun\\
-\cite{Hatton2001} & Neighbors$^1$ & FOF & & & 0\\\hline\hline
+
+\cite{Hatton2001} & Neighbors$^1$ &  & & 0\\\hline\hline
+
 \end{tabular}\\
 \caption{Summary of previous theoretical results.
 NOTES:
@@ -156,12 +177,14 @@ include halos more massiven than $3\times 10^{9}$\hMsun.
 
 The shape is defined from the reduced inertia tensor. Results are
 reported for three mass bins $M_{\rm vir}<10^{11.5}$\hMsun,
-$11^{11.5}<M_{\rm vir}<12^{12.5}\hMsun$ and $M_{\rm vir}>12^{12.5}\hMsun$.
+$11^{11.5}<M_{\rm vir}<12^{12.5}\hMsun$ and $M_{\rm
+  vir}>12^{12.5}\hMsun$. 
 
-THe identification of the cosmic web is done on a grid of $256^3$ with
-a gaussian smoothing of $\sim 1$\hMpc over the velocity field. The
-details of this smoothing are different from ours. This is decribed in
-detail in the Appendix.
+The identification of the cosmic web is done on a grid of $256^3$ with
+a gaussian smoothing of $\sim 1$\hMpc over the velocity field. We
+define this velocity field as the ratio of a momentum density to the
+matter density field. The details of this approach are described in
+the Appendix .
 
 The aligmnet signal of the spin is very weak while the shape alignment
 signal is very strong. The alignment is such that the eigenvector
@@ -174,15 +197,14 @@ and lies on the plane that define a sheet.
 \citep{Trowland2013}
 
 
-The simulation is the millennium simulation, which has $2160^3$
+The simulation is the millennium run, which has $2160^3$
 particles in a volume of $500$\hMpc on a side. This corresponds to a
 particle mass of $8.6\times 10^{8}$\hMsun. The catalog uses both halos
 and subhalos which were identified with SUBFIND. Only halos with more
 than 500 particles were kept to get a robust computation for the
-spin. For each halo the spin is defined as the sum of the angular momentum
-of each particle with respect to the center of mass. 
-
-
+spin. For each halo the spin is defined as the sum of the angular
+momentum of each particle with respect to the center of mass.  
+ 
 
 The method to define the filamentary structure is based on the
 eigenvalues of the hessian of the density.However the analysis are
