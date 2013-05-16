@@ -122,40 +122,66 @@ SHAPE
 
 TABLA
 \begin{table*}
+SPIN
 \begin{tabular}{cccccc}\hline\hline
-Author & Web Method & Spatial Scale & Test Direction &
+Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
+\cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
+filament &$-$ & $>10^{12}$\hMsun\\
+
+&   & & 
+filament &$+$ & $<10^{12}$\hMsun\\
+
+&   & & 
+wall & $++$ & all masses\\
+
+\cite{Trowland2013} & Hessian density & $2-5\hMpc$ & 
+filament & $-$ & $> 5\times 10^{12}$\hMsun\\
+&   & & 
+filament & $+$ & $< 5\times 10^{12}$\hMsun\\
+
+\cite{Codis2012} & Morse Theory \& Tidal Web & $1-5\hMpc$ & 
+filament & $--$ & $>10^{12}$\hMsun \\ 
+
+&   & & 
+filament & $++$ & $<10^{12}$\hMsun \\ 
+
+& & & 
+wall & $++$ & all masses\\
+
+\cite{Zhang2009}  & Hessian density field &  $2.1$\hMpc & 
+filament & $++$ & only if anticorrelated with shape\\
+
+& &  & 
+filament & $--$ & only if correlated with shape\\
+
 \cite{AragonCalvo2007} & Hessian density field & - &
-perpendicular to sheet & $-$$-$ & $>10^{12}$\hMsun\\
+wall & $++$ & $>10^{12}$\hMsun\\
 
 
 & & - &
-perpendicular to sheet & $-$ & $<10^{12}$\hMsun\\
+wall & $+$ & $<10^{12}$\hMsun\\
 
 & & - &
-along the filament& $-$ & $>10^{12}$\hMsun\\
+filament& $-$ & $>10^{12}$\hMsun\\
 
 
 & & - &
-along the filament& $+$ & $<10^{12}$\hMsun\\
+filament& $+$ & $<10^{12}$\hMsun\\
 
 
 
-\cite{Hahn2007} & Tidal Web & $2.1$\hMpc & along
-the filament & $-$& none\\
+\cite{Hahn2007} & Tidal Web & $2.1$\hMpc & filament & $-$& none\\
 
 
 & &  $2.1$\hMpc &
-perpendicular to sheet & $-$$-$ & stronger $>10^{12}$\hMsun\\
+wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
-\cite{Hatton2001} & Neighbors$^1$ &  & & 0\\\hline\hline
+
 
 \end{tabular}\\
 \caption{Summary of previous theoretical results.
-NOTES:
-$^1$ They do not use a web finder method. They look for correlations
-with neightborig structures on any escale.
 Angular Momentum}
 \end{table*}
 
@@ -170,7 +196,7 @@ Angular Momentum}
 Studies shape and spin alignment with the cosmic web defined by the
 velocity shear tensor method described in this paper.
 
-The simulation has $2048^3$ particles in a bos of $250$\hMpc,
+The simulation has $2048^3$ particles in a box of $250$\hMpc,
 corresponding to a particles mass of $1.3\times 10^{8}$\hMsun.  Halos
 are found using a FOF halo finder with $b=0.17$. The catalog only
 include halos more massiven than $3\times 10^{9}$\hMsun.
@@ -187,11 +213,13 @@ matter density field. The details of this approach are described in
 the Appendix .
 
 The aligmnet signal of the spin is very weak while the shape alignment
-signal is very strong. The alignment is such that the eigenvector
-corresponding to the smalles eigenvalue is aligned with the major
+signal is very strong. The shape alignment is such that the eigenvector
+corresponding to the smallest eigenvalue is aligned with the major
 axis. This effect is stronger for more massive halos. 
 In other words the major axis of a halo is aligned with a filament,
-and lies on the plane that define a sheet.
+and lies on the plane that define a sheet. However the spin is
+antialgined with the filament for massive halos and weakly aligned for
+low mass halos. 
 
 \item
 \citep{Trowland2013}
@@ -291,7 +319,7 @@ inertia tensor.
 
 The environment is found using the hessian of the density. The density
 field was interpolated over a $1024^3$ grid and then smoothed with a
-Gaussian filter of scale $R_{s}2.1$\hMpc. There are two methods to
+Gaussian filter of scale $R_{s} = 2.1$\hMpc. There are two methods to
 define the direction of a filament. The first method uses the
 eigenvalues of the hessian density, howevere they define the filament
 direction with the eigenvector corresponding the single positive
