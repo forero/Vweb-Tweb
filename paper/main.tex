@@ -107,11 +107,6 @@ shape and angular momentum alignment, respectively.
 
 
 
-\citep{Faltenbacher2009} %galaxy alignments with mocks
-\citep{Paz2008} %angular momentum alignments
-\citep{Platen2008} %alignment in voids
-\citep{Lee2007}%Obs. spin alignment
-
 
 \begin{table}
 \begin{tabular}{lllll}
@@ -126,6 +121,16 @@ SPIN
 \begin{tabular}{cccccc}\hline\hline
 Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
+
+
+\citep{Faltenbacher2009} %galaxy alignments with mocks
+
+
+
+The tidal connection between voids in simulations \citep{Platen2008},
+the alignment of observed galaxies with the inferred tidal
+field\citep{Lee2007,Jones2010} 
+
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
 filament &$-$ & $>10^{12}$\hMsun\\
@@ -245,14 +250,15 @@ the $\cos(\theta)$ distribution
 
 \begin{equation}
 P(\cos\theta) =
-(1-c)\sqrt{1+\frac{c}{2}}\left[1-c\left(1-\frac{3}{2}\cos^{2}\theta \right)\right]^{-3/2},
+(1-c)\sqrt{1+\frac{c}{2}}\left[1-c\left(1-\frac{3}{2}\cos^{2}\theta
+  \right)\right]^{-3/2}, 
 \end{equation}
 
 they are able to quantify the degree of alignment ($c<0$) or
 antialignment ($c>0$).  This parameterization is based on theoretical
-expectactions of Tidal Torque Theory (TTT) \citep{Lee2005}. At $z=0$, the reported
-value is $c = −0.035 \pm 0.004$, where the uncertainty was calculated
-using bootstraping and resampling. 
+expectactions of Tidal Torque Theory (TTT) \citep{Lee2005}. At $z=0$,
+the reported value is $c = −0.035 \pm 0.004$, where the uncertainty
+was calculated using bootstraping and resampling. 
 
 When the halo sample is divided between low mass and high mass halos
 with a transition scale $M_{\star}=5.9\times 10^{12}$\Msun, there is
@@ -342,9 +348,12 @@ anticorrelation for halos with a strong shape correlation. This means
 that the halos with strong spin alignment are not the same halos
 showing strong shape alignment. 
 
+\item
+\citep{Paz2008} %angular momentum alignments
+Nelson? Puedes hacer un resumen?
 
 \item 
-\citep{AragonCalvo2007} %Spin alignment
+\citep{AragonCalvo2007} %angular momentum alignment
 The method is the Multi-scale Morphology Filter which is based on the
 Hessian matrix of the density field, where the density field is
 computed from the particle distribution using a Delaunay tesselation
@@ -422,6 +431,36 @@ shape. They do not measure the shape alinment.
 
 \item
 \citep{Brunino2007}
+Uses a DM only N-body simulation (the Millennium Run) to study the
+shape and angular momentum alignment with respect to large
+cosmological voids. 
+
+The voids are found with a spherical void finder. This algorithm first
+looks for potential void centers in the underdense regions of the
+simulation. These positions define the centers of spheres that are
+empty of halos above a given mass threshold. Only voids with radius
+larger than $10$\hMpc were considered for further analysis.
+
+Halos were identified by linking particles with density exceeding 900
+times the background density in order to keep the analysis of shape
+and angular momentum on the core of the halo. Only halos with masses
+in the range $8.6\times 10^{11}\hMsun < M_{\mathrm h}< 8.6\times
+10^{12}\hMsun$ were included analized to measure their angular
+momentum and the inertia tensor, both in a non-normalized way.
+
+For the purpose of measuring alignments a second cut is imposed
+whereby only halos within a shell of radius $R_{\mathrm void}<r<1.05R_{\mathrm
+void}$. The alignment is then measured between the vector connecting
+the center of the void to the halo in question and the vector of
+interest.
+
+The results show that there is a strong alignment of halo shape in
+such a way that the major axis is parallel to the shell surrounding
+the void. In the case of angular momentum there is not a significant
+signal for alignment.
+
+
+
 
 \item
 \citep{Basilakos2006}
