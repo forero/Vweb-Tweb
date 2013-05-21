@@ -102,10 +102,12 @@ interest.
 ... Table 1 and Table 2 summariz recent results found in the literature for
 shape and angular momentum alignment, respectively.
 
-
-
-
-
+The tidal connection between voids in simulations \citep{Platen2008},
+the alignment of observed galaxies with the inferred tidal
+field\citep{Lee2007,Jones2010}. There are other kind of alignment
+statistics based on modifications of the correlation
+\citep{Paz2008,Faltenbacher2009} that go beyond a local computation
+and therefore are not reviewed in detail in this paper.
 
 
 \begin{table}
@@ -115,21 +117,48 @@ Author & Web Method & Halo Finder & Major Axis & Correlation\\
 SHAPE
 \end{table}
 
-TABLA
 \begin{table*}
-SPIN
 \begin{tabular}{cccccc}\hline\hline
 Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
+\cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
+filament &$++$ & $>10^{12}$\hMsun\\
 
-\citep{Faltenbacher2009} %galaxy alignments with mocks
+&   & & 
+filament &$+$ & $<10^{12}$\hMsun\\
 
+&   & & 
+wall & $++$ & all masses\\
 
+\cite{Zhang2009}  & Hessian density field &  $2.1$\hMpc & 
+filament & $++$ & $>10^{12}\hMsun$\\
 
-The tidal connection between voids in simulations \citep{Platen2008},
-the alignment of observed galaxies with the inferred tidal
-field\citep{Lee2007,Jones2010} 
+& &  & 
+filament & $+$ & $<10^{12}\hMsun$\\
+
+\cite{AragonCalvo2007} & Hessian density field & - &
+wall & $++$ & $>10^{12}$\hMsun\\
+
+& & - &
+wall & $+$ & $<10^{12}$\hMsun\\
+
+& & - &
+filament& $++$ & $>10^{12}$\hMsun\\
+
+& & - &
+filament& $+$ & $<10^{12}$\hMsun\\\hline \hline
+
+\end{tabular}\\
+\caption{Summary of previous theoretical results.
+Shape. Indicates the alignment of the halo's major axis along a
+filament or a sheet.} 
+\end{table*}
+
+\begin{table*}
+\begin{tabular}{cccccc}\hline\hline
+Author & Web Method & Spatial Scale & Along &
+Alignment & Mass dependence\\\hline
 
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
@@ -183,9 +212,7 @@ filament& $+$ & $<10^{12}$\hMsun\\
 & &  $2.1$\hMpc &
 wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
-
-
-\end{tabular}\\
+\end{tabular}
 \caption{Summary of previous theoretical results.
 Angular Momentum}
 \end{table*}
@@ -348,9 +375,6 @@ anticorrelation for halos with a strong shape correlation. This means
 that the halos with strong spin alignment are not the same halos
 showing strong shape alignment. 
 
-\item
-\citep{Paz2008} %angular momentum alignments
-Nelson? Puedes hacer un resumen?
 
 \item 
 \citep{AragonCalvo2007} %angular momentum alignment
@@ -362,15 +386,14 @@ identify clusters, filaments and walls.
 
 
 The simulation has $512^3$ particles in a cubic box of $150$\hMpc. The
-mass per particle is $2\times 10^{9}$\hMsun. 
-Halo identitification is done with the HOP algorithm. They keep halos with more
-than $50$ partices and less than $5000$, defining a mass range of
-$1-100\times 10^{11}$\hMsun.
+mass per particle is $2\times 10^{9}$\hMsun.  Halo identitification is
+done with the HOP algorithm. They keep halos with more than $50$
+partices and less than $5000$, defining a mass range of$1-100\times
+10^{11}$\hMsun. 
 
-The principal
-axes of each halo are computed from the non-normalized inertia
-tensor. The inertian tensor and the angular momentum are computed with
-respect to the center of mass of the halo.
+The principal axes of each halo are computed from the non-normalized
+inertia tensor. The inertian tensor and the angular momentum are
+computed with respect to the center of mass of the halo. 
 
 
 They compute two angles, one with respect to the direction
@@ -488,7 +511,10 @@ radial comoving distance of $\sim 150$\hMpc.
 \item
 \citep{Hatton2001} %angular momentum alignment
 DM matter only simulation. $256^3$ particles, $100$\hMpc, particle
-mass. Look for alignment of angular momentum vectors with neighbohring structures or other massive structures. They match halos using close pair statistics. They do not find any evidence for a statistically significant mutual alignment of halos on any escale.
+mass. Look for alignment of angular momentum vectors with neighbohring
+structures or other massive structures. They match halos using close
+pair statistics. They do not find any evidence for a statistically
+significant mutual alignment of halos on any escale. 
 \end{itemize}
 \section{N-body simulation and halo finding}
 
