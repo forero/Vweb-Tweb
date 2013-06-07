@@ -61,8 +61,8 @@
 
 \begin{document}
 
-\title[Vweb \& Tweb]{Halo alignments with large scale tidal and
-  velocity fields} 
+\title[Vweb \& Tweb]{Cosmic web correlations with the shape, spin and
+  peculiar velocties of dark matter halos}  
 \author[S. Contreras et al.]{
 \parbox[t]{\textwidth}{\raggedright 
   Sergio Contreras$^{1}$ 
@@ -519,21 +519,54 @@ significant mutual alignment of halos on any escale.
 \section{N-body simulation and halo finding}
 
 
-... In this paper we use groups found with a FOF halo finder.
+In this paper we use groups found with a FOF halo finder.
 
 \section{The cosmic web algorithms}
 \label{sec:algorithms}
+We use two algorithms to define the cosmic web on cosmological N-body
+simulations. Both are based on the same algorithmic principle, which
+is determining locally a symmetric tensor which can be diagonalized to yield
+three real eigenvalues $\lambda_1>\lambda_2>\lambda_3$ and their
+corresponding eigenvectors ${\bf e}_{1}$, ${\bf e}_2$ and ${\bf
+  e}_3$. This allows for a local classification into one of the
+following four categories: void, sheet, filament and peak depending
+whether the number of eigenvalues larger than a given threshold
+$\lambda_{th}$ is $3$, $2$, $1$ or $0$, respectively.
 
-\subsection{The Tidal Web}
+We use two different symmetric tensors. The first is the shear tensor,
+defined as the hessian of the gravitational potential, normalized in
+such a way as to be dimensionless:
 
+\begin{equation}
+T_{\alpha\beta} = \frac{\partial^2\phi}{\partial
+  r_{\alpha}\partial r_{\beta}}, 
+\end{equation}
+where $\phi$ is the gravitational potential rescaled by a factor $4\pi
+G\bar{\rho}=3/2\Omega_m H_{0}^2$ in such a way that the Poission
+equation can be written as:
 
+\begin{equation}
+\nabla^{2}\phi  = \delta, 
+\end{equation}
 
-\subsection{The Velocity Web}
+where $\delta$ is the matter overdensity, $\bar{\rho}$ is the average
+matter density, $H_{0}$ is the Hubble constant at present time and
+$\Omega_m$ is the matter density parameter.
+
+The second tensor is the velocity shear:
+
+\begin{equation}
+\Sigma_{\alpha\beta} = -\frac{1}{2H_{0}}\left(\frac{\partial
+  v_{\alpha}}{\partial r_{\beta}}+ \frac{\partial v_{\beta}}{\partial
+  r_{\alpha}}\right) 
+\end{equation}
 
 \subsection{Numerical considerations}
 
-... In this paper we compute the cosmic web on grids of two different
-resolutions $256^3$ and $512^3$.
+In this paper we compute the cosmic web on grids of two different
+resolutions $256^3$ and $512^3$...
+
+
 
 \section{Results}
 
@@ -747,6 +780,23 @@ sections: shape, angular momentum and peculiar velocities.
 \end{figure*}
 
 Possible conclusion. Prolateness follow concentration. In the Tweb Angular momentum alignment is influenced by spin at higher masses. In the Vweb angular momentum alginment is influenced by all factors. In the peculiar velocity alginment only spin seemss to have an effect.
+
+\subsection{Mass dependency and other conditions for stronger alignment}
+
+We wish to understand what other selection criteria on halo
+properties can produce a stronger local alignment for the shape, spin
+and peculiar velocities. We split the halo population into low and
+high mass halos imposing a cut at $M_{\rm halo}=10^{11}$\hMsun. This
+allows us to have robust statistics on the high mass end. We have also
+computed these results for a cut at $M_{\rm halo}=10^{12}$\hMsun and
+checked that the results we report below are not affected by this
+change.
+
+For each mass interval we perform cuts in the following properties:
+spin, concentration, triaxiallity, circularity  and density. We
+measure the web alignments in two sets, each one including the $30\%$
+of halos in the lower/higher end of the corresponding property.
+
 
 \section{Discussion}
 \label{sec:discussion}
