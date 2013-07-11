@@ -1,4 +1,4 @@
-LATEX = latex
+LATEX = pdflatex
 MAIN  = main
 
 main: 	$(MAIN).tex  
@@ -6,8 +6,6 @@ main: 	$(MAIN).tex
 	bibtex $(MAIN)
 	$(LATEX) $(MAIN).tex 
 	$(LATEX) $(MAIN).tex 
-	dvips $(MAIN).dvi -o $(MAIN).ps
-	ps2pdf $(MAIN).ps 
 
 
 clean:
