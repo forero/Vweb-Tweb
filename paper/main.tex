@@ -43,9 +43,11 @@
 \newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
 \newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc }\fi}}  
 \newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc }\fi}}  
-\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}  
-\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
-\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc }\fi}}
+\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm
+        {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}   
+\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm
+        {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}   
 \newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\lya}{{Lyman$\alpha$~}}
@@ -581,143 +583,172 @@ sections: shape, angular momentum and peculiar velocities.
 
 ... 
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V3.ps}
-\caption{Interweb alignment for $256^3$ grid resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T1V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T2V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/256/256_T3V3.ps}
+%\caption{Interweb alignment for $256^3$ grid resolution.}
+%\end{figure*}
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V3.ps}
-\caption{Interweb alignment for $512^3$ grid resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T1V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T2V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/512/512_T3V3.ps}
+%\caption{Interweb alignment for $512^3$ grid resolution.}
+%\end{figure*}
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Mass/Web.ps}
-\caption{Median of the interweb alignment for the two grid resolution.}
-\end{figure*}
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{../plot2/Mass/Web.ps}
+\caption{Median of the interweb alignment for the two grid
+  resolutions as a function of the dark matter mass corresponding to
+  the halos where the measurement was made. The error bars indicate
+  the lower and upper quartiles (Figure in color in the web version).} 
+\end{figure}
+
 
 \subsection{Shape Alignment}
 
 \begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V3.ps}
-\caption{Shape alignment for the vweb at $256^3$ resolution.}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/VWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/TWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/VWebV2.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/TWebV2.ps}
+\caption{Median of $\cos\theta$ quantifying the shape alignment for
+  the Vweb (left) and the Tweb (right) at two different grid
+  resolutions. In the upper (lower) panels the angle $\theta$ is
+  measured between the halo minor (major) axis and the first (third)
+  eigenvector.} 
 \end{figure*}
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T3.ps}
-\caption{Shape alignment for the tweb at $256^3$ resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_V3.ps}
+%\caption{Shape alignment for the vweb at $256^3$ resolution.}
+%\end{figure*}
+
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/256_AX1_T3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/256_AX2_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/256_AX3_T3.ps}
+%\caption{Shape alignment for the tweb at $256^3$ resolution.}
+%\end{figure*}
 
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V3.ps}
-\caption{Shape alignment for the vweb at $512^3$ resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_V3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_V3.ps}
+%\caption{Shape alignment for the vweb at $512^3$ resolution.}
+%\end{figure*}
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T3.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T3.ps}
-\caption{Shape alignment for the tweb at $512^3$ resolution.}
-\end{figure*}
-
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Mass/VWeb.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Mass/TWeb.ps}
-\caption{Median of the shape alignment for the two web  and the two grid resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax1_VT/512_AX1_T3.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax2_VT/512_AX2_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/Ax3_VT/512_AX3_T3.ps}
+%\caption{Shape alignment for the tweb at $512^3$ resolution.}
+%\end{figure*}
 
 
 \newpage
 \subsection{Angular Momentum Alignment}
 
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V3.ps}
-\caption{Angular momentum alignment with the Vweb for $256^3$ grid resolution.}
-\end{figure*}
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_V3.ps}
+%\caption{Angular momentum alignment with the Vweb for $256^3$ grid resolution.}
+%\end{figure*}
+
+
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V3.ps}
+%\caption{Angular momentum alignment with the Vweb for $512^3$ grid resolution.}
+%\end{figure*}
+
+
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T3.ps}
+%\caption{Angular momentum alignment with the Tweb for $256^3$ grid resolution.}
+%\end{figure*}
+
+
+%\begin{figure*}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T1.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T2.ps}
+%\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T3.ps}
+%\caption{Angular momentum alignment with the Tweb for $512^3$ grid resolution.}
+%\end{figure*}
 
 
 \begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_V3.ps}
-\caption{Angular momentum alignment with the Vweb for $512^3$ grid resolution.}
-\end{figure*}
-
-
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/256_J_T3.ps}
-\caption{Angular momentum alignment with the Tweb for $256^3$ grid resolution.}
-\end{figure*}
-
-
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T1.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T2.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/J/512_J_T3.ps}
-\caption{Angular momentum alignment with the Tweb for $512^3$ grid resolution.}
-\end{figure*}
-
-
-\begin{figure*}
-\includegraphics[width=0.30\textwidth]{../plot2/Mass/jVWeb.ps}
-\includegraphics[width=0.30\textwidth]{../plot2/Mass/jTWeb.ps}
-\caption{Median of the angular momentum for the two web  and the two grid resolution.}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/jVWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/jTWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/jVWebV2.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/jTWebV2.ps}
+\caption{Median of $\cos\theta$ quantifying the angular momentum
+  alingment for the Vweb (left) and the Tweb (right) at two different
+  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
+  measured between the first (third) eivenvector and the angular
+  momentum vector.} 
 \end{figure*}
 
 
 
 \subsection{Peculiar velocity Alignment}
+
+\begin{figure*}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/vVWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/vTWeb.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/vVWebV2.ps}
+\includegraphics[width=0.48\textwidth]{../plot2/Mass/vTWebV2.ps}
+\caption{Median of $\cos\theta$ quantifying the peculiar velocity
+  alignment with the Vweb (left) and the Tweb (right) at two different
+  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
+  measured between the first (third) eivenvector and the peculiar
+  velocity of each halo.} 
+\end{figure*}
+
 
 \begin{figure*}
 \includegraphics[width=0.30\textwidth]{../plot2/Vel/256_vel_V1.ps}
