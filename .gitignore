@@ -1,3 +1,6 @@
+code/*.png
+code/*.pdf
+code/*.eps
 *~
 *.aux 
 *.blg
