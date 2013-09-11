@@ -1,6 +1,6 @@
 
 Estructura de cada archivo
-       mu_{30%}, sigma mu_{30%}, mu_{-30%}, sigma mu_{-30%}, mu_{100%}, sigma mu_{100%}
+       mu_{30%}, mu_{-30%}, sigma mu_{-30%}, sigma mu_{-30%}, mu_{100%}, sigma mu_{100%}
 Ax-V
 Ax-T
 J-V
