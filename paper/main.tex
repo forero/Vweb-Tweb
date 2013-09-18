@@ -17,9 +17,8 @@
 
 \usepackage[normalem]{ulem}
 \definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
-\newcommand{\SRK}[1]{\textcolor{darkgreen}{\bf SRK: \textit{#1}}}
-\newcommand{\SRKED}[1]{\textcolor{darkgreen}{\bf #1}}
 
+\newcommand{\documentname}{paper~}
 \newcommand{\LCDM}{$\Lambda$CDM~}
 \newcommand{\beq}{\begin{eqnarray}}  
 \newcommand{\eeq}{\end{eqnarray}}  
@@ -125,10 +124,8 @@ Alignment & Mass dependence\\\hline
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
 filament &$++$ & $>10^{12}$\hMsun\\
-
 &   & & 
 filament &$+$ & $<10^{12}$\hMsun\\
-
 &   & & 
 wall & $++$ & all masses\\
 
@@ -520,7 +517,46 @@ significant mutual alignment of halos on any escale.
 \section{N-body simulation and halo finding}
 
 
-In this paper we use groups found with a FOF halo finder.
+In this \documentname we use the Bolshoi volume. This is a simulation
+that follows the non-linear evolution of a dark matter density field
+on cosmological scales. The volume is a cubic box with 250\hMpc on a
+side, the matter density field is sampled with $2048^3$ particles. The
+cosmological parameters in the simulation correspond to the results
+inferred from WMAP5 data, which are also consistent with the more
+recent results of WMAP9. These parameters are $\Omega_m=0.27$,
+$\Omega_{\Lambda} =0.73$, $\sigma_8=0.82$, $n_s=0.95$ and $h=0.70$ for the
+matter density, cosmological constant, normalization of the power
+spectrum, the slope in the spectrum of the primordial matter
+fluctuation and the dimensionless Hubble constant. With this
+conditions the mass of each dark matter particle in the simulation
+corresponds to $m_p=1.4\times 10^{8}$\hMsun. 
+
+
+In this paper we use groups found with a Friends-Of-Friends (FOF) halo
+finder using a linking length of $b=0.17$ times the mean interparticle
+separation. This choice translates into halos with a density of $570$
+times the mean density at $z=0$. The measurements for the shape,
+angular momentum and peculiar velocity are done using the set of
+particles in each dark matter halo. The definition we use in this
+\documentname for the shape comes from the diagonalization of the
+reduced inertia tensor.
+
+\begin{equation}
+{\mathcal T}_{lm} = \sum_{i}\frac{x_{i,l}x_{i,m}}{R_i^2}, 
+\end{equation}
+where $i$ is the particle index in the halo and $l,m$ run over the
+three spatial indexes  and $R_i^2 = x_{i,1}^2 + x_{i,2}^2 +
+x_{i,3}^2$, where the positions are measured with respect to the
+center of mass.
+
+The spin is calculated as
+\begin{equation}
+\vec{J} = \sum_{i}m_p{R_i}\vec{v}_i, 
+\end{equation}
+where the velocities are also measured with respect to the center of
+mass velocity. Finally the peculiar velocity of a halo is computed as the center of
+mass velocity.
+
 
 \section{The cosmic web algorithms}
 \label{sec:algorithms}
@@ -565,7 +601,7 @@ The second tensor is the velocity shear:
 \subsection{Numerical considerations}
 
 In this paper we compute the cosmic web on grids of two different
-resolutions $256^3$ and $512^3$...
+resolutions $256^3$ and $512^3$. In the case for the Tweb we interpolate
 
 
 
