@@ -77,6 +77,23 @@ $^{2}$Uni B
 
 \begin{abstract}
 
+We study
+the alignment of DM halos with the cosmic web as described by the
+tidal and velocity shear fields. We focus on the alignment of halos
+shape, spin and peculiar velocities. We use a cosmological N-body
+simulation that allows to study dark matter halos spanning four orders
+of magnitude in mass ($(10^{10}$-$10^{14}$) \hMsun and spatial
+scales of $(0.5$-$1.0)$\hMpc to define the cosmic web. After varying
+the numerical parameters in our experiments we find that the tidal
+field provides a robust description for the different kinds of
+alignments.  We measure a strong here is a strong alignment of the
+peculiar velocity field and the halo shape with the cosmic web defined
+by the tidal field. The results for the spin alignment are less
+significant. The shape alignment is stronger for halos that are either
+ massive ($M>10^{12}$\hMsun), have large or are located in high
+ density regions.  
+
+
 \end{abstract}
 \begin{keywords}
 methods: N-body simulations, galaxies: haloes, cosmology: theory, dark
@@ -216,6 +233,204 @@ Angular Momentum}
 \end{table*}
 
 
+
+\section{N-body simulation and halo finding}
+
+
+In this \documentname we use the Bolshoi volume. This is a simulation
+that follows the non-linear evolution of a dark matter density field
+on cosmological scales. The volume is a cubic box with 250\hMpc on a
+side, the matter density field is sampled with $2048^3$ particles. The
+cosmological parameters in the simulation correspond to the results
+inferred from WMAP5 data, which are also consistent with the more
+recent results of WMAP9. These parameters are $\Omega_m=0.27$,
+$\Omega_{\Lambda} =0.73$, $\sigma_8=0.82$, $n_s=0.95$ and $h=0.70$ for the
+matter density, cosmological constant, normalization of the power
+spectrum, the slope in the spectrum of the primordial matter
+fluctuation and the dimensionless Hubble constant. With this
+conditions the mass of each dark matter particle in the simulation
+corresponds to $m_p=1.4\times 10^{8}$\hMsun. 
+
+
+In this paper we use groups found with a Friends-Of-Friends (FOF) halo
+finder using a linking length of $b=0.17$ times the mean interparticle
+separation. This choice translates into halos with a density of $570$
+times the mean density at $z=0$. The measurements for the shape,
+angular momentum and peculiar velocity are done using the set of
+particles in each dark matter halo. The definition we use in this
+\documentname for the shape comes from the diagonalization of the
+reduced inertia tensor.
+
+\begin{equation}
+{\mathcal T}_{lm} = \sum_{i}\frac{x_{i,l}x_{i,m}}{R_i^2}, 
+\end{equation}
+where $i$ is the particle index in the halo and $l,m$ run over the
+three spatial indexes  and $R_i^2 = x_{i,1}^2 + x_{i,2}^2 +
+x_{i,3}^2$, where the positions are measured with respect to the
+center of mass.
+
+The spin is calculated as
+\begin{equation}
+\vec{J} = \sum_{i}m_p{R_i}\vec{v}_i, 
+\end{equation}
+where the velocities are also measured with respect to the center of
+mass velocity. Finally the peculiar velocity of a halo is computed as
+the center of mass velocity.
+
+
+\section{The cosmic web algorithms}
+\label{sec:algorithms}
+We use two algorithms to define the cosmic web on cosmological N-body
+simulations. Both are based on the same algorithmic principle, which
+is determining locally a symmetric tensor which can be diagonalized to yield
+three real eigenvalues $\lambda_1>\lambda_2>\lambda_3$ and their
+corresponding eigenvectors ${\bf e}_{1}$, ${\bf e}_2$ and ${\bf
+  e}_3$. This allows for a local classification into one of the
+following four categories: void, sheet, filament and peak depending
+whether the number of eigenvalues larger than a given threshold
+$\lambda_{th}$ is $3$, $2$, $1$ or $0$, respectively.
+
+We use two different symmetric tensors. The first is the shear tensor,
+defined as the hessian of the gravitational potential, normalized in
+such a way as to be dimensionless:
+
+\begin{equation}
+T_{\alpha\beta} = \frac{\partial^2\phi}{\partial
+  r_{\alpha}\partial r_{\beta}}, 
+\end{equation}
+where $\phi$ is the gravitational potential rescaled by a factor $4\pi
+G\bar{\rho}=3/2\Omega_m H_{0}^2$ in such a way that the Poission
+equation can be written as:
+
+\begin{equation}
+\nabla^{2}\phi  = \delta, 
+\end{equation}
+
+where $\delta$ is the matter overdensity, $\bar{\rho}$ is the average
+matter density, $H_{0}$ is the Hubble constant at present time and
+$\Omega_m$ is the matter density parameter.
+
+The second tensor is the velocity shear:
+
+\begin{equation}
+\Sigma_{\alpha\beta} = -\frac{1}{2H_{0}}\left(\frac{\partial
+  v_{\alpha}}{\partial r_{\beta}}+ \frac{\partial v_{\beta}}{\partial
+  r_{\alpha}}\right) 
+\end{equation}
+
+\subsection{Numerical considerations}
+
+In this paper we compute the cosmic web on grids of two different
+resolutions $256^3$ and $512^3$. In the case for the Tweb we interpolate
+
+
+
+\section{Results}
+
+\subsection{Interweb Alignment}
+... We compute the pair-wise allignment between the eigenvectors in
+the two web finders. 
+
+... We also compute the alignment between the eigenvectors in cells
+occupied by dark matter halos. This will be a key element in the
+interpretation of the results for halo-based allignments in the next
+sections: shape, angular momentum and peculiar velocities.
+
+... 
+
+\begin{figure}
+\includegraphics[width=0.40\textwidth]{web.pdf}
+\caption{Median of the interweb alignment for the two grid
+  resolutions as a function of the dark matter mass corresponding to
+  the halos where the measurement was made. The error bars indicate
+  the lower and upper quartiles (Figure in color in the web version).} 
+\end{figure}
+
+
+\subsection{Shape Alignment}
+
+\begin{figure*}
+\includegraphics[width=0.80\textwidth]{Fig2.pdf}
+\caption{Median of $\cos\theta$ quantifying the shape alignment for
+  the Vweb (left) and the Tweb (right) at two different grid
+  resolutions. In the upper (lower) panels the angle $\theta$ is
+  measured between the halo minor (major) axis and the first (third)
+  eigenvector.} 
+\end{figure*}
+
+\newpage
+\subsection{Angular Momentum Alignment}
+
+
+\begin{figure*}
+\includegraphics[width=0.80\textwidth]{Fig3.pdf}
+\caption{Median of $\cos\theta$ quantifying the angular momentum
+  alingment for the Vweb (left) and the Tweb (right) at two different
+  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
+  measured between the first (third) eivenvector and the angular
+  momentum vector.} 
+\end{figure*}
+
+
+
+\subsection{Peculiar velocity Alignment}
+
+\begin{figure*}
+\includegraphics[width=0.80\textwidth]{Fig4.pdf}
+\caption{Median of $\cos\theta$ quantifying the peculiar velocity
+  alignment with the Vweb (left) and the Tweb (right) at two different
+  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
+  measured between the first (third) eivenvector and a halo's peculiar
+  velocity.} 
+\end{figure*}
+
+Possible conclusion. Prolateness follow concentration. In the Tweb Angular momentum alignment is influenced by spin at higher masses. In the Vweb angular momentum alginment is influenced by all factors. In the peculiar velocity alginment only spin seemss to have an effect.
+
+\subsection{What drives the alignment}
+
+We wish to understand what other selection criteria on halo
+properties can produce a stronger local alignment for the shape, spin
+and peculiar velocities. We split the halo population into low and
+high mass halos imposing a cut at $M_{\rm halo}=10^{11}$\hMsun. This
+allows us to have robust statistics on the high mass end. We have also
+computed these results for a cut at $M_{\rm halo}=10^{12}$\hMsun and
+checked that the results we report below are not affected by this
+change.
+
+For each mass interval we perform cuts in the following properties:
+spin, concentration, triaxiallity, circularity  and density. We
+measure the web alignments in two sets, each one including the $30\%$
+of halos in the lower/higher end of the corresponding property.
+
+
+\begin{figure*}
+\includegraphics[width=0.48\textwidth]{ax_T_cut.pdf}
+\includegraphics[width=0.48\textwidth]{ax_V_cut.pdf}
+\includegraphics[width=0.48\textwidth]{J_T_cut.pdf}
+\includegraphics[width=0.48\textwidth]{J_V_cut.pdf}
+\includegraphics[width=0.48\textwidth]{v_T_cut.pdf}
+\includegraphics[width=0.48\textwidth]{v_V_cut.pdf}
+\caption{The alignment is always taken with respect to the first eigenvector.}
+\end{figure*}
+
+\section{Discussion}
+\label{sec:discussion}
+
+
+We do not find a strong signal for the alignment of spin and the
+cosmic web. A significant correlation signal has been recently
+measured between the spin and the cosmic vorticity
+\citep{Libeskind2013a,Laigle2013}. This two facts are consistent with
+spin being produced by the non-symmetric part of the shear and tidal
+tensors.  
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+
+\section*{Acknowledgments} 
+
+\section*{Appendix A. Detailed description of previous theoretical results}
 
 
 \begin{itemize}
@@ -514,201 +729,6 @@ structures or other massive structures. They match halos using close
 pair statistics. They do not find any evidence for a statistically
 significant mutual alignment of halos on any escale. 
 \end{itemize}
-\section{N-body simulation and halo finding}
-
-
-In this \documentname we use the Bolshoi volume. This is a simulation
-that follows the non-linear evolution of a dark matter density field
-on cosmological scales. The volume is a cubic box with 250\hMpc on a
-side, the matter density field is sampled with $2048^3$ particles. The
-cosmological parameters in the simulation correspond to the results
-inferred from WMAP5 data, which are also consistent with the more
-recent results of WMAP9. These parameters are $\Omega_m=0.27$,
-$\Omega_{\Lambda} =0.73$, $\sigma_8=0.82$, $n_s=0.95$ and $h=0.70$ for the
-matter density, cosmological constant, normalization of the power
-spectrum, the slope in the spectrum of the primordial matter
-fluctuation and the dimensionless Hubble constant. With this
-conditions the mass of each dark matter particle in the simulation
-corresponds to $m_p=1.4\times 10^{8}$\hMsun. 
-
-
-In this paper we use groups found with a Friends-Of-Friends (FOF) halo
-finder using a linking length of $b=0.17$ times the mean interparticle
-separation. This choice translates into halos with a density of $570$
-times the mean density at $z=0$. The measurements for the shape,
-angular momentum and peculiar velocity are done using the set of
-particles in each dark matter halo. The definition we use in this
-\documentname for the shape comes from the diagonalization of the
-reduced inertia tensor.
-
-\begin{equation}
-{\mathcal T}_{lm} = \sum_{i}\frac{x_{i,l}x_{i,m}}{R_i^2}, 
-\end{equation}
-where $i$ is the particle index in the halo and $l,m$ run over the
-three spatial indexes  and $R_i^2 = x_{i,1}^2 + x_{i,2}^2 +
-x_{i,3}^2$, where the positions are measured with respect to the
-center of mass.
-
-The spin is calculated as
-\begin{equation}
-\vec{J} = \sum_{i}m_p{R_i}\vec{v}_i, 
-\end{equation}
-where the velocities are also measured with respect to the center of
-mass velocity. Finally the peculiar velocity of a halo is computed as
-the center of mass velocity.
-
-
-\section{The cosmic web algorithms}
-\label{sec:algorithms}
-We use two algorithms to define the cosmic web on cosmological N-body
-simulations. Both are based on the same algorithmic principle, which
-is determining locally a symmetric tensor which can be diagonalized to yield
-three real eigenvalues $\lambda_1>\lambda_2>\lambda_3$ and their
-corresponding eigenvectors ${\bf e}_{1}$, ${\bf e}_2$ and ${\bf
-  e}_3$. This allows for a local classification into one of the
-following four categories: void, sheet, filament and peak depending
-whether the number of eigenvalues larger than a given threshold
-$\lambda_{th}$ is $3$, $2$, $1$ or $0$, respectively.
-
-We use two different symmetric tensors. The first is the shear tensor,
-defined as the hessian of the gravitational potential, normalized in
-such a way as to be dimensionless:
-
-\begin{equation}
-T_{\alpha\beta} = \frac{\partial^2\phi}{\partial
-  r_{\alpha}\partial r_{\beta}}, 
-\end{equation}
-where $\phi$ is the gravitational potential rescaled by a factor $4\pi
-G\bar{\rho}=3/2\Omega_m H_{0}^2$ in such a way that the Poission
-equation can be written as:
-
-\begin{equation}
-\nabla^{2}\phi  = \delta, 
-\end{equation}
-
-where $\delta$ is the matter overdensity, $\bar{\rho}$ is the average
-matter density, $H_{0}$ is the Hubble constant at present time and
-$\Omega_m$ is the matter density parameter.
-
-The second tensor is the velocity shear:
-
-\begin{equation}
-\Sigma_{\alpha\beta} = -\frac{1}{2H_{0}}\left(\frac{\partial
-  v_{\alpha}}{\partial r_{\beta}}+ \frac{\partial v_{\beta}}{\partial
-  r_{\alpha}}\right) 
-\end{equation}
-
-\subsection{Numerical considerations}
-
-In this paper we compute the cosmic web on grids of two different
-resolutions $256^3$ and $512^3$. In the case for the Tweb we interpolate
-
-
-
-\section{Results}
-
-\subsection{Interweb Alignment}
-... We compute the pair-wise allignment between the eigenvectors in
-the two web finders. 
-
-... We also compute the alignment between the eigenvectors in cells
-occupied by dark matter halos. This will be a key element in the
-interpretation of the results for halo-based allignments in the next
-sections: shape, angular momentum and peculiar velocities.
-
-... 
-
-\begin{figure}
-\includegraphics[width=0.40\textwidth]{web.pdf}
-\caption{Median of the interweb alignment for the two grid
-  resolutions as a function of the dark matter mass corresponding to
-  the halos where the measurement was made. The error bars indicate
-  the lower and upper quartiles (Figure in color in the web version).} 
-\end{figure}
-
-
-\subsection{Shape Alignment}
-
-\begin{figure*}
-\includegraphics[width=0.80\textwidth]{Fig2.pdf}
-\caption{Median of $\cos\theta$ quantifying the shape alignment for
-  the Vweb (left) and the Tweb (right) at two different grid
-  resolutions. In the upper (lower) panels the angle $\theta$ is
-  measured between the halo minor (major) axis and the first (third)
-  eigenvector.} 
-\end{figure*}
-
-\newpage
-\subsection{Angular Momentum Alignment}
-
-
-\begin{figure*}
-\includegraphics[width=0.80\textwidth]{Fig3.pdf}
-\caption{Median of $\cos\theta$ quantifying the angular momentum
-  alingment for the Vweb (left) and the Tweb (right) at two different
-  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
-  measured between the first (third) eivenvector and the angular
-  momentum vector.} 
-\end{figure*}
-
-
-
-\subsection{Peculiar velocity Alignment}
-
-\begin{figure*}
-\includegraphics[width=0.80\textwidth]{Fig4.pdf}
-\caption{Median of $\cos\theta$ quantifying the peculiar velocity
-  alignment with the Vweb (left) and the Tweb (right) at two different
-  grid resolutions. In the upper (lower)  panels the angle $\theta$ is
-  measured between the first (third) eivenvector and a halo's peculiar
-  velocity.} 
-\end{figure*}
-
-Possible conclusion. Prolateness follow concentration. In the Tweb Angular momentum alignment is influenced by spin at higher masses. In the Vweb angular momentum alginment is influenced by all factors. In the peculiar velocity alginment only spin seemss to have an effect.
-
-\subsection{What drives the alignment}
-
-We wish to understand what other selection criteria on halo
-properties can produce a stronger local alignment for the shape, spin
-and peculiar velocities. We split the halo population into low and
-high mass halos imposing a cut at $M_{\rm halo}=10^{11}$\hMsun. This
-allows us to have robust statistics on the high mass end. We have also
-computed these results for a cut at $M_{\rm halo}=10^{12}$\hMsun and
-checked that the results we report below are not affected by this
-change.
-
-For each mass interval we perform cuts in the following properties:
-spin, concentration, triaxiallity, circularity  and density. We
-measure the web alignments in two sets, each one including the $30\%$
-of halos in the lower/higher end of the corresponding property.
-
-
-\begin{figure*}
-\includegraphics[width=0.48\textwidth]{ax_T_cut.pdf}
-\includegraphics[width=0.48\textwidth]{ax_V_cut.pdf}
-\includegraphics[width=0.48\textwidth]{J_T_cut.pdf}
-\includegraphics[width=0.48\textwidth]{J_V_cut.pdf}
-\includegraphics[width=0.48\textwidth]{v_T_cut.pdf}
-\includegraphics[width=0.48\textwidth]{v_V_cut.pdf}
-\caption{The alignment is always taken with respect to the first eigenvector.}
-\end{figure*}
-
-\section{Discussion}
-\label{sec:discussion}
-
-
-We do not find a strong signal for the alignment of spin and the
-cosmic web. A significant correlation signal has been recently
-measured between the spin and the cosmic vorticity
-\citep{Libeskind2013a,Laigle2013}. This two facts are consistent with
-spin being produced by the non-symmetric part of the shear and tidal
-tensors.  
-
-\section{Conclusions}
-\label{sec:conclusions}
-
-
-\section*{Acknowledgments} 
 
 \bibliographystyle{mn2e}
 \bibliography{references} 
