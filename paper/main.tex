@@ -8,6 +8,7 @@
 \def\ee{\end{equation}}
 \def\ba{\begin{eqnarray}}
 \def\ea{\end{eqnarray}}
+
 % To highlight comments 
 \usepackage{color}
 \definecolor{red}{rgb}{1,0.0,0.0}
@@ -104,9 +105,39 @@ matter, large-scale structure of Universe
 \section{Introduction}
 \label{sec:introduction}
 
-%-------
+The formation of large scale structure in the Universe proceeds by
+gravitational instability. This is an intrinsic anisotropic
+process. [Pancake formation ...] 
 
-\section{Theoretical Antecedents}
+
+Numerical simulations allow the exploration of a deep nonlinear
+regime, following the formation of virialized dark matter halos, which
+host observable galaxies. Some characteristics of these halos have to
+be linked to the environment in which they formed. One way to studty
+the connection halo-environment is to quantify the degree of
+correlation between different halo properties and their surrounding
+density and velocity fields. 
+
+
+Among the properties that are of interest we find the shape, spin and
+peculiar velocity. [Relevanc of dark matter halo shapes ...]
+[Relevance of halo spin ...] [Relevance of peculiar velocities]
+
+There is large tradition of theoretical precedents for the
+measurements of shape and spin alignment. In this \documentname we
+review most of these studyes and offer our own study with
+complementary numerical techniques and simulations. [Brief summary of
+  the appendix ...]
+
+We also present the results for the alignment of peculiar velocities
+with large scale structure. Such a study has received less atention in
+the literature. However, we consider that it presents relevant
+insights for the study of cosmic flows.
+
+The structure of this \documentname is the following.
+
+
+\section{Theoretical Precedents}
 \label{sec:theory}
 
 ... There is abundant literature on the issue of shape and angular momentum
@@ -116,8 +147,8 @@ aligmnent of dark matter haloe with respect to the cosmic we.
 $\cos\theta$ where $\theta$ is the angle between the two axes of
 interest.
 
-... Table 1 and Table 2 summariz recent results found in the literature for
-shape and angular momentum alignment, respectively.
+... Table 1 and Table 2 summarizes recent results found in the literature for
+shape and angular momentum alignment. 
 
 The tidal connection between voids in simulations \citep{Platen2008},
 the alignment of observed galaxies with the inferred tidal
@@ -139,18 +170,32 @@ SHAPE
 Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
+{\bf Contreras et al. (2014)} & T-Web & $0.5-1 \hMpc$ & 
+filament &$?$ & $>10^{12}$\hMsun\\
+&   & & 
+filament &$?$ & $<10^{12}$\hMsun\\
+&   & & 
+wall & $?$ & all masses\\\hline
+
+{\bf Contreras et al. (2014)} & Vp-Web & $0.5-1 \hMpc$ & 
+filament &$?$ & $>10^{12}$\hMsun\\
+&   & & 
+filament &$?$ & $<10^{12}$\hMsun\\
+&   & & 
+wall & $?$ & all masses\\\hline
+
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
 filament &$++$ & $>10^{12}$\hMsun\\
 &   & & 
 filament &$+$ & $<10^{12}$\hMsun\\
 &   & & 
-wall & $++$ & all masses\\
+wall & $++$ & all masses\\\hline
 
 \cite{Zhang2009}  & Hessian density field &  $2.1$\hMpc & 
 filament & $++$ & $>10^{12}\hMsun$\\
 
 & &  & 
-filament & $+$ & $<10^{12}\hMsun$\\
+filament & $+$ & $<10^{12}\hMsun$\\\hline
 
 \cite{AragonCalvo2007} & Hessian density field & - &
 wall & $++$ & $>10^{12}$\hMsun\\
@@ -165,16 +210,33 @@ filament& $++$ & $>10^{12}$\hMsun\\
 filament& $+$ & $<10^{12}$\hMsun\\\hline \hline
 
 \end{tabular}\\
-\caption{Summary of previous theoretical results.
-Shape. Indicates the alignment of the halo's major axis along a
-filament or a sheet.} 
+\caption{Shape alignment with the cosmic web. Summary of theoretical
+  results provided by methods comparable to ours.}
 \end{table*}
+
 
 \begin{table*}
 \begin{tabular}{cccccc}\hline\hline
 Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
+{\bf Contreras et al. (2014)} & V-Web & $1 \hMpc$ & 
+filament &$?$ & $>10^{12}$\hMsun\\
+
+&   & & 
+filament &$?$ & $<10^{12}$\hMsun\\
+
+&   & & 
+wall & $?$ & all masses\\\hline
+
+{\bf Contreras et al. (2014)} & Vp-Web & $1 \hMpc$ & 
+filament &$?$ & $>10^{12}$\hMsun\\
+
+&   & & 
+filament &$?$ & $<10^{12}$\hMsun\\
+
+&   & & 
+wall & $?$ & all masses\\\hline
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
 filament &$-$ & $>10^{12}$\hMsun\\
@@ -183,12 +245,12 @@ filament &$-$ & $>10^{12}$\hMsun\\
 filament &$+$ & $<10^{12}$\hMsun\\
 
 &   & & 
-wall & $++$ & all masses\\
+wall & $++$ & all masses\\\hline
 
 \cite{Trowland2013} & Hessian density & $2-5\hMpc$ & 
 filament & $-$ & $> 5\times 10^{12}$\hMsun\\
 &   & & 
-filament & $+$ & $< 5\times 10^{12}$\hMsun\\
+filament & $+$ & $< 5\times 10^{12}$\hMsun\\\hline
 
 \cite{Codis2012} & Morse Theory \& Tidal Web & $1-5\hMpc$ & 
 filament & $--$ & $>10^{12}$\hMsun \\ 
@@ -197,13 +259,13 @@ filament & $--$ & $>10^{12}$\hMsun \\
 filament & $++$ & $<10^{12}$\hMsun \\ 
 
 & & & 
-wall & $++$ & all masses\\
+wall & $++$ & all masses\\\hline
 
 \cite{Zhang2009}  & Hessian density field &  $2.1$\hMpc & 
 filament & $++$ & only if anticorrelated with shape\\
 
 & &  & 
-filament & $--$ & only if correlated with shape\\
+filament & $--$ & only if correlated with shape\\\hline
 
 \cite{AragonCalvo2007} & Hessian density field & - &
 wall & $++$ & $>10^{12}$\hMsun\\
@@ -213,11 +275,11 @@ wall & $++$ & $>10^{12}$\hMsun\\
 wall & $+$ & $<10^{12}$\hMsun\\
 
 & & - &
-filament& $-$ & $>10^{12}$\hMsun\\
+filament& $-$ & $>10^{12}$\hMsun\\\hline
 
 
 & & - &
-filament& $+$ & $<10^{12}$\hMsun\\
+filament& $+$ & $<10^{12}$\hMsun\\\hline
 
 
 
@@ -228,8 +290,9 @@ filament& $+$ & $<10^{12}$\hMsun\\
 wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
 \end{tabular}
-\caption{Summary of previous theoretical results.
-Angular Momentum}
+\caption{Spin alignment with the cosmic web. Summary of theoretical
+  results provided by methods comparable to ours.}
+
 \end{table*}
 
 
