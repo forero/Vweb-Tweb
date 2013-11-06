@@ -300,10 +300,10 @@ wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 \section{N-body simulation and halo finding}
 
 
-In this \documentname we use the Bolshoi volume. This is a simulation
-that follows the non-linear evolution of a dark matter density field
-on cosmological scales. The volume is a cubic box with 250\hMpc on a
-side, the matter density field is sampled with $2048^3$ particles. The
+In this \documentname we use the Bolshoi simulation that follows the
+non-linear evolution of a dark matter density field on cosmological
+scales. The volume is a cubic box with 250\hMpc on a side, the matter
+density field is sampled with $2048^3$ particles. The  
 cosmological parameters in the simulation correspond to the results
 inferred from WMAP5 data, which are also consistent with the more
 recent results of WMAP9. These parameters are $\Omega_m=0.27$,
@@ -391,22 +391,50 @@ resolutions $256^3$ and $512^3$. In the case for the Tweb we interpolate
 \section{Results}
 
 \subsection{Interweb Alignment}
-... We compute the pair-wise allignment between the eigenvectors in
-the two web finders. 
 
-... We also compute the alignment between the eigenvectors in cells
-occupied by dark matter halos. This will be a key element in the
-interpretation of the results for halo-based allignments in the next
-sections: shape, angular momentum and peculiar velocities.
+In the first place we wish to directly compare the results of the two
+algorithms. For the two algorithms we have the information for the
+eigenvectors and the eigenvalues on exactly the same positions defined
+by the grids. This allows us tocompute the pair-wise allignment
+between the eigenvectors in the two web finders. 
 
-... 
+We are mainly interested in the alginment of the web with
+the halos. Therefore we restrict our analysis to the grid cells that are
+occupied by halos. If we had decided to perform this kind of analysis
+on all the grid cells, the statistics would be dominated by the void
+regions, because the dominate in number the fraction of cells in the
+simuation.
+
+Figure \ref{fig:interweb} shows the results of the inter-web alignment
+as a function of halo mass. It clearly stands out that the
+eigenvectors are aligned for low mass halos but are close perpendicular to
+each other at the location of the most massive halos. There is a
+transition scale around $(10^{11.5}-10^{12.5})$\hMsun depending on the
+grid resolution. The coarse grid $(256^3)$shows the transition at higher masses
+than the fine grid $(512^3)$.  
+
+
+For both resolutions, the halos more massiven than $10^{13}$\hMsun are
+locate in regions where the fastest momentum-weighted collapse
+direction (defined by the V-web) is perpendicular to the direction
+where the tidal compression is the highest. 
+
+The fact that this trend is less evident at low resolution and low
+masses, hints that the flip is actually related to the overdensity
+values, i.e. to the degree of non-linearity, in the corresponding
+spatial scales.
+
+
+
+
 
 \begin{figure}
 \includegraphics[width=0.40\textwidth]{web.pdf}
 \caption{Median of the interweb alignment for the two grid
   resolutions as a function of the dark matter mass corresponding to
   the halos where the measurement was made. The error bars indicate
-  the lower and upper quartiles (Figure in color in the web version).} 
+  the lower and upper quartiles (Figure in color in the web version).
+\label{fig:interweb}} 
 \end{figure}
 
 
