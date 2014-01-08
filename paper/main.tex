@@ -66,9 +66,9 @@
   peculiar velocties of dark matter halos}  
 \author[S. Contreras et al.]{
 \parbox[t]{\textwidth}{\raggedright 
-  Sergio Contreras$^{1}$ 
-  Jaime E. Forero-Romero$^{1}$ 
-  Nelson Padilla$^{1}$ 
+  Jaime E. Forero-Romero$^{1}$,
+  Sergio Contreras$^{2}$,
+  Nelson Padilla$^{2}$ 
 }
 \vspace*{6pt}\\
 $^{1}$Uni A
@@ -134,28 +134,42 @@ with large scale structure. Such a study has received less atention in
 the literature. However, we consider that it presents relevant
 insights for the study of cosmic flows.
 
-The structure of this \documentname is the following.
+The structure of this \documentname is the following. In \S
+\ref{sec:theory} we present the theoretical antecedendts for the
+alignment studies we present in this paper. In \S
+\ref{sec:nbody} we present the N-body
+cosmological simulation and halo catalogs next to describe in
+\S\ref{sec:algorithms} the two web-finding algorithms we use. In
+\S\ref{sec:results} we present our main results about the alignment
+of shape, spin and peculiar velocities with respect to the cosmic
+web. We continue with a discussion of these results in
+\S\ref{sec:discussion} paying special attention to resolution effects
+and the conditions that might drive the strong alignment signals
+observed in the precedent section. In \S\ref{sec:conclusions} we
+present our conclusions.
 
 
 \section{Theoretical Precedents}
 \label{sec:theory}
 
 ... There is abundant literature on the issue of shape and angular momentum
-aligmnent of dark matter haloe with respect to the cosmic we.
+aligmnent of dark matter haloe with respect to the cosmic web.
 
 ... This alignment is often measured from the distribution of the
 $\cos\theta$ where $\theta$ is the angle between the two axes of
 interest.
 
 ... Table 1 and Table 2 summarizes recent results found in the literature for
-shape and angular momentum alignment. 
+shape and angular momentum alignment. The Appendix includes a detailed
+description of each one the algorithms. 
 
-The tidal connection between voids in simulations \citep{Platen2008},
-the alignment of observed galaxies with the inferred tidal
-field\citep{Lee2007,Jones2010}. There are other kind of alignment
-statistics based on modifications of the correlation
-\citep{Paz2008,Faltenbacher2009} that go beyond a local computation
-and therefore are not reviewed in detail in this paper.
+The main summary from these results can be done in three points. (i)
+The halo mass of $1-5\times 10^{12}$\hMsun is a threshold mass between
+different behaviours.  (ii) Halo shape is strongly aligned along
+filaments, more so for massive haloes and (iii) Halo spin tends to be
+perpendicular with respect to filaments, but it is a weak. 
+ 
+
 
 
 \begin{table}
@@ -302,7 +316,7 @@ wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
 
 \section{N-body simulation and halo finding}
-
+\label{sec:nbody}
 
 In this \documentname we use the Bolshoi simulation that follows the
 non-linear evolution of a dark matter density field on cosmological
@@ -365,34 +379,49 @@ such a way as to be dimensionless:
 T_{\alpha\beta} = \frac{\partial^2\phi}{\partial
   r_{\alpha}\partial r_{\beta}}, 
 \end{equation}
+%
 where $\phi$ is the gravitational potential rescaled by a factor $4\pi
 G\bar{\rho}=3/2\Omega_m H_{0}^2$ in such a way that the Poission
-equation can be written as:
-
-\begin{equation}
-\nabla^{2}\phi  = \delta, 
-\end{equation}
-
-where $\delta$ is the matter overdensity, $\bar{\rho}$ is the average
-matter density, $H_{0}$ is the Hubble constant at present time and
-$\Omega_m$ is the matter density parameter.
+equation can be written as $\nabla^{2}\phi  = \delta$, where $\delta$
+is the matter overdensity, $\bar{\rho}$ is the averagematter density,
+$H_{0}$ is the Hubble constant at present time and $\Omega_m$ is the
+matter density parameter. A detailed presentation of this algorithm
+can be found in \citep{Tweb}.
 
 The second tensor is the velocity shear:
 
 \begin{equation}
 \Sigma_{\alpha\beta} = -\frac{1}{2H_{0}}\left(\frac{\partial
   v_{\alpha}}{\partial r_{\beta}}+ \frac{\partial v_{\beta}}{\partial
-  r_{\alpha}}\right) 
+  r_{\alpha}}\right), 
 \end{equation}
+%
+where $v_{\alpha}$ correspond to the components of the peculiar
+comoving velocities. With this definition the trace of the shear
+tensor is minus the divergence of the velocity field normalized by the
+Hubble constant $-\nabla\cdot {\bf}v /H_{0}$. A detailed description
+of this algorithm can be found in \citep{Vweb}.
+
+
+
 
 \subsection{Numerical considerations}
 
 In this paper we compute the cosmic web on grids of two different
-resolutions $256^3$ and $512^3$. In the case for the Tweb we interpolate
+resolutions $256^3$ and $512^3$. In the V-Web computations we compute
+the velocity field as follows. First we compute the momentum density field
+over a grid and the normalize it by the matter density field. We follow the
+same procedure for the gaussian smoothed fields. It means that a
+smoothed velocity fields is the ratio of the smoothed momentum density
+and matter density fields.
+
+
+
 
 
 
 \section{Results}
+\label{sec:results}
 
 \subsection{Interweb Alignment}
 
@@ -537,7 +566,10 @@ second eigenvector.
   velocity.} 
 \end{figure*}
 
-Possible conclusion. Prolateness follow concentration. In the Tweb Angular momentum alignment is influenced by spin at higher masses. In the Vweb angular momentum alginment is influenced by all factors. In the peculiar velocity alginment only spin seemss to have an effect.
+Possible conclusion. Prolateness follow concentration. In the Tweb
+Angular momentum alignment is influenced by spin at higher masses. In
+the Vweb angular momentum alginment is influenced by all factors. In
+the peculiar velocity alginment only spin seemss to have an effect. 
 
 \subsection{What drives the alignment}
 
@@ -579,6 +611,13 @@ tensors.
 
 \section*{Appendix A. Detailed description of previous theoretical results}
 
+
+The tidal connection between voids in simulations \citep{Platen2008},
+the alignment of observed galaxies with the inferred tidal
+field\citep{Lee2007,Jones2010}. There are other kind of alignment
+statistics based on modifications of the correlation
+\citep{Paz2008,Faltenbacher2009} that go beyond a local computation
+and therefore are not reviewed in detail in this paper.
 
 \begin{itemize}
 
