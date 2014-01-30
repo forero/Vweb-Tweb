@@ -1,7 +1,7 @@
 LATEX = pdflatex
 MAIN  = main
 
-main: 	$(MAIN).tex  
+$(MAIN).pdf: 	$(MAIN).tex  
 	$(LATEX) $(MAIN).tex 
 	bibtex $(MAIN)
 	$(LATEX) $(MAIN).tex 
