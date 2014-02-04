@@ -573,53 +573,6 @@ Figure \ref{fig:preferential} presents all the results for the
 preferential alignment (PA).
 
 
-\subsection{Interweb Alignment}
-
-In the first place we wish to directly compare the results of the two
-algorithms. For the two algorithms we have the information for the
-eigenvectors and the eigenvalues on exactly the same positions defined
-by the grids. This allows us tocompute the pair-wise allignment
-between the eigenvectors in the two web finders. 
-
-We are mainly interested in the alginment of the web with
-the halos. Therefore we restrict our analysis to the grid cells that are
-occupied by halos. If we had decided to perform this kind of analysis
-on all the grid cells, the statistics would be dominated by the void
-regions, because the dominate in number the fraction of cells in the
-simuation.
-
-Figure \ref{fig:interweb} shows the results of the inter-web alignment
-as a function of halo mass. It clearly stands out that the
-eigenvectors are aligned for low mass halos but are close perpendicular to
-each other at the location of the most massive halos. There is a
-transition scale around $(10^{11.5}-10^{12.5})$\hMsun depending on the
-grid resolution. The coarse grid $(256^3)$shows the transition at higher masses
-than the fine grid $(512^3)$.  
-
-
-For both resolutions, the halos more massiven than $10^{13}$\hMsun are
-locate in regions where the fastest momentum-weighted collapse
-direction (defined by the V-web) is perpendicular to the direction
-where the tidal compression is the highest. 
-
-The fact that this trend is less evident at low resolution and low
-masses, hints that the flip is actually related to the overdensity
-values, i.e. to the degree of non-linearity, in the corresponding
-spatial scales.
-
-
-
-
-
-\begin{figure}
-\includegraphics[width=0.40\textwidth]{web.pdf}
-\caption{Median of the interweb alignment for the two grid
-  resolutions as a function of the dark matter mass corresponding to
-  the halos where the measurement was made. The error bars indicate
-  the lower and upper quartiles (Figure in color in the web version).
-\label{fig:interweb}} 
-\end{figure}
-
 \subsection{Angular Momentum Alignment}
 
 
@@ -752,6 +705,56 @@ measured between the spin and the cosmic vorticity
 \citep{Libeskind2013a,Laigle2013}. This two facts are consistent with
 spin being produced by the non-symmetric part of the shear and tidal
 tensors.  
+
+
+
+\subsection{Interweb Alignment}
+
+In the first place we wish to directly compare the results of the two
+algorithms. For the two algorithms we have the information for the
+eigenvectors and the eigenvalues on exactly the same positions defined
+by the grids. This allows us tocompute the pair-wise allignment
+between the eigenvectors in the two web finders. 
+
+We are mainly interested in the alginment of the web with
+the halos. Therefore we restrict our analysis to the grid cells that are
+occupied by halos. If we had decided to perform this kind of analysis
+on all the grid cells, the statistics would be dominated by the void
+regions, because the dominate in number the fraction of cells in the
+simuation.
+
+Figure \ref{fig:interweb} shows the results of the inter-web alignment
+as a function of halo mass. It clearly stands out that the
+eigenvectors are aligned for low mass halos but are close perpendicular to
+each other at the location of the most massive halos. There is a
+transition scale around $(10^{11.5}-10^{12.5})$\hMsun depending on the
+grid resolution. The coarse grid $(256^3)$shows the transition at higher masses
+than the fine grid $(512^3)$.  
+
+
+For both resolutions, the halos more massiven than $10^{13}$\hMsun are
+locate in regions where the fastest momentum-weighted collapse
+direction (defined by the V-web) is perpendicular to the direction
+where the tidal compression is the highest. 
+
+The fact that this trend is less evident at low resolution and low
+masses, hints that the flip is actually related to the overdensity
+values, i.e. to the degree of non-linearity, in the corresponding
+spatial scales.
+
+
+
+
+
+\begin{figure}
+\includegraphics[width=0.40\textwidth]{web.pdf}
+\caption{Median of the interweb alignment for the two grid
+  resolutions as a function of the dark matter mass corresponding to
+  the halos where the measurement was made. The error bars indicate
+  the lower and upper quartiles (Figure in color in the web version).
+\label{fig:interweb}} 
+\end{figure}
+
 
 \section{Conclusions}
 \label{sec:conclusions}
