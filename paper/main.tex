@@ -149,26 +149,73 @@ observed in the precedent section. In \S\ref{sec:conclusions} we
 present our conclusions.
 
 
-\section{Theoretical Precedents}
+\section{Theoretical Considerations: Notation and Precendents}
 \label{sec:theory}
 
-... There is abundant literature on the issue of shape and angular momentum
-aligmnent of dark matter haloe with respect to the cosmic web.
+There is abundant literature on the issue of shape and angular momentum
+aligmnent of dark matter haloe with respect to the cosmic web. In this
+paper we focus our attention on results published during the last
+decade that have made use of large N-body dark matter only
+cosmological simulations. There are many works that have addressed
+this problem using observational data from large surveys such as the
+Sloan Digital Sky Survey (SDSS), however we choose to narrow our
+discussion to simulation based studies which are prone to comparison.
 
-... This alignment is often measured from the distribution of the
-$\cos\theta$ where $\theta$ is the angle between the two axes of
-interest.
+Out of the three alignments that we study in this paper -shape,
+angular momentum and peculiar velocity- only the the first two have
+received wide attention in the literature, being angular momentum the
+most popular with twice the number of studies for shape alignment.
 
-... Table 1 and Table 2 summarizes recent results found in the literature for
-shape and angular momentum alignment. The Appendix includes a detailed
-description of each one the algorithms. 
+These alignments are often measured from the distribution of the
+$\mu=\vert\cos\theta\vert$ where $\theta$ is the angle between the two axes of
+interest. This is often directly measuered as the absolute value of
+the dot product between the two unit vectors along the directions
+being tested, for instance in the case of angular momentum one would compute
+$\mu=\vert\hat{j}\cdot\hat{n}\vert$ In the case of shape alignments the major
+axis is the chosen direction to compare against the cosmic web. 
 
-The main summary from these results can be done in three points. (i)
-The halo mass of $1-5\times 10^{12}$\hMsun is a threshold mass between
-different behaviours.  (ii) Halo shape is strongly aligned along
-filaments, more so for massive haloes and (iii) Halo spin tends to be
-perpendicular with respect to filaments, but it is a weak. 
- 
+For an isotropic ditribution of the vector around the direction defined by
+$\hat{n}$ the $\mu$ distribution, ranging between $0$ and $1$, should
+be flat and its mean value shoud be
+$\langle|mu|\rangle=0.5$. If a distribution is biased towards $1$
+($\langle\vert\mu\vert\rangle>0.5$) we call this an statistical
+alignment along $\hat{n}$, while in the case of a bias towards $0$
+($\langle\vert\mu\vert\rangle<0.5$) we talk about an anti-alignment,
+meaning an perpendicular orientations with respecto to the $\hat{n}$
+direction. 
+
+\cite{Trowland2013} presented a parameterization for the $\mu$
+distribution in the case of angular momentm alignment based on
+theoretical considerations by \cite{Lee2005} (Eq. \ref{eq:distro} in
+the Appendix A). Under this parameterization it was found a unique
+correspondece between the full shape of the $\vert\mu\vert$
+distribution and its average. In this paper we use that result to only
+present the results for the average $\langle\vert\mu\vert\rangle$. 
+
+Table 1 and Table 2 summarize recent results found in the literature for
+shape and angular momentum alignment. The Appendix A includes a detailed
+description of the definitions, algorithms and simulations used in
+each one of these studies. In these tables the first column describe
+the reference, the second column summarizes the web finding method
+with a single name, the third scale associates an spatial scale to the
+web finding methods, in most cases it corresponds to the grid size or
+smoothing scale used to interpolate the underlying matter density or
+velocity field; The fourth column indicates along which web element
+(filament or wall) was measured the alignment; the fifth scale
+indicates the strenght of the alignment/anti-alignment, $++$/$--$
+indicate a strong alignement/anti-alignment while $+$/$-$ indicate a
+weaker signal; the last columns indicates whether the described signal
+is only present in a defined range of halo mass.
+
+These results can be summarized in three important points:
+\begin{itemize}
+\item The halo mass of $1-5\times 10^{12}$\hMsun is a threshold mass between
+behaviours of no-alignment, alignment or anti-alignment.
+\item Halo shape provides a strong alignment signal along filaments
+  and sheets, more so for massive haloes. 
+\item Halo spin tends to be oriented perpendicular to filaments and
+parallel to sheets, but it is a weaker than shape alignment. 
+\end{itemize}
 
 
 
@@ -689,6 +736,7 @@ the $\cos(\theta)$ distribution
 P(\cos\theta) =
 (1-c)\sqrt{1+\frac{c}{2}}\left[1-c\left(1-\frac{3}{2}\cos^{2}\theta
   \right)\right]^{-3/2}, 
+\label{eq:distro}
 \end{equation}
 
 they are able to quantify the degree of alignment ($c<0$) or
