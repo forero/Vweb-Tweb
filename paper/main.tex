@@ -1,9 +1,10 @@
-\documentclass[usenatbib]{mn2e} 
+\documentclass[useAMS,usenatbib]{mn2e} 
 \usepackage{amsmath} 
 \usepackage{amssymb} 
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage{epsfig}  
+\usepackage{hyperref} 
 \def\be{\begin{equation}}
 \def\ee{\end{equation}}
 \def\ba{\begin{eqnarray}}
@@ -24,6 +25,7 @@
 \newcommand{\beq}{\begin{eqnarray}}  
 \newcommand{\eeq}{\end{eqnarray}}  
 \newcommand{\zz}{$z\sim 3$} 
+
 \newcommand{\apj}{ApJ}  
 \newcommand{\apjs}{ApJS}  
 \newcommand{\apjl}{ApJL}  
@@ -184,7 +186,7 @@ alignment along $\hat{n}$, while in the case of a bias towards $0$
 meaning an perpendicular orientations with respecto to the $\hat{n}$
 direction. 
 
-\cite{Trowland2013} presented a parameterization for the $\mu$
+a \cite{Trowland2013} presented a parameterization for the $\mu$
 distribution in the case of angular momentm alignment based on
 theoretical considerations by \cite{Lee2005} (Eq. \ref{eq:distro} in
 the Appendix A). Under this parameterization it was found a unique
@@ -201,11 +203,11 @@ with a single name, the third scale associates an spatial scale to the
 web finding methods, in most cases it corresponds to the grid size or
 smoothing scale used to interpolate the underlying matter density or
 velocity field; The fourth column indicates along which web element
-(filament or wall) was measured the alignment; the fifth scale
+(filament or wall) was measured the alignment; the fifth colume
 indicates the strenght of the alignment/anti-alignment, $++$/$--$
 indicate a strong alignement/anti-alignment while $+$/$-$ indicate a
 weaker signal; the last columns indicates whether the described signal
-is only present in a defined range of halo mass.
+is present within a defined range of halo mass.
 
 These results can be summarized in three important points:
 \begin{itemize}
@@ -341,7 +343,7 @@ wall & $++$ & $>10^{12}$\hMsun\\
 wall & $+$ & $<10^{12}$\hMsun\\
 
 & & - &
-filament& $-$ & $>10^{12}$\hMsun\\\hline
+filament& $-$ & $>10^{12}$\hMsun\\
 
 
 & & - &
@@ -351,9 +353,8 @@ filament& $+$ & $<10^{12}$\hMsun\\\hline
 
 \cite{Hahn2007} & Tidal Web & $2.1$ & filament & $-$& none\\
 
-
-& &  $2.1$\hMpc &
-wall & $++$ & stronger $>10^{12}$\\\hline \hline
+& &  $2.1$ &
+wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
 \end{tabular}
 \caption{Spin alignment with the cosmic web. Summary of theoretical
@@ -371,14 +372,16 @@ non-linear evolution of a dark matter density field on cosmological
 scales. The volume is a cubic box with 250\hMpc on a side, the matter
 density field is sampled with $2048^3$ particles. The  
 cosmological parameters in the simulation correspond to the results
-inferred from WMAP5 data, which are also consistent with the more
-recent results of WMAP9. These parameters are $\Omega_m=0.27$,
+inferred from WMAP5 data \citep{2009ApJS..180..306D}, which are also consistent with the more
+recent results of WMAP9 \citep{2013ApJS..208...19H}. These parameters are $\Omega_m=0.27$,
 $\Omega_{\Lambda} =0.73$, $\sigma_8=0.82$, $n_s=0.95$ and $h=0.70$ for the
 matter density, cosmological constant, normalization of the power
 spectrum, the slope in the spectrum of the primordial matter
 fluctuation and the dimensionless Hubble constant. With this
 conditions the mass of each dark matter particle in the simulation
-corresponds to $m_p=1.4\times 10^{8}$\hMsun. 
+corresponds to $m_p=1.4\times 10^{8}$\hMsun. A more detailed
+description of the simulation can be found in
+\citep{2011ApJ...740..102K}. 
 
 
 In this paper we use groups found with a Friends-Of-Friends (FOF) halo
@@ -405,6 +408,11 @@ The spin is calculated as
 where the velocities are also measured with respect to the center of
 mass velocity. Finally the peculiar velocity of a halo is computed as
 the center of mass velocity.
+
+The halo data used in this paper is publicly available through the
+MultiDark
+database\footnote{\texttt{http://www.multidark.org/MultiDark/}} and is
+thoroughly described in \cite{2013AN....334..691R}. 
 
 
 
