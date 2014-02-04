@@ -416,20 +416,21 @@ thoroughly described in \cite{2013AN....334..691R}.
 
 
 
-\section{The cosmic web algorithms}
+\section{Web Finding Algorithms}
 \label{sec:algorithms}
-We use two algorithms to define the cosmic web on cosmological N-body
+
+We use two algorithms to define the cosmic web in cosmological N-body
 simulations. Both are based on the same algorithmic principle, which
-is determining locally a symmetric tensor which can be diagonalized to yield
+determines locally a symmetric tensor which can be diagonalized to yield
 three real eigenvalues $\lambda_1>\lambda_2>\lambda_3$ and their
 corresponding eigenvectors ${\bf e}_{1}$, ${\bf e}_2$ and ${\bf
   e}_3$. This allows for a local classification into one of the
-following four categories: void, sheet, filament and peak depending
-whether the number of eigenvalues larger than a given threshold
+following four web types: void, sheet, filament and peak depending
+on the number of eigenvalues larger than a given threshold
 $\lambda_{th}$ is $3$, $2$, $1$ or $0$, respectively.
 
 We use two different symmetric tensors. The first is the shear tensor,
-defined as the hessian of the gravitational potential, normalized in
+defined as the Hessian of the gravitational potential, normalized in
 such a way as to be dimensionless:
 
 \begin{equation}
@@ -440,7 +441,7 @@ T_{\alpha\beta} = \frac{\partial^2\phi}{\partial
 where $\phi$ is the gravitational potential rescaled by a factor $4\pi
 G\bar{\rho}=3/2\Omega_m H_{0}^2$ in such a way that the Poission
 equation can be written as $\nabla^{2}\phi  = \delta$, where $\delta$
-is the matter overdensity, $\bar{\rho}$ is the averagematter density,
+is the matter overdensity, $\bar{\rho}$ is the average matter density,
 $H_{0}$ is the Hubble constant at present time and $\Omega_m$ is the
 matter density parameter. A detailed presentation of this algorithm
 can be found in \citep{Tweb}.
@@ -464,13 +465,24 @@ of this algorithm can be found in \citep{Vweb}.
 
 \subsection{Numerical considerations}
 
-In this paper we compute the cosmic web on grids of two different
-resolutions $256^3$ and $512^3$. In the V-Web computations we compute
-the velocity field as follows. First we compute the momentum density field
-over a grid and the normalize it by the matter density field. We follow the
-same procedure for the gaussian smoothed fields. It means that a
-smoothed velocity fields is the ratio of the smoothed momentum density
-and matter density fields.
+In this paper we compute the cosmic web on cubic grids of two different
+resolutions $256^3$ and $512^3$. For the T-Web we interpolate first
+the matter density field using a Cloud-In-Cell (CIC) scheme. Then we
+smooth using a Gaussian kernel with a spatial variance equal to the
+size of one grid cell. This smoothed matter density field is
+transformed into Fourier space to solve the Poisson equation and find
+the gravitational potential $\phi$. The Hessian is computed a finite
+differences method. Finally, the eigenvalues and eigenvectors are
+computed on each grid point.
+
+For the V-Web we interpolate first the momentum density field over a
+grid using the CIC scheme and then apply a gaussian smoothing with a
+spatial variance of one grid cell. We use the matter density field,
+which is also CIC interpolated and gaussian smoothed, to normalize the
+momentum field. This ratio between the momentum and matter density
+field is what we consider as the velocity field to compute the shear
+tensor on each grid point. In this case we also compute the
+eigenvalues and eigenvectors on each grid point.
 
 
 \section{Results}
