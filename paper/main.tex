@@ -484,10 +484,79 @@ field is what we consider as the velocity field to compute the shear
 tensor on each grid point. In this case we also compute the
 eigenvalues and eigenvectors on each grid point.
 
+\section{Our Numerical Experiments}
+In this paper we use the data and the methods described above to
+perform three diferent kinds of measurements.
+
+
+\subsection{Preferential Alignment}
+
+The first measurement is a rough approximation to find out along which
+axes are halos aligned. We call this Preferential Alignment (PA). 
+
+We use the fact that for a given vector under study $\hat{a}$ and the
+tree eigenvectors the following identity holds  
+ 
+\begin{equation}
+(\hat{s}\cdot\hat{e}_1)^2 +(\hat{s}\cdot\hat{e}_2)^2 +(\hat{s}\cdot\hat{e}_3)^2 =1.
+\end{equation}
+%
+Using this we know that all halos can be splitted into three groups:
+
+\begin{enumerate}
+\item Halos with $(\hat{s}\cdot\hat{e}_1)^2> (\hat{s}\cdot\hat{e}_2)^2$
+  and $(\hat{s}\cdot\hat{e}_1)^2> (\hat{s}\cdot\hat{e}_2)$, which can
+  be considered to aligned mostly along $\hat{e}_1$.
+\item Halos with $(\hat{s}\cdot\hat{e}_2)^2> (\hat{s}\cdot\hat{e}_2)^2$
+  and $(\hat{s}\cdot\hat{e}_2)^2> (\hat{s}\cdot\hat{e}_3)^2$, which can
+  be considered to aligned mostly along $\hat{e}_2$.
+\item Halos with $(\hat{s}\cdot\hat{e}_3)^2> (\hat{s}\cdot\hat{e}_1)^2$
+  and $(\hat{s}\cdot\hat{e}_3)^2> (\hat{s}\cdot\hat{e}_1)^2$, which can
+  be considered to aligned mostly along $\hat{e}_2$.
+\end{enumerate}
+
+If the halo population does not show any preferential alignment, then
+all the halos must be evenly distributed along these three
+populations. On the contrary, if there is more than one third of the
+halo population in one of these sets, then we can talk about a
+preferential alignment along one of the axis. However, this statistic 
+does not give a precise answer on the degree of the alignment
+
+
+\subsection{Average Alignment Angle}
+
+We emphasize that all the quantities that we compute in this paper are
+independent of any threshold on the eigenvalues that could be used to make a web
+clasification into web types. Instead, we focus on the alignments with
+respect to the eigenvectors regardless of the web type. In this
+context we recall that the eigenvector $\hat{e}_1$ is vector
+perpendicular to the plane defining a sheet and also a filamente and
+that $\hat{e}_3$ is the vector that marks the direction of a filament
+and lies on the plane of a sheet. Therefore we focus on quantifying
+the degree of alignment along these two eigenvectors. 
+
+This experiment complements the results obtained by the PA satistic by
+computing the average and standard deviation of
+$\vert\langle\hat{s}\cdot\hat{e}_1\rangle\vert$ and
+$\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$.  We perform this
+tests in differet populations split into different mass bins
+logarithmically spaced between $1\times 10^{9}$\hMsun and
+$1\times10^{14}$\hMsun.  
+
+In a separate test we make the same measurements but this time
+splitting the halo sample by other properties such as:
+circularity, concentration, local matter density, spin and
+triaxiality. In this case we take the upper and lower $30\%$ of the
+halos according to each property and measure the strenght of the
+alignment by the average value of
+$\vert\langle\hat{s}\cdot\hat{e}_1\rangle\vert$ and
+$\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$. 
 
 \section{Results}
 \label{sec:results}
 
+
+\subsection{Preferential Alignment}
 
 \begin{figure*}
 \includegraphics[width=0.9\textwidth]{Fig0.pdf}
@@ -499,6 +568,9 @@ eigenvalues and eigenvectors on each grid point.
   resolutions and lighter colors to a $512^3$ grid.
 \label{fig:preferential}}
 \end{figure*}
+
+Figure \ref{fig:preferential} presents all the results for the
+preferential alignment (PA).
 
 
 \subsection{Interweb Alignment}
