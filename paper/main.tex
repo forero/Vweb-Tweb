@@ -64,8 +64,7 @@
 
 \begin{document}
 
-\title[Vweb \& Tweb]{Cosmic web correlations with the shape, spin and
-  peculiar velocties of dark matter halos}  
+\title[Cosmic web alignments with halos]{Cosmic web alignments with the shape, angular momentum and peculiar velocities of dark matter halos}  
 \author[S. Contreras et al.]{
 \parbox[t]{\textwidth}{\raggedright 
   Jaime E. Forero-Romero$^{1}$,
@@ -234,16 +233,26 @@ Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
 {\bf Forero-Romero et al. (2014)} & T-Web & $0.5-1 \hMpc$ & 
-filament &$++$ & all masses\hMsun\\
+filament &$++$ & $>10^{12}$\hMsun\\
 &   & & 
-wall & $--$ & all masses\\\hline
+filament & $+$ & $<10^{12}$\hMsun\\
+
+&   & & 
+wall & $++$ & $>10^{12}$\hMsun\\
+
+&   & & 
+wall & $+$ & $<10^{12}$\hMsun\\\hline
 
 {\bf Forero-Romero et al. (2014)} & Vp-Web & $0.5-1 \hMpc$ & 
-filament &$?$ & $>10^{12}$\hMsun\\
+filament &$--$ & $>10^{12}$\hMsun\\
 &   & & 
-filament &$?$ & $<10^{12}$\hMsun\\
+filament & none & $<10^{12}$\hMsun\\
 &   & & 
-wall & $?$ & all masses\\\hline
+wall & $--$ & $>10^{12}$\hMsun\\
+
+&   & & 
+wall & none & $<10^{12}$\hMsun\\\hline
+
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ & 
 filament &$++$ & $>10^{12}$\hMsun\\
@@ -272,7 +281,7 @@ filament& $+$ & $<10^{12}$\hMsun\\\hline \hline
 
 \end{tabular}\\
 \caption{Shape alignment with the cosmic web. Summary of theoretical
-  results provided by methods comparable to ours.}
+  results provided by methods similar to ours.}
 \end{table*}
 
 
@@ -321,10 +330,10 @@ filament & $-$ & $> 5\times 10^{12}$\hMsun\\
 filament & $+$ & $< 5\times 10^{12}$\hMsun\\\hline
 
 \cite{Codis2012} & Morse Theory \& T-Web & $1-5$ & 
-filament & $--$ & $>10^{12}$\hMsun \\ 
+filament & $--$ & $>10^{12.5}$\hMsun \\ 
 
 &   & & 
-filament & $++$ & $<10^{12}$\hMsun \\ 
+filament & $++$ & $<10^{12.5}$\hMsun \\ 
 
 & & & 
 wall & $++$ & all masses\\\hline
@@ -358,7 +367,7 @@ wall & $++$ & stronger $>10^{12}$\hMsun\\\hline \hline
 
 \end{tabular}
 \caption{Spin alignment with the cosmic web. Summary of theoretical
-  results provided by methods comparable to ours.}
+  results provided by methods similar to ours.}
 
 \end{table*}
 
@@ -565,12 +574,52 @@ $\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$.
   studies in this paper: shape (major axis), angular momentum and
   peculiar velocity. Left column presents the results against the Tweb
   and the right the Vweb. Strong colors refer to $256^3$ grid
-  resolutions and lighter colors to a $512^3$ grid.
+  resolutions and lighter colors to a $512^3$ grid. The thick black
+  horizontal line at $0.33$ corresponds to the expected fraction for a
+  a random vector field.
 \label{fig:preferential}}
 \end{figure*}
 
 Figure \ref{fig:preferential} presents all the results for the
-preferential alignment (PA).
+preferential alignment (PA) summarizing to a good extent the main
+results of this paper. 
+
+For shape alignment and the Tweb (upper row, right column) we find a strong
+preferential alignment along the third eigenvector $\vec{e}_{3}$. This
+signal incresases steadily with mass and is almost independent of the
+grid resolution. At high masses between $70\%$ and $100\%$ of the
+halos have their major axis aligned along $\vec{e}_{3}$ which means
+that they mostly lie along filaments and sheets. 
+
+The shape alignment and the Vweb (upper row, left column) gives a
+different perspective. Firstly, there seems to be little evidence
+for an alignment for masses below $10^{11}-10^{12}$\hMsun, depending
+on the grid resolution. Secondly, the alignment at higher masses goes
+along the first eigenvector $\vec{e}_{1}$ meaning that they mostly lie
+perpendicular to the filaments and sheets. In the discussion section
+we clarify this result that at first might seem puzzling.
+
+For fhe angular momentum alignment and the Tweb (middle row, right
+column) we find that at low masses $<10^{12}$\hMsun no evidence for
+any alignment. At higher masses $>10^{12}$\hMsun there is weak signal
+of preferential alignment along the first and second eigenvectors,
+between $35\%$ to $45\%$ of the halos are aligned with respect to
+$\vec{e}_1$ and $\vec{e}_2$. Correspondingly, between $10\%$ to $20\%$
+of the halos are aligned along respect to $\vec{e}_{3}$. This means
+that most of the halos are perpendicular to the filaments and do not
+have a clear alignment with respect to walls.
+
+The angular momentum in the Vweb (middle row, left column) presents a
+a signal of alignment along the second eigenvector $\hat{e}_{2}$,
+between $45\%$ to $60\%$ of the halos are aligned along that
+direction. While there is a minority of halos aligned with
+$\vec{e}_{1}$.  There a clear change in trends around
+$10^{11}$\hMsun-$10^{12}$\hMsun depending on the grid resolution;
+below that mass range there is no evidence for alignment while at
+higher masses appear all the trends we describe. This means that most
+of the halos tend to lie along walls but do not have a clear alignment
+with respect to filaments.
+
 
 
 \subsection{Angular Momentum Alignment}
