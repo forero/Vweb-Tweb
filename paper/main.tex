@@ -937,15 +937,14 @@ and therefore are not reviewed in detail in this paper.
 
 
 \item
-\citep{Libeskind2013} %various alignments
-Studies shape and angular momentum alignments with the cosmic web
-defined by the velocity shear tensor method described in this
-paper. 
+\cite{Libeskind2013} %various alignments
 
-\cite{Libeskind2013} also used the Bolshoi simulation and the halo
+They study the shape and angular momentum alignments with the cosmic
+web defined by the velocity shear tensor method described in this
+paper.  \cite{Libeskind2013} used the Bolshoi simulation and the halo
 catalogs we use in this work. Results are reported for three mass bins $M_{\rm
   vir}<10^{11.5}$\hMsun, $11^{11.5}<M_{\rm vir}<12^{12.5}\hMsun$ and
-$M_{\rm  vir}>12^{12.5}\hMsun$.   The identification of the cosmic web
+$M_{\rm  vir}>12^{12.5}\hMsun$. The identification of the cosmic web
 is done on a grid of $256^3$ with a gaussian smoothing of $\sim
 1$\hMpc over the velocity field. The way they compute this smoothed
 velocity field differs from our computation. We do it based on the
@@ -953,36 +952,33 @@ momentum density field while \cite{Libesking2013} do not take into
 account the mass in each cell. 
 
 
-The aligmnet signal for the angular momentum is very weak while the shape alignment
-signal is very strong. The shape alignment is such that the eigenvector
-corresponding to the smallest eigenvalue is aligned with the major
-axis. This effect is stronger for more massive halos. 
-In other words the major axis of a halo is aligned with a filament,
-and lies on the plane that define a sheet. The angular momentum is
+The aligmnet signal for the angular momentum is weak while the shape
+alignmentsignal is very strong. The shape alignment is such that the
+eigenvector corresponding to the smallest eigenvalue is aligned with
+the major axis. This effect is stronger for more massive halos.  In
+other words the major axis of a halo is aligned with a filament, and
+lies on the plane that define a sheet. The angular momentum is
 anti-aligned with the filament for massive halos and weakly aligned
-for low mass halos. 
+for low mass halos.  
 
 \item
-\citep{Trowland2013}
+\cite{Trowland2013}
 
+They used the Millennium Run, which has $2160^3$ particles in a volume
+of $500$\hMpc on a side. This corresponds to a particle mass of
+$8.6\times 10^{8}$\hMsun. The catalog uses both halos and subhalos
+identified with SUBFIND. Only halos with more than 500 particles were
+kept to get a robust computation for the spin. The angular momentum is
+defined as the sum of the angular momentum of each particle with 
+respect to the center of mass.  
 
-The simulation is the millennium run, which has $2160^3$
-particles in a volume of $500$\hMpc on a side. This corresponds to a
-particle mass of $8.6\times 10^{8}$\hMsun. The catalog uses both halos
-and subhalos which were identified with SUBFIND. Only halos with more
-than 500 particles were kept to get a robust computation for the
-spin. For each halo the spin is defined as the sum of the angular
-momentum of each particle with respect to the center of mass.  
- 
 
 The method to define the filamentary structure is based on the
-eigenvalues of the hessian of the density.However the analysis are
-reported ona box of $300$\hMpc on a side. Four different gaussian
-smoothing scales are used: $2.0$, $3.0$ and $5.0$\hMpc.
+eigenvalues of the hessian of the density.  However, the analysis is
+performed on a box of $300$\hMpc on a side. Four different gaussian
+smoothing scales are used: $2.0$, $3.0$ and $5.0$\hMpc. 
 
-The authors report a slight alignment signal of spin against the
-principal filament axis. By fitting the following functional form to
-the $\cos(\theta)$ distribution
+By fitting the following functional form tothe $\cos(\theta)$ distribution
 
 \begin{equation}
 P(\cos\theta) =
@@ -990,7 +986,7 @@ P(\cos\theta) =
   \right)\right]^{-3/2}, 
 \label{eq:distro}
 \end{equation}
-
+%
 they are able to quantify the degree of alignment ($c<0$) or
 antialignment ($c>0$).  This parameterization is based on theoretical
 expectactions of Tidal Torque Theory (TTT) \citep{Lee2005}. At $z=0$,
@@ -999,237 +995,145 @@ was calculated using bootstraping and resampling.
 
 When the halo sample is divided between low mass and high mass halos
 with a transition scale $M_{\star}=5.9\times 10^{12}$\Msun, there is
-an anti-alignment above this mass and an alignment below it. 
-
+a weak alignment signal of the angular momentum against the
+principal filament axis for halos above that mass, for halos below
+that scale there is a weak anti-alignment.
 
 \item 
-\citep{Codis2012}
-Studies the alignment of the spin of dark matter halos relative to
+\cite{Codis2012}
+
+They studies the alignment of the angular momentum dark relative to
 the surrounding large scale structure and to the tidal tensor
 eigenvalues.
 
 They use a dark matter simulation with $4096^3$ DM particles in a
 cubic periodic box of $2000$\hMpc on a side, which corresponds to a
 particle mass of $7.7\times 10^9$\Msun. Halos are identified
-using a FoF algorithm with a linking legth of 0.2 keeping all halos
+using a FoF algorithm with a linking length of 0.2 keeping all halos
 with more than 40 particles, which sets the minimum halo mass to be
 $3\times 10^{11}$\Msun. In their work the particles were sampled on a
 $2048^3$ grid and the density field was smoothed with a gaussian
 fileter over a scale of $5$\hMpc corresponding to a mass of $1.9\times
 10^{14}$. The skeleton was computed over $6^{3}$ overlapping subcubes
-and then reconnected.
-
-
+and then reconnected. 
 
 The filament finder algorithm is based on Morse theory and defines a
 Skeleton to be the set of critical lines joining the maxima of the
-densit field through saddle points following the gradient. They also
-compute the hessinan of the potential over the smoothed density field
+density field through saddle points following the gradient. They also
+compute the hessian of the potential over the smoothed density field
 to get their eigenvectors.
 
-
-The spin of the halo is defined as $m_{p}\sum_{i}(r_i-\bar{r})\times
+The angular momentum of the halo is defined as $m_{p}\sum_{i}(r_i-\bar{r})\times
 (v_i-\bar{v})$ where $\bar{r}$ is the center of mass of the halo and
 $\bar{v}$ is the average velocity.
 
-They measure the sping alignment with each one of the
-eigenvectors. With repecto to the minor eigenvector $e_{1}$ there is
-antialignement for masses $M>5\times10^{12}$\Msun and alignment for masses
-$<5\times 10^{12}$\Msun. With respect to the intermediate eigenvector $e_2$
+They measure the alignment with each one of the eigenvectors. With
+repecto to the minor eigenvector $\vec{e}_{3}$  (the filament direction) there is anti-alignement for masses $M>5\times10^{12}$\Msun and alignment for masses
+$<5\times 10^{12}$\Msun; with respect to the intermediate eigenvector $\vec{e}_2$
 there is a strong alignment at high masses and no alignment for low
-masses, with respecto the major eigenvector $e_{3}$ there is an
-anti-alignment signal at all masses. The results from the Skeleton
-algorithm are in perfect agreement with the results from the Tidal
-web.  The transitional mass is weakly dependent on the smoothing scale,
-varing between $1-5\times 10^{12}$\hMsun for smoothing scales between
-  $1.0-5.0$\hMpc. 
+masses; with respect to the major eigenvector $\vec{e}_{1}$
+(normal to the wall plane) there is an anti-alignment signal at all
+masses. The results from the Skeleton algorithm are in
+agreement with the results from the Tidal web.  The transitional mass
+is weakly dependent on the smoothing scale, varing between $1-5\times
+10^{12}$\hMsun for smoothing scales between $1.0-5.0$\hMpc. 
 
 
 \item
 \citep{Zhang2009}
-Study the spin and shape alignment against filaments. 
 
-They use a dark matter simulation with $1024^3$ DM particles in a
+They studied the angular momentum and shape alignment against
+filaments.  They used a dark matter simulation with $1024^3$ DM particles in a
 periodic box of $100$ \hMpc on a side. The particle mass is
 $6.92\times10^{7}$\hMsun. Dark matter haloes are found using a FOF
 algorithm with a linking length of 0.2 times the interparticle
 distance. Only halos with more than 500 particles are retained for
-further analysis. 
-
-The angular momentum is measured with positions repect to the center
-of mass and the shape is determined using the non-normalized moment of
-inertia tensor.
+further analysis. The angular momentum is measured with positions
+repect to the center of mass and the shape is determined using the
+non-normalized moment of inertia tensor.
 
 The environment is found using the hessian of the density. The density
 field was interpolated over a $1024^3$ grid and then smoothed with a
 Gaussian filter of scale $R_{s} = 2.1$\hMpc. There are two methods to
 define the direction of a filament. The first method uses the
-eigenvalues of the hessian density, howevere they define the filament
-direction with the eigenvector corresponding the single positive
+eigenvalues of the hessian density; they take the filament
+direction to be the eigenvector corresponding the single positive
 eigenvalue of the hessian. The second method used a line that
 connects the two terminal halos in a filament segment.
 
-
-The characterization of the alingment with the $\cos(\theta)$
-statistic. For the method that uses the eigenvectors, they find that
-the strenght of the spin alignment decreases with halo mass. For the
+For the method that uses the eigenvectors, they find that the strenght
+of the angular momentum alignment decreases with halo mass. For the
 shape they study the alingment of the major axis with the
-filament. The find an alignment signal in all mass bins, with an stronger
-effect for more massive halos. 
+filament. The find an alignment signal in all mass bins, with an
+stronger effect for more massive halos.  
 
-In a final experiment they measure the spin alignment in four
-different samples that separated by the strength of the shape
-alignment. They find that halos anticorrelated in shape, show a strong
-sping correlation going to the extreme where there is a strong spin
-anticorrelation for halos with a strong shape correlation. This means
-that the halos with strong spin alignment are not the same halos
-showing strong shape alignment. 
-
+In a final experiment they measure the angular momentum alignment in four
+different samples split by the strength of the shape alignment. They
+find that halos anti-aligned in shape, show a strong angular momentum
+correlation; and a strong angular momentum anti-alignment for halos
+with a strong shape alignment. 
 
 \item 
 \citep{AragonCalvo2007} %angular momentum alignment
-The method is the Multi-scale Morphology Filter which is based on the
-Hessian matrix of the density field, where the density field is
-computed from the particle distribution using a Delaunay tesselation
-field estimatior (DTFE), which is self-adaptive. This allows them to
-identify clusters, filaments and walls.
 
 
-The simulation has $512^3$ particles in a cubic box of $150$\hMpc. The
+The used the Multi-Scale Morphology Filter to describe th filamentary
+structure. The method is based on the Hessian matrix of the density
+field, which is computed from the particle distribution using a
+Delaunay tesselation field estimatior (DTFE). This allows them to
+identify clusters, filaments and walls. 
+
+They used a simulation with $512^3$ particles in a cubic box of $150$\hMpc. The
 mass per particle is $2\times 10^{9}$\hMsun.  Halo identitification is
 done with the HOP algorithm. They keep halos with more than $50$
-partices and less than $5000$, defining a mass range of$1-100\times
-10^{11}$\hMsun. 
-
-The principal axes of each halo are computed from the non-normalized
-inertia tensor. The inertian tensor and the angular momentum are
-computed with respect to the center of mass of the halo. 
-
+particles and less than $5000$, defining a mass range of$1-100\times
+10^{11}$\hMsun. The principal axes of each halo are computed from the
+non-normalized inertia tensor. The inertia tensor and the angular
+momentum are computed with respect to the center of mass of the halo.  
 
 They compute two angles, one with respect to the direction
 defining the filaments and the other the walls. Their results make a
 distinction between halos of more massive and less massive than
-$10^{12}$\hMsun.
+$10^{12}$\hMsun. The angular momentum tends to lie along the plane of
+the wall, with a stronger alignment for massive halos. The effect for
+filaments is weaker, low mass halos tend to alignt along the filament,
+while high mass halos tend to be anti-aligned.  
 
-The halo spins tend to lie on the plane of the wall. This is stronger
-for massive halos.The effect for filaments is weaker: low mass halos
-tend to lieparallel to their host filament, while high mass halos tend
-to be perpendicular.  
-
-Theres is a very strong effect for the principal axes of halos in
-filaments to be strongly correlated with the direction of the
-filaments. The minor axis tend to be perpendicular to the
-filament. This effect is stronger for larger halos.
-
-The effect in walls is less strong ,but still the minor axis tend to
-lie perpendicular to the wall, while the other axis then to lie over
-the wall. The effect is stronger for massive halos.
-
-They find that spins and shapes of dark matter halos are significantly
-correlated with each other and with the orientation of their host
-structures. 
-
+For the shape they find a very strong alignment along filaments. In
+walls the major axis lies along the wall. Both alignments are stronger
+for massive halos. 
 
 
 \item 
+
 \citep{Hahn2007}% various alignments with the Tweb
-The method is the Tweb. They use three simulations each of $512^3$
+
+The used the Tweb method applied on three simulations each of $512^3$
 particles, with sizes $L_1=45$\hMpc, $L_2=90$\hMpc and
 $L_3=180$\hMpc, this corresponds to particle masses of $4.7, 38.0,
-300\times 10^7$\hMsun. The normalization is $\sigma_8=0.9$. Halo
-identification was done with a FOF algorithm with 0.2 times the
-interparticle distance. They consider halos of at least 300
-particles. 
+300\times 10^7$\hMsun. Halo identification was done with a FOF
+algorithm with 0.2 times the interparticle distance. They considered
+halos of at least 300  particles. 
 
 The web is obtained for a grid of $1024^3$ cells, the density field is
 obtained with a CIC interpolation and smoothed using a Gaussian
-Kernel. In the rest of the paper all the results correspond to a
-smoothing scale of $R_{s}=2.1$\hMpc.
+Kernel. All the results correspond to a smoothing scale of
+$R_{s}=2.1$\hMpc. 
 
+They report on the angle between the halo angular momentum vector and
+the eigenvector corresponding to perpendicular directions to the
+sheets and the direction of the filaments. This is divided into two halo
+populations according to mass; low mass $5\times 10^{10} - 1.0\times 10^{12}$ and
+high mass $>10^{12}$. They find a weake anti-alignment for filaments
+and a stronger anti-alignment in the case of the sheets. For the
+sheets the effect is stronger for the massive bin. The anti-alignment
+along filaments is weak regardless of the mass. They do not report any
+other significan statistic, but recognize that they suffer from
+small-number statistics in voids. 
 
-They Report on the angle between the halo
-angular momentum vector and the eigenvector corresponding to
-perpendicular directions to the sheets and the direction of the
-filaments. This is divided in two halo populations: $5\times 10^{10} -
-1.0\times 10^{12}$ and $>10^{12}$. There is a weak antialignment in
-the case of the filaments and a stronger anti-alignment in the case of
-the sheets. For the sheets the effect is stronger for the massive
-bin. In the filaments the alignment is weak regardless of the
-mass. They do not report any other significan statistic, but recognize
-that they suffer from small-number statistics in voids).
-
-
-They do not see any strong dependance of the environment in the
-shape. They do not measure the shape alinment.
-
-\item
-\citep{Brunino2007}
-Uses a DM only N-body simulation (the Millennium Run) to study the
-shape and angular momentum alignment with respect to large
-cosmological voids. 
-
-The voids are found with a spherical void finder. This algorithm first
-looks for potential void centers in the underdense regions of the
-simulation. These positions define the centers of spheres that are
-empty of halos above a given mass threshold. Only voids with radius
-larger than $10$\hMpc were considered for further analysis.
-
-Halos were identified by linking particles with density exceeding 900
-times the background density in order to keep the analysis of shape
-and angular momentum on the core of the halo. Only halos with masses
-in the range $8.6\times 10^{11}\hMsun < M_{\mathrm h}< 8.6\times
-10^{12}\hMsun$ were included analized to measure their angular
-momentum and the inertia tensor, both in a non-normalized way.
-
-For the purpose of measuring alignments a second cut is imposed
-whereby only halos within a shell of radius $R_{\mathrm void}<r<1.05R_{\mathrm
-void}$. The alignment is then measured between the vector connecting
-the center of the void to the halo in question and the vector of
-interest.
-
-The results show that there is a strong alignment of halo shape in
-such a way that the major axis is parallel to the shell surrounding
-the void. In the case of angular momentum there is not a significant
-signal for alignment.
-
-
-
-
-\item
-\citep{Basilakos2006}
-Use a cosmological SPH+N-body simulation to measure the alignment of
-cluster halos with their parent supercluster. For both the cluster
-halos and parent super-cluster they define the shape via the
-non-normalized inertia tensor.  The find that strenght of the
-alignments increases with the degree of filamentarity of the
-supercluster.
-
-The simulation has $2\times 512^3$ particles in a box of side
-$500$\hMpc. The dark matter particle mass is $6.6\times
-10^{10}$\hMsun while for SPH particles is $1.2\times
-10^{10}$\hMsun. The halo finding is done with a FOF algorithm with a
-linking length of 0.17 and keep objects with more than 100 partcles. 
-
-
-\item
-\citep{Lee2002}%Obs. spin alignment
-Observational measurement for the alignment of galaxy spin axes with
-the local tidal shear field. For the measurement of shear, we have used
-the Point Source Catalog Redshift (PSCz) survey (a complete redshift survey
-from the IRAS Point Source Catalog) data. This was done down to a
-radial comoving distance of $\sim 150$\hMpc.
-\item
-\citep{Hatton2001} %angular momentum alignment
-DM matter only simulation. $256^3$ particles, $100$\hMpc, particle
-mass. Look for alignment of angular momentum vectors with neighbohring
-structures or other massive structures. They match halos using close
-pair statistics. They do not find any evidence for a statistically
-significant mutual alignment of halos on any escale. 
 \end{itemize}
 
 \bibliographystyle{mn2e}
 \bibliography{references} 
-
-
 
 \end{document}
