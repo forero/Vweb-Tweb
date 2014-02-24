@@ -9,7 +9,7 @@ $(MAIN).pdf: 	$(MAIN).tex
 
 
 clean:
-	rm -f $(MAIN).{aux,bbl,ps,pdf,dvi,blg,log}
+	rm -f $(MAIN).{aux,bbl,ps,pdf,dvi,blg,log,out}
 
 view: 
 	open $(MAIN).pdf &
