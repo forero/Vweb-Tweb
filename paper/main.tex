@@ -74,8 +74,10 @@
   Nelson Padilla$^{2}$ 
 }
 \vspace*{6pt}\\
-$^{1}$Uni A
-$^{2}$Uni B
+$^{1}$Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
+No. 18A-10, Edificio Ip, Bogot\'a, Colombia\\
+$^{2}$Instituto de Astrofísica, Pontificia Universidad Católica,
+Av. Vicuña Mackenna 4860, Santiago, Chile\\
 }
 \maketitle
 
@@ -88,18 +90,24 @@ simulation that allows to study dark matter halos spanning almost five orders
 of magnitude in mass ($10^{9}$-$10^{14}$) \hMsun over spatial scales
 of $(0.5$-$1.0)$\hMpc to define the cosmic web. After varying the
 numerical parameters in our experiments we find that the halo shape
-and the tidal field web presents the strongest alignment with a signal
-that gets stronger as the halo mass increases. For the angular momentum we
-find alignment signals only halos more massive than $10^{12}$\hMsun
-both in the tidal and velocity shear descriptions. The peculiar
-velocities of halos show a strong alignment signal for the tidal web
-at all halo masses, while in the velocity shear description the signal
-is weaker an only present for halos less massive than
-$10^{12}$\hMsun. We also find that the main directions of stronger
-tidal tension and velocity shear coincide for halos below
-$10^{12}$\hMpc but are perpendicular to each other for halos more
-massive than this threshold. 
-
+and the tidal field web presents the strongest alignment along
+filaments and walls with a signal that gets stronger as the halo mass
+increases; in the case of the velocity shear only massive halos
+$>10^{12}$\hMsun tend to have their shapes be perpendicular to
+filaments and walls. For the angular momentum we find alignment
+signals only for halos more massive than $10^{12}$\hMsun both in the
+tidal and velocity shear webs where the preferences are to be
+perpendicular to filaments or parallel to walls,
+respectively. Finally, the peculiar velocities show a strong alignment
+for all halo masses to move along filaments and walls in the tidal
+web, while in the velocity shear the same alignment is present but
+weaker and only for halos less massive than $10^{12}$\hMsun. Most of
+the different signals between the two web description are due to the
+fact that that the main directions of stronger tidal tension and
+velocity shear coincide for halos below $10^{12}$\hMpc but are
+perpendicular to each other for halos more massive than this
+threshold.   
+  
 \end{abstract}
 \begin{keywords}
 methods: N-body simulations, galaxies: haloes, cosmology: theory, dark
@@ -247,7 +255,6 @@ behaviours of no-alignment, alignment or anti-alignment.
 \item Halo spin tends to be oriented perpendicular to filaments and
 parallel to sheets, but it is a weaker than shape alignment. 
 \end{itemize}
-
 
 
 \begin{table}
@@ -526,9 +533,17 @@ tensor on each grid point. In this case we also compute the
 eigenvalues and eigenvectors on each grid point.
 
 \section{Our Numerical Experiments}
-In this paper we use the data and the methods described above to
-perform three diferent kinds of measurements.
 
+In this paper we use the data and the methods described above to
+perform two kinds of measurements: the preferential alignment and the
+average value of the angle along the eigenvectors of interest.
+
+We note that we measure alignments along the eigenvectors of the
+cosmic web without defining first whether each point corresponds to a
+filament or a wall. Our motivation is two-fold. First, partitioning the
+simulation into web elements implies an choice as to what value to use
+for the parameter $\lambda_{\rm th}$; although, this has been done
+before we consider that 
 
 \subsection{Preferential Alignment}
 
