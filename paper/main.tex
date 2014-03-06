@@ -87,13 +87,14 @@ We study the alignment of dark matter halos with the cosmic web as described by
 the tidal and velocity shear fields. We focus on the alignment of their
 shape, angular momentum and peculiar velocities. We use a cosmological N-body
 simulation that allows to study dark matter halos spanning almost five orders
-of magnitude in mass ($10^{9}$-$10^{14}$) \hMsun over spatial scales
+of magnitude in mass ($10^{9}$-$10^{14}$) \hMsun {\bf and use} spatial scales
 of $(0.5$-$1.0)$\hMpc to define the cosmic web. After varying the
 numerical parameters in our experiments we find that the halo shape
 and the tidal field web presents the strongest alignment along
 filaments and walls with a signal that gets stronger as the halo mass
 increases; in the case of the velocity shear only massive halos
-$>10^{12}$\hMsun tend to have their shapes be perpendicular to
+$>10^{12}$\hMsun tend to have their shapes %be
+ perpendicular to
 filaments and walls. For the angular momentum we find alignment
 signals only for halos more massive than $10^{12}$\hMsun both in the
 tidal and velocity shear webs where the preferences are to be
@@ -103,10 +104,12 @@ for all halo masses to move along filaments and walls in the tidal
 web, while in the velocity shear the same alignment is present but
 weaker and only for halos less massive than $10^{12}$\hMsun. Most of
 the different signals between the two web description are due to the
-fact that that the main directions of stronger tidal tension and
+fact that %that 
+the main directions of stronger tidal tension and
 velocity shear coincide for halos below $10^{12}$\hMpc but are
 perpendicular to each other for halos more massive than this
-threshold.   
+threshold.  {\bf This clearly separates halos into those that live
+in sheets and filaments (lower masses) and nodes of the cosmic web.}
   
 \end{abstract}
 \begin{keywords}
@@ -119,9 +122,10 @@ matter, large-scale structure of Universe
 \label{sec:introduction}
 
 There is a long observational tradition stuying galactic properties
-as a function of its large scale environment. In these situations the environment
-definition is based on quantities easily accesible to observations
-such as the number density. With the advenment of large
+as a function of {\bf their} large scale environment. In these situations the environment
+definition is {\bf usually} based on quantities easily accesible to observations
+such as the number density. With the {\bg advent}%advenment 
+of large
 surveys the visibility of the cosmic web is clear. As a consequence,
 in order to capture this filamentarity, the environment definition
 started to be more complex, involving shear properties of the galaxy
@@ -129,22 +133,23 @@ density field or the reconstructuted dark matter density field.
 
 The emergence of this web like structure is a great success of large
 scale structure growth models based on gravitational
-instability. Using numerical simulations allows the time description
-of such structure together with the formation of the virialized dark
+instability. %Using 
+Numerical simulations allow the time description
+of such structures together with the formation of the virialized dark
 matter halos, which in turn should host observable galaxies. The
 finding of gas filaments that feed galaxies is another theoretical
-hint that strenghten the expected connection between galactic
+hint that strenghtened the expected connection between galactic
 properties ant their place in the cosmic web.
 
-Using high resolution simulations it has been stablished that halos of
-a given mass for earlier in denser regions; concentration, spin and
+{\bf With the aid of} high resolution simulations it has been established that halos of
+a given mass form earlier in denser regions; concentration, spin and
 shape also depend on the local density. In the last decade new
 algorithms have implemented cosmic web classifications that go beyond
 the local density by defining a location to be a peak, sheet, filament
 or void depending on the simmetry properties of the local dark matter
 distribution. 
 
-There analytical frameworks, such as tidal torque theory, that
+There {\bf are} analytical frameworks, such as tidal torque theory, that
 aim at describing how galaxies gain angular momentum and expect a
 correlation of this quantity with the cosmic web. The observational
 studies that try to measure such correlations actually try to use as a
@@ -154,11 +159,11 @@ and shape with the cosmic web.
 
 In the same spirit of describing the place of galaxies within the
 cosmic web, there has been an revival of surveys that measure the
-cosmic flow patters in the Local Universe. Assuming the correspondence
-between the divergenec of the cosmic flow velocity field and the local
+cosmic flow patterns in the Local Universe. Assuming the correspondence
+between the divergence of the cosmic flow velocity field and the local
 matter overdensity (valid in the linear regime) one could construct
 accurate maps of the matter density from peculiar velocities. From
-this perspective is interesting to look at the expected alignment of
+this perspective it is interesting to look at the expected alignment of
 the peculiar velocities.
 
 
@@ -174,10 +179,10 @@ with large scale structure.
 
 
 The structure of this \documentname is the following. In \S
-\ref{sec:theory} we present the theoretical antecedendts for the
+\ref{sec:theory} we present the theoretical antecedents for the
 alignment studies we present in this paper. In \S
 \ref{sec:nbody} we present the N-body
-cosmological simulation and halo catalogs next to describe in
+cosmological simulation and halo catalogs.  Next, we describe in
 \S\ref{sec:algorithms} the two web-finding algorithms we use. In
 \S\ref{sec:results} we present our main results about the alignment
 of shape, spin and peculiar velocities with respect to the cosmic
@@ -192,7 +197,7 @@ present our conclusions.
 \label{sec:theory}
 
 There is abundant literature on the issue of shape and angular momentum
-aligmnent of dark matter haloe with respect to the cosmic web. In this
+alignment of dark matter halos with respect to the cosmic web. In this
 paper we focus our attention on results published during the last
 decade that have made use of large N-body dark matter only
 cosmological simulations. There are many works that have addressed
@@ -220,23 +225,23 @@ $\langle|mu|\rangle=0.5$. If a distribution is biased towards $1$
 ($\langle\vert\mu\vert\rangle>0.5$) we call this an statistical
 alignment along $\hat{n}$, while in the case of a bias towards $0$
 ($\langle\vert\mu\vert\rangle<0.5$) we talk about an anti-alignment,
-meaning an perpendicular orientations with respecto to the $\hat{n}$
+meaning a perpendicular orientation with respect to the $\hat{n}$
 direction. 
 
 \cite{Trowland2013} presented a parameterization for the $\mu$
 distribution in the case of angular momentm alignment based on
 theoretical considerations by \cite{Lee2005} (Eq. \ref{eq:distro} in
-the Appendix A). Under this parameterization it was found a unique
-correspondece between the full shape of the $\vert\mu\vert$
-distribution and its average. In this paper we use that result to only
-present the results for the average $\langle\vert\mu\vert\rangle$. 
+the Appendix A). Under this parameterization a unique
+correspondece was found between the full shape of the $\vert\mu\vert$
+distribution and its average. In this paper we follow the lines of their work but
+only present the results for the average $\langle\vert\mu\vert\rangle$. 
 
 Table 1 and Table 2 summarize recent results found in the literature for
 shape and angular momentum alignment. The Appendix A includes a detailed
 description of the definitions, algorithms and simulations used in
-each one of these studies. In these tables the first column describe
+each one of these studies. In these tables the first column describes
 the reference, the second column summarizes the web finding method
-with a single name, the third scale associates an spatial scale to the
+with a single name, the third scale associates a spatial scale to the
 web finding methods, in most cases it corresponds to the grid size or
 smoothing scale used to interpolate the underlying matter density or
 velocity field; The fourth column indicates along which web element
@@ -425,7 +430,7 @@ recent results of WMAP9 \citep{2013ApJS..208...19H}. These parameters are $\Omeg
 $\Omega_{\Lambda} =0.73$, $\sigma_8=0.82$, $n_s=0.95$ and $h=0.70$ for the
 matter density, cosmological constant, normalization of the power
 spectrum, the slope in the spectrum of the primordial matter
-fluctuation and the dimensionless Hubble constant. With this
+fluctuation and the dimensionless Hubble constant. With these
 conditions the mass of each dark matter particle in the simulation
 corresponds to $m_p=1.4\times 10^{8}$\hMsun. A more detailed
 description of the simulation can be found in
@@ -492,7 +497,7 @@ equation can be written as $\nabla^{2}\phi  = \delta$, where $\delta$
 is the matter overdensity, $\bar{\rho}$ is the average matter density,
 $H_{0}$ is the Hubble constant at present time and $\Omega_m$ is the
 matter density parameter. A detailed presentation of this algorithm
-can be found in \citep{Tweb}.
+can be found in \cite{Tweb}.
 
 The second tensor is the velocity shear:
 
@@ -506,7 +511,7 @@ where $v_{\alpha}$ correspond to the components of the peculiar
 comoving velocities. With this definition the trace of the shear
 tensor is minus the divergence of the velocity field normalized by the
 Hubble constant $-\nabla\cdot {\bf}v /H_{0}$. A detailed description
-of this algorithm can be found in \citep{Vweb}.
+of this algorithm can be found in \cite{Vweb}.
 
 
 
@@ -514,12 +519,13 @@ of this algorithm can be found in \citep{Vweb}.
 \subsection{Numerical considerations}
 
 In this paper we compute the cosmic web on cubic grids of two different
-resolutions $256^3$ and $512^3$. For the T-Web we interpolate first
+resolutions $256^3$ and $512^3$ that roughly correspond
+to scales of $1$ and $0.5$h$^{-1}$Mpc, respectively. For the T-Web we interpolate first
 the matter density field using a Cloud-In-Cell (CIC) scheme. Then we
 smooth using a Gaussian kernel with a spatial variance equal to the
 size of one grid cell. This smoothed matter density field is
 transformed into Fourier space to solve the Poisson equation and find
-the gravitational potential $\phi$. The Hessian is computed a finite
+the gravitational potential $\phi$. The Hessian is computed using a finite
 differences method. Finally, the eigenvalues and eigenvectors are
 computed on each grid point.
 
@@ -541,9 +547,9 @@ average value of the angle along the eigenvectors of interest.
 We note that we measure alignments along the eigenvectors of the
 cosmic web without defining first whether each point corresponds to a
 filament or a wall. Our motivation is two-fold. First, partitioning the
-simulation into web elements implies an choice as to what value to use
+simulation into web elements implies a choice as to what value to use
 for the parameter $\lambda_{\rm th}$; although, this has been done
-before we consider that 
+before we consider that  COMPLETAR...
 
 \subsection{Preferential Alignment}
 
@@ -575,7 +581,7 @@ If the halo population does not show any preferential alignment, then
 all the halos must be evenly distributed along these three
 populations. On the contrary, if there is more than one third of the
 halo population in one of these sets, then we can talk about a
-preferential alignment along one of the axis. However, this statistic 
+preferential alignment along one of the axes. However, this statistics
 does not give a precise answer on the degree of the alignment
 
 
@@ -586,7 +592,7 @@ independent of any threshold on the eigenvalues that could be used to make a web
 clasification into web types. Instead, we focus on the alignments with
 respect to the eigenvectors regardless of the web type. In this
 context we recall that the eigenvector $\hat{e}_1$ is vector
-perpendicular to the plane defining a sheet and also a filamente and
+perpendicular to the plane defining a sheet and also a filament and
 that $\hat{e}_3$ is the vector that marks the direction of a filament
 and lies on the plane of a sheet. Therefore we focus on quantifying
 the degree of alignment along these two eigenvectors. 
@@ -594,8 +600,8 @@ the degree of alignment along these two eigenvectors.
 This experiment complements the results obtained by the PA satistic by
 computing the average and standard deviation of
 $\vert\langle\hat{s}\cdot\hat{e}_1\rangle\vert$ and
-$\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$.  We perform this
-tests in differet populations split into different mass bins
+$\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$.  We perform these
+tests in different populations split into different mass bins
 logarithmically spaced between $1\times 10^{9}$\hMsun and
 $1\times10^{14}$\hMsun.  
 
@@ -631,12 +637,7 @@ Figure \ref{fig:preferential} presents all the results for the
 preferential alignment (PA) summarizing to a good extent the main
 results of this paper. 
 
-For shape alignment and the Tweb (upper row, right column) we find a strong
-preferential alignment along the third eigenvector $\vec{e}_{3}$. This
-signal incresases steadily with mass and is almost independent of the
-grid resolution. At high masses between $70\%$ and $100\%$ of the
-halos have their major axis aligned along $\vec{e}_{3}$ which means
-that they mostly lie along filaments and sheets. 
+CAMBIE EL ORDEN DE PARRAFOS PARA QUE LA FIGURA SE LEA DE IZQ A DERECHA:
 
 The shape alignment and the Vweb (upper row, left column) gives a
 different perspective. Firstly, there seems to be little evidence
@@ -644,41 +645,48 @@ for an alignment for masses below $10^{11}-10^{12}\hMsun$, depending
 on the grid resolution. Secondly, the alignment at higher masses goes
 along the first eigenvector $\vec{e}_{1}$ meaning that they mostly lie
 perpendicular to the filaments and sheets. In the discussion section
-we clarify this result that at first might seem puzzling.
+we clarify this result that at first sight might seem puzzling.
 
-For the angular momentum alignment and the Tweb (middle row, right
-column) we find that at low masses $<10^{12}\hMsun$ no evidence for
-any alignment. At higher masses $>10^{12}\hMsun$ there is weak signal
-of preferential alignment along the first and second eigenvectors,
-between $35\%$ to $45\%$ of the halos are aligned with respect to
-$\vec{e}_1$ and $\vec{e}_2$. Correspondingly, between $10\%$ to $20\%$
-of the halos are aligned along respect to $\vec{e}_{3}$. This means
-that most of the halos are perpendicular to the filaments and do not
-have a clear alignment with respect to walls.
+For shape alignment and the Tweb (upper row, right column) we find a strong
+preferential alignment along the third eigenvector $\vec{e}_{3}$. This
+signal incresases steadily with mass and is almost independent of the
+grid resolution. At high masses between $70\%$ and $100\%$ of the
+halos have their major axis aligned along $\vec{e}_{3}$ which means
+that they mostly lie along filaments and sheets. 
 
 The angular momentum in the Vweb (middle row, left column) presents a
-a signal of alignment along the second eigenvector $\hat{e}_{2}$,
+a signal of alignment along the second eigenvector $\hat{e}_{2}$;
 between $45\%$ to $60\%$ of the halos are aligned along that
-direction. While there is a minority of halos aligned with
-$\vec{e}_{1}$.  There a clear change in trends around
+direction, while there is a minority of halos aligned with
+$\vec{e}_{1}$.  There is a clear change in trends around
 $10^{11}\hMsun-10^{12}\hMsun$ depending on the grid resolution;
 below that mass range there is no evidence for alignment while at
-higher masses appear all the trends we describe. This means that most
+higher masses all the trends we describe are aparent. This means that most
 of the halos tend to lie along walls but do not have a clear alignment
 with respect to filaments.
 
-The peculiar velocities show a weak but consistent alignment along the
+For the angular momentum alignment and the Tweb (middle row, right
+column) we find no evidence for any alighment at low masses $<10^{12}\hMsun$.
+At higher masses $>10^{12}\hMsun$ there is a weak signal
+of preferential alignment along the first and second eigenvectors;
+between $35\%$ to $45\%$ of the halos are aligned with respect to
+$\vec{e}_1$ and $\vec{e}_2$. Correspondingly, between $10\%$ to $20\%$
+of the halos are aligned along $\vec{e}_{3}$. This means
+that most of the halos are perpendicular to the filaments and do not
+have a clear alignment with respect to walls.
+
+The peculiar velocities (lower panels) show a weak but consistent alignment along the
 third eigenvector $\vec{e}_{3}$ of the Tweb for all masses below
 $10^{13.0}\hMsun-10^{13.5}\hMsun$ depending on the grid
-resolution. $45\%$ of the halos are aligned while only $25\%$ are
+resolution. $45\%$ of the halos are aligned this way, while only $25\%$ are
 aligned along the first eigenvector $\vec{e}_1$. This suggests that
 halos tend to move along filaments and parallel to the walls, except
 at higher masses where the alignments get randomized.  In contrast,
-the peculiar velocities with respect to the Vweb show the same trend
-but weaker and only for low mass halos $<10^{12}$.
+the peculiar velocities with respect to the Vweb show the same, although weaker, trend
+and only for low mass halos $<10^{12}$.
 
 
-In the next subsections we present a complementary account of this
+In the next subsections we present a complementary account of these
 results by presenting quantitative results of the average angle
 between vector pairs describing the alignments discussed so far.
 
@@ -691,8 +699,10 @@ between vector pairs describing the alignments discussed so far.
   the Vweb (left) and the Tweb (right) at two different grid
   resolutions. In the upper (lower) panels the angle $\theta$ is
   measured between the halo major axis and the first (third)
-  eigenvector.\label{fig:shape_alignment}} 
+  eigenvector.\label{fig:shape_alignment}.  SUGIERO PONER AMBAS LEYENDAS EN UN SOLO PANEL, SINO PARECE QUE
+IZQUIERDA Y DERECHA FUERAN PARA DOS RESOLUCIONES DISTINTAS.} 
 \end{figure*}
+
 
 Figure \ref{fig:shape_alignment} presents the main results for the
 angles between the first and third eigenvectors and the major shape
@@ -700,18 +710,18 @@ axis as a function of halo mass.
 
 In the case of the Vweb (left column) we have a clear alignment with
 respect to the first eigenvector at high masses $>10^{12}\hMsun$, with
-values $\muavg\approx 0.8$ well above the expected value of $0.5$ for
+values $\muavg\approx 0.8$ well above the expected value of $0.5$ for a
 random distribution. With respect to the third eigenvector we measure
 an anti-alignment with $\muavg\approx0.3$. For low masses
 $<10^{12}\hMsun$ we do not detect any aligmnent signal. This is 
 consistent with the PA results of massive halos
 perpendicular to filaments and parallel to walls.
 
-The Tweb (right column) show alignment trends starting at masses of
-$10^{10}$\hMsun, two orders of magnitude less than the V-web. In this
-case we measure an alignment along the third eigenvectors and an
-antialignment along the first eigenvector. In the later case at the
-highest mases $\muavg\approx 0.8$ while in the former $\muavg\approx
+The Tweb (right column) shows alignment trends starting at masses of
+$10^{10}$\hMsun, two orders of magnitude below than the V-web. In this
+case we measure an alignment along the third eigenvector and an
+antialignment along the first eigenvector. In the latter case at the
+highest mases $\muavg\approx 0.8$, while in the former $\muavg\approx
 0.2$. This strong alignment/antialignment signal mirrors the
 interpretation from the PA results that describe halos lying parallel
 both to filaments and walls.
@@ -731,23 +741,23 @@ both to filaments and walls.
 
 We now take a look at the angular momentum alignment. Figure
 \ref{fig:spin_alignment} shows the results as a function of halo mass
-following the same panel distributio as in Figure
+following the same panel layout as in Figure
 \ref{fig:shape_alignment}. In all cases we see that these alignment
-trends are weaker than shape alignments. For the Vweb low mass halos
+trends are weaker than the shape alignments. For the Vweb low mass halos
 $<10^{12}$\hMsun do not show any preferential alignment with the
 cosmic web. Halos more massive than this threshold have their angular
 momentum slightly perpendicular to the direction defined by the first
-eigenvector and uncorrelated to the third eigenvector. This translates
+eigenvector and are uncorrelated with the third eigenvector. This translates
 into a weak tendency for the angular momentum to lie parallel to walls.
 
 In the case of the Tweb, the alignment for low mass halos $<10^{12}$\hMsun 
 is also absent. More massive halos present a weak alignment along
-first eigen vector and anti-alignment with the third eigenvector. This
+first eigenvector and anti-alignment with the third eigenvector. This
 provides a quantitative expression of the results derived from the
 preferential alignment whereby the angular momentum is weakly
 perpendicular to filaments.
 
-\subsection{Peculiar velocity Alignment}
+\subsection{Peculiar Velocity Alignment}
 
 \begin{figure*}
 \includegraphics[width=0.75\textwidth]{Fig4.pdf}
@@ -763,30 +773,26 @@ Figure \ref{fig:velocity_alignment} shows the results for peculiar
 velocities alignments. In the case of the Vweb, the peculiar
 velocities show a weak signal of aligmnent ($\muavg\approx0.55$)
 along the third eigenvector for low masses $<10^{12}$\Msun and a weak
-antialigment at higher masses. The strengt of the alignment also shows
-clear dependency on the grid size used to compute the web.
+antialignment at higher masses. The strength of the alignment also shows
+a clear dependency on the grid size used to compute the web.
 
 The Tweb shows a stronger alignment with the third eignenvecor at all
 masses with $\muavg\approx0.6$ and an antialignment with the first
 eigenvector with $\muavg\approx 0.4$. In contrast to the Vweb results,
-these trends remain baiscally unchanged at all masses and grid
-resolutions, with only minor change for halos masses $>10^{13}$\hMsun.
+these trends remain basically unchanged at all masses and grid
+resolutions, with only minor changes for halos masses $>10^{13}$\hMsun.
 
-
-In the first place we wish to directly compare the results of the two
-algorithms. For the two algorithms we have the information for the
-eigenvectors and the eigenvalues on exactly the same positions defined
-by the grids. This allows us tocompute the pair-wise allignment
-between the eigenvectors in the two web finders. 
-
-We are mainly interested in the alginment of the web with
-the halos. Therefore we restrict our analysis to the grid cells that are
-occupied by halos. If we had decided to perform this kind of analysis
-on all the grid cells, the statistics would be dominated by the void
-regions, because the dominate in number the fraction of cells in the
-simuation.
-
+MOVI EL TITULO DE LA SUBSECCION AQUI, ESTABA DOS PARRAFOS MAS ABAJO, PERO TAMBIEN MODIFIQUE EL TEXTO INICIAL
 \subsection{Interweb Alignment}
+
+\begin{figure}
+\includegraphics[width=0.40\textwidth]{Fig5.pdf}
+\caption{Median of the interweb alignment for the two grid
+  resolutions as a function of the dark matter mass corresponding to
+  the halos where the measurement was made. The error bars indicate
+  the lower and upper quartiles (Figure in color in the web version).
+\label{fig:interweb}} 
+\end{figure}
 
 Perhaps the most striking result so far is that the two webs give
 different results for the alignment of massive halos. This is not
@@ -795,11 +801,26 @@ different physical premises to obtain the directions defining the
 eigenvectors. However, we investigate the origin of the different
 alignment statistics by studying the inter-web alignment. 
  
+%We also wish to directly compare the results of the two
+%web tensor algorithms. 
+For the two algorithms, Tweb and Vweb, we have the information for their
+eigenvectors and eigenvalues on exactly the same positions defined
+by the grids. This allows us tocompute the pair-wise alignment
+between the eigenvectors in the two web finders. 
+
+We are mainly interested in the alignment of the web near
+halos. Therefore we restrict our analysis to the grid cells that are
+occupied by halos. Otherwise, if we decided to perform this kind of analysis
+on all the grid cells, the statistics would be dominated by the void
+regions, because they dominate in number the fraction of cells in the
+simuation.
+
+
 
 Figure \ref{fig:interweb} shows the values for $\muavg$ between the
 two $\vec{e}_1$ eigenvectors in the Tweb and the Vweb.  The Figure
 shows that there is an alignment, $\muavg\approx 1.0$, for low mass
-halos and an antialignment, $\muavg\approx 0.2$ for massive. 
+halos and an antialignment, $\muavg\approx 0.2$ for massive ones. 
 
 The transitional scale is located around $(10^{11.5}-10^{12.5})$\hMsun
 depending on the grid resolution. The coarse grid $(256^3)$ shows the
@@ -814,23 +835,14 @@ the divergence of the velocity field is proportional to the
 overdensity, i.e. the trace of the shear field is proportional to the
 trace of the tidal field. 
 
-On the scale where the halos more massiven than $10^{13}$\hMsun are
-located, the relationshop between the velocity shear and the tidal
+On the scale where the halos more massive than $10^{13}$\hMsun are
+located, the relationship between the velocity shear and the tidal
 field changes. There, the fastest momentum-weighted collapse direction
 (defined by the V-web) is perpendicular to the direction where the
 tidal compression is the highest.  
 
 
 
-
-\begin{figure}
-\includegraphics[width=0.40\textwidth]{Fig5.pdf}
-\caption{Median of the interweb alignment for the two grid
-  resolutions as a function of the dark matter mass corresponding to
-  the halos where the measurement was made. The error bars indicate
-  the lower and upper quartiles (Figure in color in the web version).
-\label{fig:interweb}} 
-\end{figure}
 
 
 \subsection{What drives the alignment}
@@ -845,18 +857,72 @@ checked that the results we report below are not affected by this
 change.
 
 For each mass interval we perform cuts in the following properties:
-spin, concentration, triaxiallity, circularity  and density. We
+halo spin, concentration, halo triaxiallity defined as $(A^2-B^2)/(A^2-C^2)$ with
+high (low) triaxiality corresponding to prolate (oblate) shapes, circularity ($C/A$)  and halo
+inner density (virial mass divided by volume out to the virial radius). We
 measure the web alignments in two sets, each one including the $30\%$
 of halos in the lower/higher end of the corresponding property.
 
-{\bf Possible conclusion. Prolateness follow concentration. In the Tweb
-Angular momentum alignment is influenced by spin at higher masses. In
-the Vweb angular momentum alginment is influenced by all factors. In
-the peculiar velocity alginment only spin seemss to have an effect. }
+Figure \ref{fig:drive} shows the results for the major axes of
+the Vweb and Tweb (left and right panels) and the major axis,
+the angular momentum vector, and the halo peculiar velocity (top, middle
+and bottom panels, respectively).  As here we show the average
+of the halo population above the lower mass limit imposed, the halo masses that dominate the
+statistics are close to this lower limit $~10^{11}\hMsun$.
+We show the result for the Twev and Vweb calculated using the two available
+resolutions, but as can be seen in general we find no significant differences in our results.
+
+As can be seen, halos with higher circularity and inner density show
+a higher alignment with the Vweb major axes.  The oposite is the case
+of haloes with higher concentration, spin and triaxiality.  This trend
+is also visible in the angular momentum vs. Vweb major axis alignment only
+for the concentration and spin, with little differences evidenced by the
+other halo properties.  And the alignment strengthening is somewhat
+reversed when comparing the Vweb with the halo peculiar velocity,
+with some evidence for a strengthening with lower circularity and
+inner density, and a weakening with spin and triaxiality.
+
+On the right panels the trends can also be readily seen.  The Tweb
+vs. major axis alignments are stronger for higher circularity,
+concentration and inner density, and weaker for higher spins and
+triaxialities.  With respect to the angular momentum, the alignment
+is weaker for higher circularities, concentrations, inner densities and
+spins, and is only strengthened when the triaxiality is higher.
+Not much difference is seen in the Tweb vs. halo peculiar velocity
+alignments, being this the only regime where there is a clear difference
+in influence of halo properties on the alignments with the Tweb and Vweb;
+the latter do show important changes on the lower-left panel.
+
+As can be seen, higher concentrations, circularities and densities,
+as well as lower spins and triaxialities, produce a similar effect on the
+Tweb vs. major axis alignmets similar to that of diminishing the mass
+of the halos.  This has also been detected in other halo properties such
+as their clustering amplitude in what has been termed assembly bias
+(e.g. Gao, Springel \& White 2005, Li et al., 2008, Lacerna et al., 2011)
+where halos of different ages and equal mass show different clustering
+amplitudes, which could also be interpreted as a change in the effective
+halo mass according to halo properties.
+
+An older halo age has been shown to come along with more spherical halo
+shapes, higher concentrations and halo inner density.  However, in the
+assembly bias scenario of Gao et al., these halos tend to show a clustering
+amplitude consistent with that of the median halo population of higher masses.
+In terms of the alignments with the Tweb, our results show the oposite
+trend.  This shows that the physics behind the clustering amplitude and
+alignments do not necessarily coincide.  The full understanding of
+the dependence of halo properties and/or on their environment is 
+a complex problem, but these results provide extra information that complements
+that obtained from clustering measurements.
+
+%Prolateness follow concentration. In the Tweb
+%Angular momentum alignment is influenced by spin at higher masses. In
+%the Vweb angular momentum alginment is influenced by all factors. In
+%the peculiar velocity alginment only spin seemss to have an effect. 
 
 \begin{figure*}
 \includegraphics[width=0.90\textwidth,angle=90]{Fig6.pdf}
 \caption{The alignment is always taken with respect to the third eigenvector.}
+\label{fig:drive}
 \end{figure*}
 \section{Discussion}
 \label{sec:discussion}
@@ -917,7 +983,7 @@ descriptions for the cosmic web.
 
 We also performed a simple study to find evidence of halo properties,
 other than mass, in driving the alignments. We find that in the case of
-shape, halos located in high density regions or with a low value of
+shape, high concentration halos or halos with a low value of
 the reduced spin parameter tend to show a stronger signal. This trend is
 more pronounced in the Tweb than in the Vweb. Concerning angular
 momentum we find that the antialignment signal is stronger for halos
