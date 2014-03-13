@@ -83,35 +83,33 @@ Av. Vicuña Mackenna 4860, Santiago, Chile\\
 
 \begin{abstract}
 
-We study the alignment of dark matter halos with the cosmic web as described by
-the tidal and velocity shear fields. We focus on the alignment of their
-shape, angular momentum and peculiar velocities. We use a cosmological N-body
-simulation that allows to study dark matter halos spanning almost five orders
-of magnitude in mass ($10^{9}$-$10^{14}$) \hMsun and use spatial scales
-of $(0.5$-$1.0)$\hMpc to define the cosmic web. After varying the
+We study the alignment of dark matter halos with the cosmic web
+charachterized by the tidal and velocity shear fields. We focus on the
+alignment of their shape, angular momentum and peculiar velocities. We
+use a cosmological N-body simulation that allows to study dark matter
+halos spanning almost five orders of magnitude in mass
+($10^{9}$-$10^{14}$) \hMsun and use spatial scales of
+$(0.5$-$1.0)$\hMpc to define the cosmic web. After varying the
 numerical parameters in our experiments we find that the halo shape
-and the tidal field web presents the strongest alignment along
-filaments and walls with a signal that gets stronger as the halo mass
-increases; in the case of the velocity shear only massive halos
-$>10^{12}$\hMsun tend to have their shapes perpendicular to
-filaments and walls. For the angular momentum we find alignment
-signals only for halos more massive than $10^{12}$\hMsun both in the
-tidal and velocity shear webs where the preferences are to be
-perpendicular to filaments or parallel to walls,
-respectively. Finally, the peculiar velocities show a strong alignment
-for all halo masses to move along filaments and walls in the tidal
-web, while in the velocity shear the same alignment is present but
-weaker and only for halos less massive than $10^{12}$\hMsun. Most of
-the different signals between the two web description are due to the
-fact that the main directions of stronger tidal tension and
-velocity shear coincide for halos below $10^{12}$\hMpc but are
+presents the strongesalignment along filaments and walls defined by
+the tidal field with a signal that gets stronger as the halo mass
+increases; in the case of the velocity shear field only massive halos
+$>10^{12}$\hMsun tend to have their shapes perpendicular to filaments
+and walls. For the angular momentum we find alignment signals only for
+halos more massive than $10^{12}$\hMsun both in the tidal and velocity
+shear webs where the preferences are to be perpendicular to filaments
+or parallel to walls, respectively. Finally, the peculiar velocities
+show a strong alignment for all halo masses to move along filaments
+and walls in the tidal web, while in the velocity shear the same
+alignment is present but weaker and only for halos less massive than
+$10^{12}$\hMsun. Most of the different signals between the two web
+description are due to the fact that the main directions of stronger
+tidal tension and velocity shear coincide for halos below $10^{12}$\hMpc but are
 perpendicular to each other for halos more massive than this
-threshold.  This clearly separates halos into those that live
-in sheets and filaments (lower masses) and nodes of the cosmic web. As
-a general conclusion, our results clearly show that the two different
+threshold.  ur results clearly show that the two different
 algorithms we used to define the cosmic web describe different physical
 aspects of non-linear collapse and should be used in a complementary
-way according to the problem at hand.
+way to understand the effect of the cosmic web on galaxy evolution.
 \end{abstract}
 \begin{keywords}
 methods: N-body simulations, galaxies: haloes, cosmology: theory, dark
@@ -122,55 +120,55 @@ matter, large-scale structure of Universe
 \section{Introduction}
 \label{sec:introduction}
 
-There is a long observational tradition stuying galactic properties
+There is a long observational tradition studying galactic properties
 as a function of their large scale environment
 \citep[e.g.][]{Oemler1974,Dressler1980,Pimbblet2002,Gomez2003,Kauffmann2004,Abbas2006,Baldry2006,Park2007,OMill2008,Wilman2010}. In
 these situations the environment definition is usually based on
 quantities easily accesible to observations such as local number
 density or nearest neighbour measurements \citep{Muldrew2012}. With
-the advent of large surveys the visibility of the cosmic web is
-clear. As a consequence, in order to capture this filamentarity, the
-environment definition started to be more complex, involving shear
+the advent of large surveys the visibility of the cosmic web became
+clear. As a consequence, in order to capture its filamentarity, the
+environment def nition started to be more complex, involving shear
 properties of the galaxy density field or the reconstructuted dark
-matter density field \citep[e.g.]{Lee2005,Sousbie2008,MunozCuartas2011,Tempel2014}. 
+matter density field
+\citep[e.g.]{Lee2005,Sousbie2008,MunozCuartas2011,Tempel2014}.  
 
-In parallel, numerical simulations can reproduce the web-like
-structure of the galaxy distribution in models based on gravitational
-instability in a Dark Matter (DM) dominated universe
-\citep[e.g.][]{Bond1996,Colberg2005}. Simulations now allow to follow the time
-evolution into the non-linear regime of virialized structures which in
-turm should host observable galaxies. The discovery in simulations of
-gas filaments that feed galaxies is another theoretical hint that
-strenghtened the expected connection between galactic properties ant
-their place in the cosmic web \citep{Ocvirk2008,Dekel2009}. 
+In parallel to the observational advances, numerical simulations
+successfully reproduced the web-like structure of the galaxy
+distribution in models based on gravitational instability in a Dark
+Matter (DM) dominated universe
+\citep[e.g.][]{Bond1996,Colberg2005}. Simulations now allow to follow
+the time evolution into the deep non-linear regime of virialized
+structures (DM halos) which in turn should host observable
+galaxies to study their evolution in the cosmic web. The discovery in
+simulations of gas filaments that feed galaxies is another theoretical
+hint that strenghtened the expected connection between galactic
+properties ant their place in the web \citep{Ocvirk2008,Dekel2009}.   
 
-With the aid of high resolution simulations it has been established that halos of
-a given mass form earlier in denser regions; concentration, spin and
-shape also depend on the local density. In the last decade new
-algorithms have implemented cosmic web classifications that go beyond
-the local density by defining a location to be a peak, sheet, filament
-or void depending on the simmetry properties of the local dark matter
-distribution
-\citep[e.g][]{Hahn2007,Sousbie2008b,Tweb,Gonzalez2010,Noh2011}.  
 
-There are analytical frameworks, such as tidal torque theory, that
-aim at describing how galaxies gain angular momentum and expect a
-correlation of this quantity with the cosmic web. The observational
-studies that try to measure such correlations actually try to use as a
-proxy the observed shape of galaxies
-\citep{Lee2002,Lee2007,Jones2010}. In this respect it is useful to
-have a theoretical baseline for the correlations of angular momentum
-and shape with the cosmic web.  There is large tradition of alignment
-measurements of shape and angular momentum
+In the last decade new algorithms have implemented cosmic web
+classifications that go beyond the local density by defining a
+location to be a peak, sheet, filament or void depending on the
+simmetry properties of the local dark matter distribution. With the
+aid of simulations it has been established that halos of a given mass
+form earlier in denser regions; concentration, angular momentum and shape also
+depend can be aligned with these web elements. \citep[e.g][]{Hahn2007,Sousbie2008b,Tweb,Gonzalez2010,Noh2011}.    
+
+The observational studies that try to measure angular momentum correlations
+use the galaxy shape as a proxy  \citep{Lee2002,Lee2007,Jones2010}. In
+this respect it is useful to have a theoretical baseline for the
+correlations of angular momentum and shape with the cosmic web.  There
+is large tradition of alignment measurements of shape and angular momentum
 \citep[e.g.][]{Hahn2007,AragonCalvo2007,Zhang2009,Codis2012,Trowland2013,Libeskind2013}. The
 main result of these previous studies is that shape alignment is a
 robust measurement regardless of the methods and simulations. On the
-other hand, the results for the angular momentum differ in the degree of the alignment.  
+other hand, the results for the angular momentum differ in the degree
+of the alignment.   
 
 In the same spirit of describing the place of galaxies within the
 cosmic web, there has been an revival of surveys that measure the
 cosmic flow patterns in the Local Universe
-\citep{Nusser2011,Tully2013}. Assuming the correspondence between the
+\citep{Nusser2011,Tully2013}. Assuming the linearity between the
 divergence of the cosmic flow velocity field and the local matter
 overdensity (valid in the linear regime) one could construct accurate
 maps of the matter density from peculiar velocities
@@ -180,43 +178,43 @@ at the expected alignment of the peculiar velocities.
 In this \documentname we review most of these studies about shape and
 angular momentum alignment and offer our own study with complementary
 numerical techniques and simulations.  We also present for the first
-time in the literature new results for the alignment of peculiar velocities
-with large scale structure.
+time in the literature new results for the alignment of peculiar
+velocities with large scale structure.
 
 The structure of this \documentname is the following. In \S
 \ref{sec:theory} we present the theoretical antecedents for the
 alignment studies we present in this paper. In \S
 \ref{sec:nbody} we present the N-body
 cosmological simulation and halo catalogs.  Next, we describe in
-\S\ref{sec:algorithms} the two web-finding algorithms we use. In
+\S\ref{sec:algorithms} the two web-finding algorithms we use and in
+\S\ref{sec:experiments} the setup for out numerical experiments. In
 \S\ref{sec:results} we present our main results about the alignment
-of shape, spin and peculiar velocities with respect to the cosmic
+of shape, angular momentum and peculiar velocities with respect to the cosmic
 web. In \S\ref{sec:conclusions} we present our conclusions.
 
 
 \section{Theoretical Considerations: Notation and Precendents}
 \label{sec:theory}
 
-There is abundant literature on the issue of shape and angular momentum
-alignment of dark matter halos with respect to the cosmic web. In this
-paper we focus our attention on results published during the last
-decade that have made use of large N-body dark matter only
-cosmological simulations. There are many works that have addressed
-this problem using observational data from large surveys such as the
-Sloan Digital Sky Survey (SDSS), however we choose to narrow our
-discussion to simulation based studies which are prone to comparison.
 
 Out of the three alignments that we study in this paper -shape,
 angular momentum and peculiar velocity- only the the first two have
 received wide attention in the literature, being angular momentum the
 most popular with twice the number of studies for shape alignment.
 
-These alignments are often measured from the distribution of the
+In this paper we focus our attention on results published during the last
+decade that have made use of large N-body dark matter only
+cosmological simulations. There are many works that have addressed
+this problem using observational data from large surveys such as the
+Sloan Digital Sky Survey (SDSS), however we choose to narrow our
+discussion to simulation based studies which are prone to comparison. 
+
+Alignments are often measured from the distribution of the
 $\mu=\vert\cos\theta\vert$ where $\theta$ is the angle between the two axes of
-interest. This is often directly measuered as the absolute value of
+interest. This is often directly measured as the absolute value of
 the dot product between the two unit vectors along the directions
-being tested, for instance in the case of angular momentum one would compute
-$\mu=\vert\hat{j}\cdot\hat{n}\vert$ In the case of shape alignments the major
+being tested. For instance, in the case of angular momentum one would compute
+$\mu=\vert\hat{j}\cdot\hat{n}\vert$. In the case of shape alignments the major
 axis is the chosen direction to compare against the cosmic web. 
 
 For an isotropic ditribution of the vector around the direction defined by
@@ -262,13 +260,11 @@ behaviours of no-alignment, alignment or anti-alignment.
 parallel to sheets, but it is a weaker than shape alignment. 
 \end{itemize}
 
-A novel aspect of our study is the use of a
-single computational volume of a high resolution simulation to study
-the alignments. Equally important, is our focus to quantify to what
-extent  these results depend on the method used to define the cosmic
-web and the numerical choices to implement the algorithms.  
-
-
+A novel aspect of our study is the use of a single computational
+volume of a high resolution simulation to study the
+alignments. Equally important, is our focus to quantify to what extent
+these results depend on the method used to define the cosmic web and
+the numerical choices to implement the algorithms.   
 
 \begin{table*}
 \begin{tabular}{cccccc}\hline\hline
@@ -465,8 +461,7 @@ mass velocity. Finally the peculiar velocity of a halo is computed as
 the center of mass velocity.
 
 The halo and environment used in this paper is publicly available through the
-MultiDark
-database\footnote{\texttt{http://www.multidark.org/MultiDark/}}. The
+MultiDark database\footnote{\texttt{http://www.multidark.org/MultiDark/}}. The
 halo data is thoroughly described in \cite{2013AN....334..691R}. 
 
 
@@ -515,11 +510,6 @@ tensor is minus the divergence of the velocity field normalized by the
 Hubble constant $-\nabla\cdot {\bf}v /H_{0}$. A detailed description
 of this algorithm can be found in \cite{Vweb}.
 
-
-In both algorithms we note the three eigenvalues as
-$\lambda_1>\lambda_2>\lambda_3$ and their correspoding eivenvectors as
-$\hat{e}_1$, $\hat{e}_2$ and $\hat{e}_3$.
-
 \subsection{Numerical considerations}
 
 In this paper we compute the cosmic web on cubic grids of two different
@@ -561,6 +551,7 @@ $\bar{v}_x=(v_{1x}+v_{2x})/2=-5$km/s.
 
 
 \section{Our Numerical Experiments}
+\label{sec:experiments}
 
 In this paper we use the data and the methods described above to
 perform two kinds of measurements: the preferential alignment and the
@@ -581,7 +572,9 @@ of alignment with respect to filaments and sheets. Given that the
 direction along a filament should be defined by the eigenvector
 $\hat{e}_3$ corresponding to the smallest eigenvalue $\lambda_3$, a
 strong aligmnet along that vector will be reported as an aligment
-along filaments. Correspondingly, 
+along filaments. Correspondingly, the first eigenvector $\hat{e}_{1}$
+defines the direction perpendicular to walls, a strong alignemnt along
+this vector will be reported as an anti-alignment along walls.
 
 \subsection{Preferential Alignment}
 
@@ -655,13 +648,16 @@ $\vert\langle\hat{s}\cdot\hat{e}_3\rangle\vert$.
 \begin{figure*}
 \includegraphics[width=0.8\textwidth]{Fig1.pdf}
 \caption{Fraction of halos in a mass bin that show a preferential
-  alignment with respect to an eigenvector. Each row presents on of
-  the three properties studied in this paper: shape (major axis),
+  alignment with respect to an eigenvector in the cosmic
+  web; $\hat{e}_1$ (black) defines the direction perpendicular to a wall and
+  $\hat{e}_3$ (yellow) indicates the direction along a filament. Each row
+  presents one of the three properties studied in this paper: shape (major axis),
   angular momentum and  peculiar velocity. Left (right) column presents the
   results against the Vweb (Tweb). Strong colors refer to $256^3$ grid
   resolutions and lighter colors to a $512^3$ grid. The thick black
   horizontal line at $0.33$ corresponds to the expected fraction for a
-  random vector field. 
+  random vector field. The uncertainty is computed assumed poissonian
+  statistics in each mass bin.
 \label{fig:preferential}}
 \end{figure*}
 
@@ -725,10 +721,10 @@ between vector pairs describing the alignments discussed so far.
 
 \begin{figure*}
 \includegraphics[width=0.75\textwidth]{Fig2.pdf}
-\caption{Median of $\cos\theta$ quantifying the shape alignment for
+\caption{Median of $|\cos\theta|$ quantifying the shape alignment for
   the Vweb (left) and the Tweb (right) at two different grid
-  resolutions. In the upper (lower) panels the angle $\theta$ is
-  measured between the halo major axis and the first (third)
+  resolutions as a function of halo mass. In the upper (lower) panels
+  the angle $\theta$ is measured between the halo major axis and the first (third)
   eigenvector.\label{fig:shape_alignment}. }
 \end{figure*}
 
@@ -762,9 +758,10 @@ both to filaments and walls.
 \includegraphics[width=0.75\textwidth]{Fig3.pdf}
 \caption{Median of $|\cos\theta|$ quantifying the angular momentum
   alingment for the Vweb (left) and the Tweb (right) for two different
-  grid resolutions. In the upper (lower) panels the angle $\theta$ is
-  measured between the first (third) eivenvector and the angular
-  momentum vector.\label{fig:spin_alignment}} 
+  grid resolutions as a function of halo mass. In the upper (lower)
+  panels the angle $\theta$ is measured between the first (third)
+  eivenvector and the angular momentum
+  vector.\label{fig:spin_alignment}}  
 \end{figure*}
 
 
@@ -792,9 +789,9 @@ perpendicular to filaments.
 \includegraphics[width=0.75\textwidth]{Fig4.pdf}
 \caption{Median of $\vert\cos\theta\vert$ quantifying the peculiar velocity
   alignment with the Vweb (left) and the Tweb (right) for two different
-  grid resolutions. In the upper (lower) panels the angle $\theta$ is
-  measured between the first (third) eivenvector and a halo's peculiar
-  velocity.
+  grid resolutions as a function of halo mass. In the upper (lower)
+  panels the angle $\theta$ is measured between the first (third)
+  eivenvector and a halo's peculiar velocity.
 \label{fig:velocity_alignment}} 
 \end{figure*}
 
@@ -907,7 +904,7 @@ that obtained from clustering measurements.
 \caption{Median of the interweb alignment for the two grid
   resolutions as a function of the dark matter mass corresponding to
   the halos where the measurement was made. The error bars indicate
-  the lower and upper quartiles (Figure in color in the web version).
+  the lower and upper quartiles.
 \label{fig:interweb}} 
 \end{figure}
 
@@ -960,31 +957,31 @@ We have examined the alignment of shape, angular momentum and peculiar
 velocity of dark matter halos with respect to the cosmic web. We use
 publicly available data from two algorithms implemented on a large
 cosmological N-body simulation to study halo populations spanning five
-orders of magnitude in mass. The first algorithm uses the tidal field
-and the second the velocity shear, both present local results on
-scales of $0.5$\hMpc to $1.0$\hMpc.  
+orders of magnitude in mass. The first algorithm uses the tidal field (Tweb)
+and the second the velocity shear (Vweb), both include results on spatial scales of
+$0.5$\hMpc and $1.0$\hMpc.    
 
 We quantify the alignments in two complementary ways. The first one
 measures the fraction of halos in a poulation that is preferentially
 aligned with either one of the eigenvectors $\vec{e}_1$, $\vec{e}_2$
-or $\vec{e}_3$. The second method measures the average value of the
-angle between an eigenvector and the quantity of interest. These two
-measurements give us a complete picture for the different degrees of
-alignment in the cosmic web. 
+or $\vec{e}_3$ en the local definition of the cosmic web. The second
+method measures the average value of the angle between an eigenvector
+and the quantity of interest. These two measurements give us a
+complete picture for the different degrees of alignment in the web.
 
 We find that the strongest alignment occurs for the halo shape with
 respect to the Tweb. In this case the halos tend to align with the
-third eigenvector, $\vec{e}_3$, meaning that they lie along filaments
-and walls. This trend is gets stronger as the halo mass
+third eigenvector, $\hat{e}_3$, meaning that they lie along filaments
+and walls. This trend gets stronger as the halo mass
 increases and agrees with all the results published so far. Instead,
 for the Vweb, there is only an antialignment for halos more massive
 than $10^{12}$\hMsun, a result that is presented here for the first
-time.  
+time. 
 
 A much weaker alignment signal is present for the angular momentum. In
 the Tweb only the most massive halos $>10^{12}$\hMsun are antialigned
 with respect to the filaments, while for the Vweb the massive halos
-are alignment with sheets. These results broadly agree with the
+are aligned with sheets. These results broadly agree with the
 published literature. Nevertheless, in some publications
 \citep{AragonCalvo2007,Hahn2007} there is an alignment signal
 reported at lower halo masses $<10^{12}$\hMsun that we do not detect
@@ -992,15 +989,15 @@ in our measurements.
 
 A new result from our study is the alignment for the peculiar
 velocities. Here we find a relatively strong signal of alignment along
-the direction defined by the third eigenvector and perpendicular to
-the first. This signal is clear in the Tweb for all masses below
+the direction defined by the third eigenvector, $\hat{e}_3$, and perpendicular to
+the first, $\hat{e}_1$. This signal is clear in the Tweb for all masses below
 $<10^{13}$\hMsun. This can be interpreted as a flow parallel to walls
 and filaments. In the case of the Vweb similar signal, albeit weaker,
 is present only for the low mass halos $<10^{12}$\hMsun.
 
 The different behaviour for the alignments of massive halos in the
-Tweb and the Vweb was tracked to a corresponding anti-alignment
-between the eigenvectors in the two web grids for massive halos
+Tweb and the Vweb is explained by an anti-alignment between the
+eigenvectors in the two web grids for massive halos
 $>10^{12}$\hMsun. For low mass halos the directions defined by the two
 webs point in the same direction. This trends can be interpreted as
 non-linear effects that appear in the two different physical
@@ -1022,23 +1019,22 @@ halos depend on the physical definition of the cosmic web. This shows
 that the main aspect of non-linear gravitational collapse might be
 revealead easily depending on the choice of the physical context
 (i.e. tidal field vs. velocity shear). There is not a better method,
-simply differente perspectives. We will explore the potential of these
-two different techniques in undertanding the environmental dependence
-of galaxy evolution in future work. 
-
-
-
-
+but differente perspectives. In future work we will explore the
+potential of these two complementary techniques in understanding the
+environmental dependence of galaxy evolution.
 
 \section*{Acknowledgments} 
+
+J.E.F-R acknowledges the financial support by Vicerrector\'ia de
+Investigaciones at Universidad de los Andes through a FAPA grant. 
 
 \section*{Appendix A. Detailed description of previous theoretical results}
 
 In this Appendix we review the results that use a similar exploration
 techniques for halo alignments with the cosmic web. Other kind of
 alignment statistics based based on modifications of the correlation
-\citep{Paz2008,Faltenbacher2009} that go beyond a local computation
-and therefore are not reviewed here.
+\citep[e.g.][]{Paz2008,Faltenbacher2009} that go beyond a local computation
+and are not reviewed here.
 
 \begin{itemize}
 
