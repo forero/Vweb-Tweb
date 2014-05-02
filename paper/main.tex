@@ -125,16 +125,16 @@ matter, large-scale structure of Universe
 
 There is a long observational tradition studying galactic properties
 as a function of their large scale environment
-\citep[e.g.][]{Oemler1974,Dressler1980,Pimbblet2002,Gomez2003,Kauffmann2004,Abbas2006,Baldry2006,Park2007,OMill2008,Gonzalez2009,Padilla2010,Wilman2010}. In
+\citep[e.g.][]{Oemler1974,Dressler1980,Pimbblet2002,Gomez2003,Kauffmann2004,Abbas2006,Baldry2006,Park2007,OMill2008,Gonzalez2009,Padilla2010,Wilman2010,Muldrew2012}. In
 these situations the environment definition is usually based on
 quantities easily accessible to observations such as local number
-density or nearest neighbour measurements \citep{Muldrew2012}. With
+density or nearest neighbour measurements. With
 the advent of large surveys the visibility of the cosmic web became
 clear. As a consequence, in order to capture its filamentarity, the
-environment definition started to be more complex, involving shear
+environment definition started to be more complex, involving shear and gradient 
 properties of the galaxy density field or the reconstructed dark
-matter density field
-\citep[e.g.]{Lee2005,Sousbie2008,MunozCuartas2011,Tempel2014}. 
+matter density/velocity field
+\citep[e.g.]{Lee2005,AragonCalvo2007,Hahn2007,Sousbie2008,Zhang2009,MunozCuartas2011,Vweb,Trowland2013,Tempel2014}. 
 
 In parallel to the observational advances, numerical simulations
 successfully reproduced the web-like structure of the galaxy
@@ -276,25 +276,25 @@ Author & Web Method & Spatial Scale & Along &
 Alignment & Mass dependence\\\hline
 
 {\bf Forero-Romero et al. (2014)} & T-Web & $0.5-1 \hMpc$ &
-filament &$++$ & $>10^{12}$\hMsun\\
+$\hat{e}_3$ (filament) &$++$ & $>10^{12}$\hMsun\\
 &   & &
-filament & $+$ & $<10^{12}$\hMsun\\
+$\hat{e}_3$ (filament) & $+$ & $<10^{12}$\hMsun\\
 
 &   & &
-wall & $++$ & $>10^{12}$\hMsun\\
+$\hat{e}_1$ (wall) & $++$ & $>10^{12}$\hMsun\\
 
 &   & &
-wall & $+$ & $<10^{12}$\hMsun\\\hline
+$\hat{e}_1$ (wall) & $+$ & $<10^{12}$\hMsun\\\hline
 
 {\bf Forero-Romero et al. (2014)} & Vp-Web & $0.5-1 \hMpc$ &
-filament &$--$ & $>10^{12}$\hMsun\\
+$\hat{e}_3$ (filament) &$--$ & $>10^{12}$\hMsun\\
 &   & &
-filament & none & $<10^{12}$\hMsun\\
+$\hat{e}_3$ (filament) & none & $<10^{12}$\hMsun\\
 &   & &
-wall & $--$ & $>10^{12}$\hMsun\\
+$\hat{e}_1$ (wall) & $--$ & $>10^{12}$\hMsun\\
 
 &   & &
-wall & none & $<10^{12}$\hMsun\\\hline
+$\hat{e}_1$ (wall) & none & $<10^{12}$\hMsun\\\hline
 
 
 \cite{Libeskind2013} & V-Web & $1 \hMpc$ &
@@ -335,28 +335,28 @@ Alignment & Mass dependence\\
  & & ($\hMpc$)& & & \\\hline
 
 {\bf Forero-Romero et al. (2014)} & T-Web & $0.5-1$ &
-filament & - & $>10^{12}$\hMsun\\
+$\hat{e}_3$  (filament) & - & $>10^{12}$\hMsun\\
 
 &   & &
-filament & none & $<10^{12}$\hMsun\\
+$\hat{e}_3$  (filament) & none & $<10^{12}$\hMsun\\
 
 &   & &
-wall & none & $>10^{12}$\hMsun\\
+$\hat{e}_1$ (wall) & none & $>10^{12}$\hMsun\\
 
 &   & &
-wall & none & $<10^{12}$\hMsun\\\hline
+$\hat{e}_1$ (wall) & none & $<10^{12}$\hMsun\\\hline
 
 {\bf Forero-Romero et al. (2014)} & Vp-Web & $0.5-1$ &
-filament &none & $>10^{12}$\hMsun\\
+$\hat{e}_3$  (filament) & none & $>10^{12}$\hMsun\\
 
 &   & &
-filament & none & $<10^{12}$\hMsun\\
+$\hat{e}_3$ (filament) & none & $<10^{12}$\hMsun\\
 
 &   & &
-wall & + & $>10^{12}$\hMsun\\
+$\hat{e}_1$ (wall) & + & $>10^{12}$\hMsun\\
 
 &   & &
-wall & nonte & $<10^{12}$\hMsun\\\hline
+$\hat{e}_1$ (wall) & none & $<10^{12}$\hMsun\\\hline
 
 \cite{Libeskind2013} & V-Web & $1$ &
 filament &$-$ & $>10^{12}$\hMsun\\
@@ -563,22 +563,32 @@ average value of the angle along the eigenvectors of interest.
 
 We note that we measure alignments along the eigenvectors of the
 cosmic web without defining first whether each point corresponds to a
-filament or a wall. Our motivation is two-fold. First, partitioning the
-simulation into web elements implies a choice regarding the value
-for the parameter $\lambda_{\rm th}$; although this has been done
-before we consider that deriving robust results independent of the
-free parameter $\lambda_{\rm th}$ can be more illuminating to
-understand the connection of halos with the cosmic web.
-
-
-However, for simplicity and readability we report our results in terms
-of alignment with respect to filaments and sheets. Given that the
-direction along a filament should be defined by the eigenvector
-$\hat{e}_3$ corresponding to the smallest eigenvalue $\lambda_3$, a
+filament or a wall. However, for simplicity and readability we describe
+our results in terms of alignment with respect to filaments and
+sheets. Given that the direction along a filament should be defined by the
+eigenvector $\hat{e}_3$ corresponding to the smallest eigenvalue $\lambda_3$, a
 strong alignment along that vector will be reported as an alignment
 along filaments. Correspondingly, the first eigenvector $\hat{e}_{1}$
 defines the direction perpendicular to walls, a strong alignment along
-this vector will be reported as an anti-alignment along walls.
+this vector will be reported as an anti-alignment along walls. 
+
+
+We avoid the classification into filaments and walls for the following
+reason. Partitioning the simulation into web elements implies
+a choice regarding the value for the parameter $\lambda_{\rm th}$;
+although this has been done before, we consider that deriving robust
+results independent of the free parameter $\lambda_{\rm th}$ can be
+more illuminating to understand the connection of halos with the
+cosmic web. 
+
+However, a possible disadvantage is that we are mixing the alignment signal
+of different environments. For instance, if half of halo population of
+fixed mass is aligned along filaments (and the vector $\hat{e}_3$), and the
+other half along planes (perpendicular to $\hat{e}_1$ but without a clear signal along
+$\hat{e}_3$, $\hat{e}_2$), the total signal of the alignment along
+$e_3$ might appear diluted in comparison to a signal taken separately
+for filaments and walls. 
+
 
 \subsection{Preferential Alignment}
 
@@ -691,9 +701,12 @@ direction, while there is a minority of halos aligned with
 $\vec{e}_{1}$.  There is a clear change in trends around
 $10^{11}\hMsun-10^{12}\hMsun$ depending on the grid resolution;
 below that mass range there is no evidence for alignment while at
-higher masses all the trends we describe are apparent. This means that most
-of the halos tend to lie along walls but do not have a clear alignment
-with respect to filaments.
+higher masses all the trends we describe are noticeable. This means
+that the angular momentum of halos above $10^{12}\hMsun$ tends to lie
+along walls, parallel to the vector $\vec{e}_2$; without any clear
+trend for alignment/anti-alignment with respec to filaments.
+
+
 
 For the angular momentum alignment and the Tweb (middle row, right
 column) we find no evidence for any alignment at low masses $<10^{12}\hMsun$.
@@ -958,6 +971,14 @@ field changes. There, the fastest momentum-weighted collapse direction
 (defined by the V-web) is perpendicular to the direction where the
 tidal compression is the highest. 
 
+It is possible to consider that numerical effects can also
+affect the estimation of the eigenvectors. For instance,
+different levels of shot noise in the interpolation scheme to
+construct the density and momentum grids could contribute to the
+anti-alignment of the two algorithms. However, a detailed study of the
+inter-web alignments is beyond the scope of this paper.
+
+
 \section{Conclusions}
 \label{sec:conclusions}
 
@@ -1038,12 +1059,18 @@ environmental dependence of galaxy evolution.
 J.E.F-R acknowledges the financial support by Vicerrector\'ia de
 Investigaciones at Universidad de los Andes through a FAPA grant.
 NP acknowledges support by Fondecyt Regular No. 1110328 and BASAL PFB-06 "Centro de Astronomia y Tecnologias Afines".
-NP and SC acknowledge support by the European Commissions Framework Programme 7, through the Marie Curie International
-Research Staff Exchange Scheme LACEGAL (PIRSES-GA-2010-269264).
-NP thanks the hospitality of the Max Planck
-Institute for Astrophysics at Garching during his sabbatical year 2013-2014.
-The Geryon cluster at the Centro de Astro-Ingenieria UC was extensively used for the calculations performed in this paper.
-The Anillo ACT-86, FONDEQUIP AIC-57, and QUIMAL 130008 provided funding for several improvements to the Geryon cluster.
+NP and SC acknowledge support by the European Commissions Framework
+Programme 7, through the Marie Curie International Research Staff
+Exchange Scheme LACEGAL (PIRSES-GA-2010-269264). NP thanks the
+hospitality of the Max Planck Institute for Astrophysics at Garching
+during his sabbatical year 2013-2014. The Geryon cluster at the Centro de Astro-Ingenieria UC was extensively used for the calculations performed in this paper.
+The Anillo ACT-86, FONDEQUIP AIC-57, and QUIMAL 130008 provided
+funding for several i provements to the Geryon cluster.
+
+We thank the referee, Miguel Aragon-Calvo, for a constructive report
+that help us to improve the paper.  
+
+
 
 \section*{Appendix A. Detailed description of previous theoretical results}
 
@@ -1228,8 +1255,7 @@ for massive halos.
 
 \citep{Hahn2007}
 
-They used the Tweb method\footnote{In \citep{Hahn2007} the authors do not use the term "Tweb", but their definition of the
-tidal field tensor they use is equivalent with the T-Web} applied on three simulations each of $512^3$
+They used the hessian of the gravitational potential \footnote{In \citep{Hahn2007} the authors use a definition of the tidal field tensor equivalent with the T-Web method} applied on three simulations each of $512^3$
 particles, with sizes $L_1=45$\hMpc, $L_2=90$\hMpc and
 $L_3=180$\hMpc, this corresponds to particle masses of $4.7, 38.0,
 300\times 10^7$\hMsun. Halo identification was done with a FOF
