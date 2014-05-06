@@ -94,25 +94,27 @@ halos spanning almost five orders of magnitude in mass
 ($10^{9}$-$10^{14}$) \hMsun and use spatial scales of
 $(0.5$-$1.0)$\hMpc to define the cosmic web. After varying the
 numerical parameters in our experiments we find that the halo shape
-presents the strongest alignment along filaments and walls defined by
-the tidal field with a signal that gets stronger as the halo mass
-increases; in the case of the velocity shear field only massive halos
-$>10^{12}$\hMsun tend to have their shapes perpendicular to filaments
-and walls. For the angular momentum we find alignment signals only for
+presents the strongest alignment along the smallest tidal eigenvector
+,i.e. along filaments and walls, with a signal that gets stronger as
+the halo mass increases. In the case of the velocity shear field only
+massive halos $>10^{12}$\hMsun tend to have their shapes aligned along
+the largest tidal eigenvector; that is perpendicular to filaments and
+walls. For the angular momentum we find alignment signals only for
 halos more massive than $10^{12}$\hMsun both in the tidal and velocity
-shear webs where the preferences are for it to be perpendicular to filaments
-or parallel to walls, respectively. Finally, the peculiar velocities
-show a strong alignment for all halo masses to move along filaments
-and walls in the tidal web, while in the velocity shear the same
-alignment is present but weaker and only for halos less massive than
-$10^{12}$\hMsun. Most of the different signals between the two web
-descriptions are due to the fact that the main directions of stronger
-tidal tension and velocity shear coincide for halos below $10^{12}$\hMsun but are
-perpendicular to each other for halos more massive than this
-threshold.  Our results clearly show that the two different
-algorithms we used to define the cosmic web describe different physical
-aspects of non-linear collapse and should be used in a complementary
-way to understand the effect of the cosmic web on galaxy evolution.
+shear webs where the preferences are for it to be parallel to the
+middle eigenvector; perpendicular to filaments and parallel to
+walls. Finally, the peculiar velocities show a strong alignment along
+the smallest tidal eigenvector for all halo masses; moving along filaments
+and walls. In the velocity shear the same alignment is present but
+weaker and only for halos less massive than $10^{12}$\hMsun. Most of
+the different signals between the two web descriptions are due to the
+fact that the main directions of stronger tidal tension and velocity
+shear coincide for halos below $10^{12}$\hMsun but are perpendicular
+to each other for halos more massive than this threshold.  Our results
+clearly show that the two different algorithms we used to define the
+cosmic web describe different physical aspects of non-linear collapse
+and should be used in a complementary way to understand the effect of
+the cosmic web on galaxy evolution. 
 \end{abstract}
 \begin{keywords}
 methods: numerical, galaxies: haloes, cosmology: theory, dark
@@ -538,9 +540,10 @@ eigenvalues and eigenvectors on each grid point.
 
 
 We caution the reader that the results reported by
-\citep{Vweb, Libeskind2013,Wang2013} use a velocity field that is calculated by a
-gaussian smoothing of the CIC velocity field without taking into
-account any weight by mass. 
+\citep{Vweb, Libeskind2013,Wang2013} use a velocity field that is
+calculated by a gaussian smoothing of the CIC velocity field without
+taking into account any weight by mass.   
+
 % We present a simple example to clarify the difference
 % between the two ways of finding the smoothed velocity field. Let's consider two
 % neighboring CIC cells, one with total mass $m_1 = 10^{11}$\hMsun and
@@ -570,24 +573,31 @@ eigenvector $\hat{e}_3$ corresponding to the smallest eigenvalue $\lambda_3$, a
 strong alignment along that vector will be reported as an alignment
 along filaments. Correspondingly, the first eigenvector $\hat{e}_{1}$
 defines the direction perpendicular to walls, a strong alignment along
-this vector will be reported as an anti-alignment along walls. 
+this vector will be reported as an anti-alignment along
+walls. Finally, a strong alignment along the second eigenvector
+$\hat{e}_2$ in company with an anti-alignment with $\hat{e}_1$ is
+reported as an alignment with walls and anti-alignment with respec to
+filaments. 
 
 
 We avoid the classification into filaments and walls for the following
 reason. Partitioning the simulation into web elements implies
-a choice regarding the value for the parameter $\lambda_{\rm th}$;
-although this has been done before, we consider that deriving robust
-results independent of the free parameter $\lambda_{\rm th}$ can be
-more illuminating to understand the connection of halos with the
-cosmic web. 
+a choice regarding the value for the parameter $\lambda_{\rm th}$ in
+two different web finders. This has been done before for each web
+finder independently. However, we consider that deriving results
+independent of the choice of parameters $\lambda_{\rm th,TWEB}$,
+$\lambda_{\rm th, VWEB}$ provides clear data to understand the
+connection of DM halos with the cosmic web.  
 
 However, a possible disadvantage is that we are mixing the alignment signal
-of different environments. For instance, if half of halo population of
-fixed mass is aligned along filaments (and the vector $\hat{e}_3$), and the
-other half along planes (perpendicular to $\hat{e}_1$ but without a clear signal along
-$\hat{e}_3$, $\hat{e}_2$), the total signal of the alignment along
-$e_3$ might appear diluted in comparison to a signal taken separately
-for filaments and walls. 
+of different environments. For instance, if half of the halo population of
+fixed mass is aligned along filaments (the vector $\hat{e}_3$), and the
+other half along planes (perpendicular to $\hat{e}_1$ but without a
+clear signal along $\hat{e}_3$, $\hat{e}_2$), the total signal of the
+alignment along $e_3$ might appear diluted in comparison to a signal
+taken separately for filaments and walls. However, as it has been
+shown in \cite{Libeskind2013} the alignment signals are robust across
+different environments. 
 
 
 \subsection{Preferential Alignment}
@@ -595,7 +605,7 @@ for filaments and walls.
 The first measurement is a rough approximation to find out along which
 axes halos are aligned. We refer to this as Preferential Alignment (PA).
 
-We use the fact that for a given vector under study $\hat{a}$ and the
+We use the fact that for a given vector under study $\hat{s}$ and the
 three eigenvectors the following identity holds 
  
 \begin{equation}
@@ -626,15 +636,13 @@ does not give a precise answer on the degree of the alignment
 
 \subsection{Average Alignment Angle}
 
-We emphasize that all the quantities that we compute in this paper are
-independent of any threshold on the eigenvalues that could be used to make a web
-classification into web types. Instead, we focus on the alignments with
-respect to the eigenvectors regardless of the web type. In this
-context we recall that the eigenvector $\hat{e}_1$ is 
-perpendicular to the plane defining a sheet and also a filament and
-that $\hat{e}_3$ is the vector that marks the direction of a filament
-and lies on the plane of a sheet. Therefore we focus on quantifying
-the degree of alignment along these two eigenvectors.
+We emphasize that we focus on the alignments with respect to the
+eigenvectors regardless of the web type. We recall that the
+eigenvector $\hat{e}_1$ is perpendicular to the plane defining a sheet
+and the line describing a filament; and $\hat{e}_3$ is the vector that
+marks the direction of a filament and lies on the plane of a
+sheet. Therefore we focus on quantifying the degree of alignment along
+these two eigenvectors. 
 
 This experiment complements the results obtained by the PA statistic by
 computing the average and standard deviation of
@@ -707,7 +715,6 @@ along walls, parallel to the vector $\vec{e}_2$; without any clear
 trend for alignment/anti-alignment with respec to filaments.
 
 
-
 For the angular momentum alignment and the Tweb (middle row, right
 column) we find no evidence for any alignment at low masses $<10^{12}\hMsun$.
 At higher masses $>10^{12}\hMsun$ there is a weak signal
@@ -718,15 +725,15 @@ of the halos are aligned along $\vec{e}_{3}$. This means
 that most of the halos are perpendicular to the filaments and do not
 have a clear alignment with respect to walls.
 
-The peculiar velocities (lower panels) show a weak but consistent alignment along the
-third eigenvector $\vec{e}_{3}$ of the Tweb for all masses below
-$10^{13.0}\hMsun-10^{13.5}\hMsun$ depending on the grid
+The peculiar velocities (lower panels) show a weak but consistent
+alignment along the third eigenvector $\vec{e}_{3}$ of the Tweb for
+all masses below $10^{13.0}\hMsun-10^{13.5}\hMsun$ depending on the grid
 resolution. $45\%$ of the halos are aligned this way, while only $25\%$ are
 aligned along the first eigenvector $\vec{e}_1$. This suggests that
 halos tend to move along filaments and parallel to the walls, except
 at higher masses where the alignments get randomized.  In contrast,
-the peculiar velocities with respect to the Vweb show the same, although weaker, trend
-and only for low mass halos $<10^{12}$.
+the peculiar velocities with respect to the Vweb show the same,
+although weaker, trend and only for low mass halos $<10^{12}$.
 
 
 In the next subsections we present a complementary account of these
@@ -987,8 +994,8 @@ velocity of dark matter halos with respect to the cosmic web. We use
 publicly available data from two algorithms implemented on a large
 cosmological N-body simulation to study halo populations spanning five
 orders of magnitude in mass. The first algorithm uses the tidal field (Tweb)
-and the second the velocity shear (Vweb); both include results on spatial scales of
-$0.5$\hMpc and $1.0$\hMpc.   
+and the second the velocity shear (Vweb); both include results on
+spatial scales of $0.5$\hMpc and $1.0$\hMpc.   
 
 We quantify the alignments in two complementary ways. The first one
 measures the fraction of halos in a population that is preferentially
@@ -1003,28 +1010,41 @@ respect to the Tweb. In this case the halos tend to align with the
 third eigenvector, $\hat{e}_3$, meaning that they lie along filaments
 and walls. This trend gets stronger as the halo mass
 increases and agrees with all the results published so far. Instead,
-for the Vweb, there is only an anti-alignment for halos more massive
-than $10^{12}\hMsun$, a result that is presented here for the first
-time.
+for the momentum based Vweb, there is only an anti-alignment for halos
+more massive than $10^{12}\hMsun$, a result that is presented here for the first
+time. 
 
 A much weaker alignment signal is present for the angular momentum. In
-the Tweb only the most massive halos $>10^{12}$\hMsun are anti-aligned
-with respect to the filaments, while for the Vweb the massive halos
-are aligned with sheets. These results broadly agree with the
+the Tweb only the most massive halos $>10^{12}$\hMsun are
+perpendicular with respect to $\hat{e}_3$ (anti-aligned to filaments),
+while for the Vweb the massive halos are aligned with $\hat{e}_2$,
+lying along sheets. These results broadly agree with the
 published literature. Nevertheless, in some publications
 \citep{AragonCalvo2007,Hahn2007,AragonCalvo2014} there is an alignment signal
 reported at lower halo masses $<10^{12}$\hMsun that we do not detect
-in our measurements. 
+in our measurements.  One possible explanation for this discrepancy
+can be appreciated by carefully looking at the results for different
+resolutions.  The $512^3$ grid does show a small anti-alignment for low
+mass haloes indicating that this signal could be related to scales
+smaller than $1$h$^{-1}$Mpc.  This would be consistent with
+\citep{Paz2008}, where using a different technique, they find an
+alignment for low mass haloes with the structure on small scales, and
+an anti-alighment at large scales (the 2-halo term). The diversity of
+results for the could be then interpreted as a high sensitivity of the
+alignment signal to the small scale cosmic web description, including
+numerical choices as to how interpolate the relevant fields.
+
 
 A new result from our study is the alignment for the peculiar
 velocities. Here we find a relatively strong signal of alignment along
-the direction defined by the third eigenvector, $\hat{e}_3$, and perpendicular to
-the first, $\hat{e}_1$. This signal is clear in the Tweb for all masses below
-$<10^{13}$\hMsun. This can be interpreted as a flow parallel to walls
-and filaments. In the case of the Vweb similar signal, albeit weaker,
-is present only for the low mass halos $<10^{12}\hMsun$.
-A similar result was obtained by \citep{Padilla2005} who found that
-peculiar velocities are larger in the direction parallel to void walls.
+the direction defined by the third eigenvector, $\hat{e}_3$, and
+perpendicular to the first, $\hat{e}_1$. This signal is clear in the
+Tweb for all masses below $<10^{13}$\hMsun. This can be interpreted as
+a flow parallel to walls and filaments. In the case of the Vweb
+similar signal, albeit weaker, is present only for the low mass halos
+$<10^{12}\hMsun$. A similar result was obtained by \citep{Padilla2005}
+who found that peculiar velocities are larger in the direction
+parallel to void walls. 
 
 The different behaviour for the alignments of massive halos in the
 Tweb and the Vweb is explained by an anti-alignment between the
@@ -1032,7 +1052,8 @@ eigenvectors in the two web grids for massive halos
 $>10^{12}\hMsun$. For low mass halos the directions defined by the two
 webs point in the same direction. This trends can be interpreted as
 non-linear effects that appear in the two different physical
-descriptions for the cosmic web.
+descriptions for the cosmic web, but the impact of the numerical
+choices to build the interpolation must be studied as well.
 
 We also performed a simple study to find evidence of halo properties,
 other than mass, in driving the alignments. We find that in the case of
