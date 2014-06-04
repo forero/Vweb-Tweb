@@ -121,8 +121,7 @@ matter, large-scale structure of Universe
 
 There is a long observational tradition studying galactic properties
 as a function of their large scale environment
-\citep[e.g.][]{Oemler1974,Dressler1980,Pimbblet2002,Gomez2003,Kauffmann2004,Abbas2006,Baldry2006,Park2007,OMill2008,Gonzalez2009,Padilla2010,Wilman2010,Muldrew2012}. In
-these situations the environment definition is usually based on
+\citep[e.g.][]{Oemler1974,Dressler1980,Pimbblet2002,Gomez2003,Kauffmann2004,Abbas2006,Baldry2006,Park2007,OMill2008,Gonzalez2009,Padilla2010,Wilman2010,Muldrew2012}. In these situations the environment definition is usually based on
 quantities easily accessible to observations such as local number
 density or nearest neighbour measurements. With
 the advent of large galaxy surveys and cosmological N-body simulations
@@ -130,7 +129,7 @@ the visibility of the cosmic web and its physical origin became
 clear. As a consequence, in order to capture its filamentarity, the
 environment definition started to be more complex, involving shear and gradient properties of the galaxy density field or the reconstructed/simulated dark
 matter density/velocity field
-\citep[e.g.][]{Lee2005,AragonCalvo2007,Hahn2007,Sousbie2008,Zhang2009,Tweb,MunozCuartas2011,Vweb,Trowland2013,Tempel2014},
+\citep[e.g.][]{Lee2005,Basilakos2006,AragonCalvo2007,Hahn2007,Sousbie2008,Zhang2009,Tweb,MunozCuartas2011,Vweb,Trowland2013,Tempel2014},
 including recent developments that take into account the rotational
 part of the velocity field \citep[e.g.][]{Wang2013,LibeskindVorticity}.
 
@@ -1104,9 +1103,10 @@ that helped us to improve the paper.
 
 In this Appendix we review the results that use a similar exploration
 techniques for halo alignments with the cosmic web. Other kind of
-alignment statistics based based on modifications of the correlation
-\citep[e.g.][]{Paz2008,Faltenbacher2009} that go beyond a local computation
-and are not reviewed here.
+alignment statistics based based on shape measurements
+\citep{Basilakos2006} or modifications of the correlation
+\citep[e.g.][]{Paz2008,Faltenbacher2009} that go beyond a local
+computation and are not reviewed here. 
 
 \begin{itemize}
 
@@ -1194,7 +1194,7 @@ and then reconnected.
 
 The filament finder algorithm is based on Morse theory and defines a
 Skeleton to be the set of critical lines joining the maxima of the
-density field through saddle points following the gradient. They also
+density field through saddle points following the gradient \citep{Sousbie2008b}. They also
 compute the hessian of the potential over the smoothed density field
 to get their eigenvectors.
 
@@ -1252,7 +1252,7 @@ with a strong shape alignment.
 \citep{AragonCalvo2007}
 
 
-They used the Multi-Scale Morphology Filter to describe th filamentary
+They used the Multi-Scale Morphology Filter \citep{AragonCalvo2007} to describe th filamentary
 structure. The method is based on the Hessian matrix of the density
 field, which is computed from the particle distribution using a
 Delaunay tesselation field estimatior (DTFE). This allows them to
