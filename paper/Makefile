@@ -4,8 +4,8 @@ MAIN  = main
 all: $(MAIN).pdf
 
 $(MAIN).pdf: 	$(MAIN).tex  
-	$(LATEX) $(MAIN).tex 
-	bibtex $(MAIN)
+#	$(LATEX) $(MAIN).tex 
+#	bibtex $(MAIN)
 	$(LATEX) $(MAIN).tex 
 	$(LATEX) $(MAIN).tex 
 
@@ -17,6 +17,9 @@ $(MAIN)_diff.pdf: $(MAIN).tex
 	bibtex $(MAIN)_diff
 	$(LATEX) $(MAIN)_diff.tex 
 	$(LATEX) $(MAIN)_diff.tex 
+
+zip:
+	zip paper.zip $(MAIN).tex mn2e* Fig*.pdf
 
 clean:
 	rm -f $(MAIN).{aux,bbl,ps,pdf,dvi,blg,log,out}
